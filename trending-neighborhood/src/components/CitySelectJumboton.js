@@ -48,6 +48,7 @@ componentDidUpdate = (prevProps) => {
   render() {
     return (
         <Jumbotron style={{
+    
           backgroundImage: `url(${this.state.backgroundImage})`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center center",
