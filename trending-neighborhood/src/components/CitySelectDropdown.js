@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, ButtonGroup, Dropdown, DropdownButton} from 'react-bootstrap'
+import { ButtonGroup, Dropdown, DropdownButton } from 'react-bootstrap'
 
 class CitySelectDropdown extends Component {
 
