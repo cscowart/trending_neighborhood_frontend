@@ -27,7 +27,7 @@ class NeighborhoodPreferencesForm extends Component {
     else {
     return (
       <Form onSubmit={ this.props.handleCategoriesSubmit }>
-        <p>What factors into your ideal neighborhood?</p>
+        <p style={{textAlign: "center"}}>What factors into your ideal neighborhood?</p>
         <hr style={{borderTop: "2px solid black"}} />
           <Row>
             <Col>     
@@ -54,9 +54,16 @@ class NeighborhoodPreferencesForm extends Component {
                 )
               })}
               <hr style={{borderTop: "2px solid black"}} />
-              <Button type="submit">
-                Submit
-              </Button>
+              <Row md='auto'>
+                <Col></Col>
+                <Col>
+                  <Button className="mb-3" type="submit">
+                  Submit
+                  </Button>
+                </Col>
+                <Col></Col>
+              </Row>
+
             </Col> 
           </Row> 
       </Form>
