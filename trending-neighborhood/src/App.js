@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ExplorePage from './pages/ExplorePage'
 // Components
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 
 function App() {
   return (
