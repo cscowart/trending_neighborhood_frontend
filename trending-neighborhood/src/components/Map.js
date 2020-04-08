@@ -67,7 +67,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div className="webmap" ref={this.mapRef} style={{height: "100%",}}/>
+      <div className="webmap mt-5" ref={this.mapRef} style={{height: '960px', width: '100%'}}/>
     );
   }
 }
