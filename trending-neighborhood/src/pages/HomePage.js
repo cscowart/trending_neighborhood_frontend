@@ -75,7 +75,7 @@ class HomePage extends Component {
       <div style={{
         height: '100%',
         width: '100%',
-        float: 'left',
+        float: 'center',
         top: '0',
         padding: 'none',
         position: 'fixed',

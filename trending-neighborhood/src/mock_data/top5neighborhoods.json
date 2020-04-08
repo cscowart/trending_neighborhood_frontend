@@ -1,0 +1,22 @@
+[
+  {
+    "neighborhood": "Lincoln Park",
+    "score": 93
+  },
+  {
+    "neighborhood": "Wicker Park",
+    "score": 90
+  },
+  {
+    "neighborhood": "West Loop",
+    "score": 85
+  },
+  {
+    "neighborhood": "Wrigleyville",
+    "score": 80
+  },
+  {
+    "neighborhood": "Lake View",
+    "score": 70
+  }
+]
