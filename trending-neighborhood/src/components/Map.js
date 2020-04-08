@@ -7,8 +7,24 @@ class Map extends Component {
     this.mapRef = React.createRef();
   }
 
+  componentDidMount() {
+    // lazy load the required ArcGIS API for JavaScript modules and CSS
+    loadModules(['esri/Map', 'esri/views/MapView'], { css: true })
+    .then(([ArcGISMap, MapView]) => {
+      const map = new ArcGISMap({
+        basemap: 'topo-vector'
+      });
+      const cityCenter = this.getCityCenter()
+      this.view = new MapView({
+        container: this.mapRef.current,
+        map: map,
+        center: cityCenter,
+        zoom: 12
+      });
+    });
+  }
+
   componentDidUpdate(prevProps) {
-    console.log(prevProps.city)
     if (this.props.city !==  prevProps.city){
       // lazy load the required ArcGIS API for JavaScript modules and CSS
       loadModules(['esri/Map', 'esri/views/MapView'], { css: true })
@@ -51,7 +67,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div className="webmap" ref={this.mapRef} style={{height: "400px",}}/>
+      <div className="webmap" ref={this.mapRef} style={{height: "100%",}}/>
     );
   }
 }

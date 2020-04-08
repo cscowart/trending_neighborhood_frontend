@@ -86,14 +86,10 @@ class HomePage extends Component {
           <source src={ ChicagoBackgroundVideo } ref="video" type="video/mp4"></source>
         </video>
       </div>
-      <div style={{position: 'absolute', top: '25%', justifyContent: 'center', alignContent: 'center', opacity: '0.7', zIndex: '2' }}>
-      <Row className="justify-content-md-center" >
-          <Col></Col>
-          <Col md='auto' >
+      <div style={{position: 'absolute', top: '25%', left: '33%', opacity: '0.7', zIndex: '2' }}>
+      
         <h1 className="justify-content-md-center" style={{ color: 'white'}}>Your new neighborhood awaits</h1>
-        </Col>
-          <Col></Col>
-        </Row>
+        
         <Row className="justify-content-md-center" >
           <Col></Col>
           <Col md='auto' >
