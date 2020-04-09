@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListGroup, Dropdown, DropdownButton, ToggleButton, ButtonGroup, Card, Row, Col, Button, Form } from 'react-bootstrap'
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 // import CategorySlider from './CategorySlider'
-import Categories from '../config/Categories.json';
 
 class NeighborhoodPreferencesForm extends Component {
 
@@ -16,7 +16,7 @@ class NeighborhoodPreferencesForm extends Component {
       event.target.style.border = 'none'
     }
   }
-
+  
   render() {
     if (!this.props.city) {
       return (
@@ -25,70 +25,42 @@ class NeighborhoodPreferencesForm extends Component {
     }
 
     else {
-    return (
+      return (
       <Form onSubmit={ this.props.handleCategoriesSubmit }>
-      {/* <Card style={{width: '25vw'}}> */}
         <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '100', width: '300px', overflow: 'auto'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
           <Card.Header>Customize my Neighborhood</Card.Header>
-          <ListGroup style={{width: '100%'}}>
-           
+          <ListGroup style={{width: '100%'}}>      
             <ListGroup.Item style={{zIndex: '3'}}>
-              {Categories.map((category, index) => {
-              return (
+              {Object.entries(this.props.categories).map((category, index) => {
+                return (
                 <>  
-                {/* <ListGroup.Item >  */}
-                  <b>{category}</b>
-                  {/* </ListGroup.Item> */}
-                {/* <ListGroup.Item > */}
-                  <Form.Group controlId="formBasicRangeCustom">
-                    <Form.Control type="range" defaultValue='0' custom />
+                  <b>{category[0]}</b>
+                  <Form.Group id={this.getPreferenceName(index)} key={index} controlId="neighborhoodPreferences">
+                    <Form.Control type="range" defaultValue={category[1]} custom onChange={this.props.handleCategoryScore}/>
                   </Form.Group>
-                {/* </ListGroup.Item> */}
-                <Dropdown.Divider />
-                    </>    
-                      // <p style={{textAlign: "center"}}>Customize this Neighborhood</p>
-                      // <hr style={{borderTop: "2px solid black"}} />
-                      // <Col>     
-                      
-                      // {/* <Row> */}
-                      // {/* </Row> */}
-                      // <br />
-                      
-                      
-                      //       {/* <Form.Group id={this.getPreferenceName(index)} key={index} controlId="neighborhoodPreferences">
-                      
-                      //  <Form.Control onChange={this.props.handleCategoryScore} as="select" >
-                      //  <option hidden={true} id="0" value='0'>How important is this to you?</option>
-                      //  <option id='1' value="1" >Somewhat important</option>
-                      //  <option id='2' value="2">Fairly important</option>
-                      //  <option id='3' value="3">Very important</option>
-                      //  </Form.Control>
-                    // </Form.Group> */}
-                    
+                </>    
                     )
                   })}
               </ListGroup.Item>
-              </ListGroup>
+            </ListGroup>
+              
+            <BootstrapSwitchButton 
+              // width={200}
+              checked={true}
+              onlabel='Complicate things!'
+              offlabel='Too much?'
+              offstyle='info'
+              size='md'
+              onChange={ this.props.handleExpandedCategories }
+            />
           <Dropdown.Divider />
-          <Dropdown.Item as="button" type="submit" >Build it!</Dropdown.Item>
-        </Card>
-                
-              {/* <hr style={{borderTop: "2px solid black"}} />
-              <Row md='auto'>
-                <Col></Col>
-                <Col>
-                  <Button className="mb-3" type="submit">
-                  Submit
-                  </Button>
-                </Col>
-                <Col></Col>
-              </Row> */}
 
-            {/* </Col>  */}
-          {/* </Row>  */}
-          {/* </Card> */}
+          {/* <DropdownToggle className="text-center" as="button"  onClick={this.props.handleResetValues}  >Reset All Values</DropdownToggle> */}
+          <Dropdown.Divider />
+          <Dropdown.Item className="text-center" as="button" type="submit" active> Build it! </Dropdown.Item>
+        </Card>
        </Form>
-      
+      // this.props.handleResetValues
     );
   }
 }
