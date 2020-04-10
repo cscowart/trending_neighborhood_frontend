@@ -1,22 +1,57 @@
 [
   {
-    "neighborhood": "Lincoln Park",
-    "score": 93
+    "Neighborhood": "Lincoln Park",
+    "Overall Score": 93,
+    "breakdown": {
+      "Restaurants and Bars": 12,
+      "Coffee Shops": 26,
+      "Shopping": 76,
+      "Entertainment": 22,
+      "Parks": 16
+    }
   },
   {
-    "neighborhood": "Wicker Park",
-    "score": 90
+    "Neighborhood": "Wicker Park",
+    "Overall Score": 90,
+    "breakdown": {
+      "Restaurants and Bars": 2,
+      "Coffee Shops": 45,
+      "Shopping": 91,
+      "Entertainment": 24,
+      "Parks": 89
+    }
   },
   {
-    "neighborhood": "West Loop",
-    "score": 85
+    "Neighborhood": "West Loop",
+    "Overall Score": 85,
+    "breakdown": {
+      "Restaurants and Bars": 34,
+      "Coffee Shops": 77,
+      "Shopping": 26,
+      "Entertainment": 96,
+      "Parks": 56
+    }
   },
   {
-    "neighborhood": "Wrigleyville",
-    "score": 80
+    "Neighborhood": "Wrigleyville",
+    "Overall Score": 80,
+    "breakdown": {
+      "Restaurants and Bars": 82,
+      "Coffee Shops": 20,
+      "Shopping": 87,
+      "Entertainment": 85,
+      "Parks": 70
+    }
   },
   {
-    "neighborhood": "Lake View",
-    "score": 70
+    "Neighborhood": "Lake View",
+    "Overall Score": 70,
+    "breakdown": {
+      "Restaurants and Bars": 90,
+      "Coffee Shops": 20,
+      "Shopping": 87,
+      "Entertainment": 85,
+      "Parks": 70
+    }
   }
 ]

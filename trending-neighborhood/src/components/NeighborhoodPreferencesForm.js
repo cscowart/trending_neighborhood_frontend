@@ -26,7 +26,7 @@ class NeighborhoodPreferencesForm extends Component {
 
     else {
       return (
-      <Form onSubmit={ this.props.handleCategoriesSubmit }>
+      <Form id="preferences" onSubmit={ this.props.handleCategoriesSubmit }>
         <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '100', width: '300px', overflow: 'auto'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
           <Card.Header>Customize my Neighborhood</Card.Header>
           <ListGroup style={{width: '100%'}}>      
@@ -53,11 +53,20 @@ class NeighborhoodPreferencesForm extends Component {
               size='md'
               onChange={ this.props.handleExpandedCategories }
             />
-          <Dropdown.Divider />
+          {/* <Dropdown.Divider />
+          <BootstrapSwitchButton 
+              // width={200}
+              checked={true}
+              onlabel='Reset All Values'
+              offlabel='Return Previous Values'
+              onstyle='warning'
+              offstyle='info'
+              size='md'
+              onChange={ this.props.handleResetValues ).reset() }
+            /> */}
 
-          {/* <DropdownToggle className="text-center" as="button"  onClick={this.props.handleResetValues}  >Reset All Values</DropdownToggle> */}
-          <Dropdown.Divider />
-          <Dropdown.Item className="text-center" as="button" type="submit" active> Build it! </Dropdown.Item>
+          {/* <Dropdown.Divider /> */}
+          <ListGroup.Item className="text-center" variant="success" as="button" type="submit" > Build it! </ListGroup.Item>
         </Card>
        </Form>
       // this.props.handleResetValues

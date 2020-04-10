@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Card, CardDeck } from 'react-bootstrap';
+import { ListGroup, ListGroupItem, Col, Card, CardDeck } from 'react-bootstrap';
 
 class ListView extends Component {
 
@@ -44,23 +44,35 @@ class ListView extends Component {
   }
 
   
-
+  
   render() {
-    console.log(this.props)
+    // let neighborhoodScores = Object.entries(this.props.results.breakdown).sort((a, b) => a.value - b.value)
+    console.log("I'm the breakdown!", Object.entries(this.props.results))
+    
+    // console.log(neighborhoodScores)
     return (
-      <CardDeck className="row row-cols-1 row-cols-lg-2 row-cols-xl-3" style={{height: "960px", width: '70%', marginTop: '12%'}} lg="10" >
+      <CardDeck className="row row-cols-1 row-cols-lg-2 row-cols-xl-3" style={{height: "960px", width: '70%', marginTop: '50px'}} lg="10" >
       {this.props.results.map((result, index) => {
+        
+        let sortedArray=[]
+        for (let i in result.breakdown){sortedArray.push([result.breakdown[i], i])}
+        sortedArray=sortedArray.sort().reverse()
+        console.log("Sorted Array", sortedArray)
         return(
           <Col className="my-4">
-            <Card key={index} style={{width: '18rem' }}>
+            <Card key={index} style={{width: '18rem'}}>
               <Card.Body>
-                <Card.Title>{result.neighborhood}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{result.score}</Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
-                </Card.Text>
-                <Card.Link href={this.getZillowHref(result.neighborhood)}>{result.neighborhood} Rentals</Card.Link>
+                <Card.Title>{result["Neighborhood"]}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Overall: {result["Overall Score"]}</Card.Subtitle>
+                <Card.Body>
+                {/* <ListGroup.Item variant="light">Top Three Scores:</ListGroup.Item> */}
+                <ListGroupItem>{sortedArray[0][1]}: {sortedArray[0][0]}</ListGroupItem>
+                <ListGroupItem>{sortedArray[1][1]}: {sortedArray[1][0]}</ListGroupItem>
+                <ListGroupItem>{sortedArray[2][1]}: {sortedArray[2][0]}</ListGroupItem>
+                </Card.Body>
+              
+              
+                <Card.Link href={this.getZillowHref(result["Neighborhood"])}>{result["Neighborhood"]} Rentals</Card.Link>
                 <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
             </Card>

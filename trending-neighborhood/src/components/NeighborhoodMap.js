@@ -8,6 +8,7 @@ class NeighborhoodMap extends Component{
     lat: 41.878,
     lng: -87.629,
     zoom: 12,
+    scrollWheelZoom: false
   }
 
 
@@ -67,13 +68,13 @@ class NeighborhoodMap extends Component{
     return {
       color: '#1f2021',
       weight: 1,
-      fillOpacity: 0.5,
+      fillOpacity: 0.25,
       fillColor: '#fff2af',
     }
   }
 
   onEachFeature(feature: Object, layer: Object) {
-    const popupContent = ` <Popup><p>Customizable Popups <br />with feature information.</p><pre>Borough: <br />${feature.properties.name}</pre></Popup>`
+    const popupContent = ` <Popup><p>Customizable Popups <br />with feature information.</p><pre>Neighborhood: <br />${feature.properties.name}</pre></Popup>`
     layer.bindPopup(popupContent)
   }
 
@@ -81,10 +82,10 @@ class NeighborhoodMap extends Component{
   
   render() {
     
-    console.log(this.props)
+    // console.log(this.props)
     const position = [this.state.lat, this.state.lng]
     return (
-      <Map center={position} zoom={this.state.zoom}>
+      <Map scrollWheelZoom={false} center={position} zoom={this.state.zoom} style={{height: "960px", width: '100%'}}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
