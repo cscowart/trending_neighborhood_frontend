@@ -12,7 +12,6 @@ function App() {
         <Router>
           <div>
             <NavBar />
-            <hr />
             <Route exact path="/" component={HomePage} />
             <Route exact path="/explore" component={ExplorePage} />
             {/* <Route exact path="/sections/:sectionID" component={SectionPage} />

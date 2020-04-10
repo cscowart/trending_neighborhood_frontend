@@ -41,6 +41,12 @@
 }
 
 .leaflet-container {
-  height: 400px;
-  width: 800px;
+  height: 960px;
+  width: 100%;
+  position: absolute;
+  top: 104px;
+  z-Index: 1;
+  left: 23px;
+  right: 23px;
+
 }
