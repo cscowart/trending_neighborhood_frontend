@@ -1,57 +1,83 @@
+
 [
   {
     "Neighborhood": "Lincoln Park",
     "Overall Score": 93,
     "breakdown": {
-      "Restaurants and Bars": 12,
-      "Coffee Shops": 26,
-      "Shopping": 76,
-      "Entertainment": 22,
-      "Parks": 16
+      "Walkability": 95,
+      "Public Transit": 63,
+      "Restaurants and Bars": 98,
+      "Entertainment": 85,
+      "Shopping": 75,
+      "Parks": 84,
+      "Biking": 82,
+      "Errands": 62,
+      "Groceries": 56,
+      "Schools": 64
     }
   },
   {
     "Neighborhood": "Wicker Park",
     "Overall Score": 90,
     "breakdown": {
-      "Restaurants and Bars": 2,
-      "Coffee Shops": 45,
-      "Shopping": 91,
-      "Entertainment": 24,
-      "Parks": 89
+      "Walkability": 34,
+      "Public Transit": 68,
+      "Restaurants and Bars": 84,
+      "Entertainment": 78,
+      "Shopping": 75,
+      "Parks": 54,
+      "Biking": 26,
+      "Errands": 54,
+      "Groceries": 87,
+      "Schools": 68
     }
   },
   {
     "Neighborhood": "West Loop",
     "Overall Score": 85,
     "breakdown": {
-      "Restaurants and Bars": 34,
-      "Coffee Shops": 77,
-      "Shopping": 26,
-      "Entertainment": 96,
-      "Parks": 56
+      "Walkability": 35,
+      "Public Transit": 24,
+      "Restaurants and Bars": 36,
+      "Entertainment": 95,
+      "Shopping": 75,
+      "Parks": 85,
+      "Biking": 92,
+      "Errands": 73,
+      "Groceries": 68,
+      "Schools": 52
     }
   },
   {
     "Neighborhood": "Wrigleyville",
-    "Overall Score": 80,
+    "Overall Score": 95,
     "breakdown": {
-      "Restaurants and Bars": 82,
-      "Coffee Shops": 20,
-      "Shopping": 87,
-      "Entertainment": 85,
-      "Parks": 70
+      "Walkability": 12,
+      "Public Transit": 2,
+      "Restaurants and Bars": 16,
+      "Entertainment": 12,
+      "Shopping": 65,
+      "Parks": 99,
+      "Biking": 97,
+      "Errands": 34,
+      "Groceries": 21,
+      "Schools": 11
     }
   },
   {
     "Neighborhood": "Lake View",
     "Overall Score": 70,
     "breakdown": {
-      "Restaurants and Bars": 90,
-      "Coffee Shops": 20,
-      "Shopping": 87,
-      "Entertainment": 85,
-      "Parks": 70
+      "Walkability": 24,
+      "Public Transit": 97,
+      "Restaurants and Bars": 88,
+      "Entertainment": 36,
+      "Shopping": 75,
+      "Parks": 23,
+      "Biking": 10,
+      "Errands": 69,
+      "Groceries": 36,
+      "Schools": 78
     }
   }
 ]
