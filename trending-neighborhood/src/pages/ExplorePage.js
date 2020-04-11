@@ -14,36 +14,45 @@ class ExplorePage extends Component {
   state = {
     city: "",
     categories: {
-      "Restaurants and Bars": 0,
-      "Shopping": 75,
-      "Entertainment": 0,
-      "Parks": 0,
-      "Coffee Shops": 0,
-    },
-    expandedCategories: {
-      "Restaurants and Bars": 0,
-      "Shopping": 75,
-      "Entertainment": 0,
-      "Parks": 0,
-      "Coffee Shops": 0,
       "Walkability": 0,
       "Public Transit": 0,
+      "Restaurants and Bars": 0,
+      "Entertainment": 0,
+      "Shopping": 0,
+      "Parks": 0,
+    },
+    expandedCategories: {
+      "Walkability": 0,
+      "Public Transit": 0,
+      "Restaurants and Bars": 0,
+      "Entertainment": 0,
+      "Shopping": 0,
+      "Parks": 0,
+      "Biking": 0,
+      "Errands": 0,
       "Groceries": 0,
-      "Books": 0,
       "Schools": 0,
       // crime: 0,
       // localEvents: 0,
     },
     mapView: true,
     showExpandedCategories: false,
-    scoreSubmitted: false
+    scoreSubmitted: true, //Do we even need this now
+    scoreBreakdownNeighborhood: null,
+    pageLoaded: false,
+    results: top5neighborhoods //Change back to null when running backend
   }
 
   componentDidMount() {
-    // console.log(this.props)
     if (this.props.location.state){
+
+    // TODO get default values
+    // run API call with all values set at 100
+      let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
+      console.log("Page just loaded, this is the neighborhood: ", neighborhood)
       this.setState({
-        city: this.props.location.state
+        city: this.props.location.state,
+        scoreBreakdownNeighborhood: neighborhood
       })
     }
   }
@@ -55,57 +64,80 @@ class ExplorePage extends Component {
   }
 
   handleResetValues = event => {
-    console.log("I made it here!")
     this.setState({
       categories: {
-        "Restaurants and Bars": 0,
-        "Shopping": 0,
-        "Entertainment": 0,
-        "Parks": 0,
-        "Coffee Shops": 0,
-      },
-      expandedCategories: {
-        "Restaurants and Bars": 0,
-        "Shopping": 75,
-        "Entertainment": 0,
-        "Parks": 0,
-        "Coffee Shops": 0,
         "Walkability": 0,
         "Public Transit": 0,
+        "Restaurants and Bars": 0,
+        "Entertainment": 0,
+        "Shopping": 0,
+        "Parks": 0,
+      },
+      expandedCategories: {
+        "Walkability": 0,
+        "Public Transit": 0,
+        "Restaurants and Bars": 0,
+        "Entertainment": 0,
+        "Shopping": 0,
+        "Parks": 0,
+        "Biking": 0,
+        "Errands": 0,
         "Groceries": 0,
-        "Books": 0,
         "Schools": 0,
-        // crime: 0,
-        // localEvents: 0,
       },
   })
 }
 
   handleCategoriesSubmit = event => {
-    console.log("I should not be here!")
-
     event.preventDefault()
+    let categoriesSelect = null
+    if (this.state.showExpandedCategories) {
+      categoriesSelect = this.state.expandedCategories
+    } else {
+      categoriesSelect = this.state.categories
+    }
     const neighborhoodObject = {
       city: this.state.city,
-      categories: this.state.expandedCategories
+      categories: categoriesSelect
     }
-    // backendAPI.findNeighborhood(neighborhoodObject)
-    //   .then(response => response.json())
-    //   .then(data=> console.log(data))
+    console.log(neighborhoodObject)
+    // !!!UNCOMMENT TO SEND SCORES TO BACKEND!!!
+    // this.getResults(neighborhoodObject)
+    let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
+    // console.log(neighborhood)
     this.setState({
       scoreSubmitted: true,
+      scoreBreakdownNeighborhood: neighborhood
     })
+  }
+
+  getResults = async neighborhoodObject => { 
+    let results = await backendAPI.findNeighborhood(neighborhoodObject) 
+      await (resonse => resonse.json())
+      await (data => data)    
+    // console.log(results)
+    let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
+    this.setState({
+      scoreSubmitted: true,
+      results: results,
+      scoreBreakdownNeighborhood: neighborhood
+    })
+  }
+
+  getHighestNeighborhood = results => {
+    let highestNeighborhood = results.sort((a, b) => b["Overall Score"] - a["Overall Score"])
+    return highestNeighborhood[0]
   }
 
   handleCategoryScore = event => {
     let cat = event.target.parentElement.id
     let val = parseInt(event.target.value)
-    console.log(`Pre-Adjusted Value ${val}`)
+    // console.log(`Pre-Adjusted Value ${val}`)
 
     
     switch (true) {
       case (val>87):
-        val=100
+        val=99
         break;
       case (val>62):
         val=75
@@ -121,12 +153,12 @@ class ExplorePage extends Component {
     }
     
 
-    console.log(event.target.parentElement)
-    console.log(`Adjusted Value ${val}`)
+    // console.log(event.target.parentElement)
+    // console.log(`Adjusted Value ${val}`)
 
     const { categories } = { ...this.state }
     const currentState = categories
-    console.log(currentState)
+    // console.log(currentState)
     currentState[cat] = val
     this.setState({
       categories: currentState
@@ -139,10 +171,19 @@ class ExplorePage extends Component {
     })
   }
 
+  handleScoreBreakdownClick = (event, neighborhood) => {
+    // console.log(event)
+    // console.log(neighborhood)
+    this.setState({
+      scoreBreakdownNeighborhood: neighborhood
+    })
+  }
+
 
   render() {
     console.log(this.state)
-     return (
+    // console.log(top5neighborhoods)
+         return (
    
       <div style={{marginTop: "25px"}}>
         <Row>
@@ -172,20 +213,25 @@ class ExplorePage extends Component {
                   this.setState({ mapView: checked })
               }}/>
           </div>
-           
+          <div style={{height: "960px", width: '70%', marginTop: '50px'}}>
             {this.state.mapView ? 
-              <NeighborhoodMap city={ this.state.city } isActive={ this.state.mapView } /> :
-              <ListView  city={this.state.city} results={top5neighborhoods.filter(neighborhood => neighborhood["Overall Score"] >= 75)} />
+              <NeighborhoodMap city={ this.state.city } results={ this.state.results} isActive={ this.state.mapView } /> :
+              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 75)} handleScoreBreakdownClick={ this.handleScoreBreakdownClick } />
             }
+          </div>       
         </Row>
-        {this.state.scoreSubmitted ?
-          <Row>
-          <Col className='my-5' style={{textAlign: "center"}}>
-            <ScoreBreakdown categories={this.state.showExpandedCategories ? this.state.expandedCategories : this.state.categories} />
-          </Col>
-        </Row> : 
-        <div></div>
-       }
+        <Row>
+          <Col className='my-5' style={{textAlign: "center", zIndex: 5}}>
+            
+        {!this.state.showExpandedCategories && this.state.scoreBreakdownNeighborhood ?
+          <ScoreBreakdown results={this.state.scoreBreakdownNeighborhood} userPreferences={this.state.categories} /> :
+          this.state.showExpandedCategories && this.state.scoreBreakdownNeighborhood ?
+          <ScoreBreakdown results={this.state.scoreBreakdownNeighborhood} userPreferences={this.state.expandedCategories}/> :
+          <div></div>            
+        } 
+          
+        </Col>
+      </Row> 
 
     </div>
     );
