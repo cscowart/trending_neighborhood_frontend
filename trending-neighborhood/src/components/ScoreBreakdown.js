@@ -2,7 +2,110 @@ import React, { Component } from 'react'
 import {Col, Card, CardDeck} from 'react-bootstrap'
 import ReactSpeedometer from "react-d3-speedometer"
 
+
 class ScoreBreakdown extends Component {
+
+  getScoreColor = (score) => {
+    let color = ""   
+    switch(true) {
+      case score>97:
+        color="#00FF00"
+        break;
+      case score>94:
+          color="#12FF00"
+        break;
+      case score>91:
+          color="#24FF00"
+        break;
+        case score>88:
+          color="#35FF00"
+        break;
+      case score>85:
+          color="#47FF00"
+        break;
+      case score>82:
+          color="#58FF00"
+        break; 
+      case score>79:
+          color="#6AFF00"
+        break;
+      case score>76:
+          color="#7CFF00"
+        break;  
+      case score>73:
+          color="#8DFF00"
+        break;  
+      case score>70:
+          color="#9FFF00"
+        break;  
+      case score>67:
+          color="#B0FF00"
+        break;  
+      case score>64:
+          color="#C2FF00"
+        break;  
+      case score>61:
+          color="#D4FF00"
+        break;  
+      case score>58:
+          color="#E5FF00"
+        break;  
+      case score>55:
+          color="#F7FF00"
+        break;
+      case score>52:
+          color="#FFF600"
+        break;  
+      case score>49:
+          color="#FFE400"
+        break;  
+      case score>46:
+          color="#FFD300"
+        break;  
+      case score>43:
+          color="#FFC100"
+        break;  
+      case score>40:
+          color="#FFAF00"
+        break;  
+      case score>37:
+          color="#FF9E00"
+        break;   
+      case score>34:
+          color="#FF8C00"
+        break;  
+      case score>31:
+          color="#FF7B00"
+        break;  
+      case score>28:
+          color="#FF6900"
+        break;  
+      case score>25:
+          color="#FF5700"
+        break;  
+      case score>22:
+          color="#FF4600"
+        break;
+      case score>19:
+          color="#FF3400"
+        break;  
+      case score>16:
+          color="#FF2300"
+        break;  
+      case score>13:
+          color="#FF1100"
+        break;                                 
+      default:
+        color="#FF0000"
+      }        
+    return ({
+      fontSize: '100px',
+      fontFamily: 'Lobster', 
+      color: color
+    })
+        
+     
+  }
 
   render() {
     let sortedArray=[]
@@ -10,7 +113,11 @@ class ScoreBreakdown extends Component {
     sortedArray=sortedArray.reverse().sort().reverse() 
 
    
-        
+    // console.log("this.props.results", this.props.results)
+    
+
+
+
     return (
       <div >
         <h1>Showing neighborhood: {this.props.results["Neighborhood"]} </h1>
@@ -18,7 +125,7 @@ class ScoreBreakdown extends Component {
 
         {sortedArray.map(category => {
           return (
-            <Col className="my-4">
+            <Col className="my-4 mx-5">
               <Card style={{width: '250px'}}>
               {/* <ReactSpeedometer
                 width={300}
@@ -63,23 +170,7 @@ class ScoreBreakdown extends Component {
               /> */}
               
             <Card.Body>
-              {/* {(()=>{
-              let score = parseInt(this.props.results.breakdown[category[1]])
-              let color="black"
-
-                switch(true) {
-                  case score>80:
-                    color="green"
-                    break
-                  case score>60:
-                    color="yellow"
-                    break
-                  default:
-                    color="red"
-                    break}
-
-                  })} */}
-                  <h1 style={{fontSize: '100px', color: 'green'}}>{this.props.results.breakdown[category[1]]}</h1>
+              <h1 style={this.getScoreColor(this.props.results.breakdown[category[1]])}>{this.props.results.breakdown[category[1]]}</h1>
               <Card.Title>{category[1]}</Card.Title>
             </Card.Body>
             <Card.Footer>

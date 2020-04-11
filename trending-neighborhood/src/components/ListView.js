@@ -1,57 +1,25 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem, Col, Card, CardDeck } from 'react-bootstrap';
+import { Accordion, Button, ListGroup, ListGroupItem, Col, Card, CardDeck } from 'react-bootstrap';
+import ScoreBreakdown from './ScoreBreakdown';
 
 class ListView extends Component {
-
-  // componentDidMount() {
-  //   const neighborhoodWiki = []
-  //   const city = this.props.city
-  //   for (let i=0; i < this.props.results.length; i++){
-  //     const neighborhood = this.props.results[i].neighborhood
-  //     const neighborhoodObj = this.formatNeighborhood(neighborhood, city)
-  //       wikipediaAPI.findNeighborhoodInfo(neighborhoodObj)
-  //         .then((data) => {
-  //           // neighborhoodWiki[i] = {
-  //             let wiki = new Object()
-  //             wiki.title = data.title
-  //             wiki.thumbnail = data.thumbnail
-  //             wiki.coordinates = data.coordinates
-  //             wiki.extract = data.extract
-  //             neighborhoodWiki.push(wiki)
-  //           // }
-  //         })
-            
-  //       }
-  //       console.log(neighborhoodWiki)
-  //       this.setState({neighborhoodWiki})
-  // }
-
-  // formatNeighborhood = (neighborhood, city) => {
-  //    const str = neighborhood + '%2C ' + city
-  //    const searchQuery = str.replace(/ /g, "_")
-  //    return searchQuery
-  // }
-
-// HTTP Link for zillow
-  // https://www.zillow.com/lincoln-park-chicago-il/rentals/
-  // https://www.zillow.com/homes/Lincoln-Park,-Chicago,-IL_rb/
-
-  getZillowHref = (neighborhood) => {
+    getZillowHref = (neighborhood) => {
     const formattedNeighborhood = neighborhood.replace(' ', '-')
     const state = "IL"
     const formattedLink = "https://www.zillow.com/" + formattedNeighborhood + "-" + this.props.city + "-" + state + "/rentals"
     return formattedLink
   }
 
-  
-  
   render() {
-    // let neighborhoodScores = Object.entries(this.props.results.breakdown).sort((a, b) => a.value - b.value)
-    // console.log("I'm the breakdown!", this.props.results.map(result => result))
-    
-    // console.log(neighborhoodScores)
+    console.log(this.props.userPreferences)
     return (
-      <CardDeck className="row row-cols-1 row-cols-lg-2 row-cols-xl-3" lg="10" >
+
+
+
+
+      <Accordion defaultActiveKey="0">
+
+      {/* // <CardDeck className="row row-cols-1 row-cols-lg-2 row-cols-xl-3" lg="10" > */}
       {this.props.results.map((result, index) => {
         
         let sortedArray=[]
@@ -59,7 +27,25 @@ class ListView extends Component {
         sortedArray=sortedArray.sort().reverse() 
         // console.log("Sorted Array", sortedArray)
         return(
-          <Col className="my-4">
+
+<>
+          <ListGroup>
+            <ListGroup.Item>
+              <Accordion.Toggle as={Button} variant="link" eventKey={result["Neighborhood"]}>
+              {result["Neighborhood"]} X miles {sortedArray[0][1]}: {sortedArray[0][0]}  
+                  {sortedArray[1][1]}: {sortedArray[1][0]}  
+                  {sortedArray[2][1]}: {sortedArray[2][0]}
+              </Accordion.Toggle>
+            </ListGroup.Item>
+            <Accordion.Collapse eventKey={result["Neighborhood"]}>
+              <Card.Body>
+                <ScoreBreakdown results={result} userPreferences={this.props.userPreferences}/>
+                </Card.Body>
+            </Accordion.Collapse>
+          </ListGroup>
+       
+
+{/* <Col className="my-4">
             <Card key={index} style={{width: '18rem'}}>
               <Card.Body>
                 <Card.Title>{result["Neighborhood"]}</Card.Title>
@@ -73,13 +59,15 @@ class ListView extends Component {
                 <Card.Link href="#">Another Link</Card.Link>
               </Card.Body>
               <Card.Footer>
-              <button variant="info"  onClick={(e) => this.props.handleScoreBreakdownClick(e, result["Neighborhood"])}> Details</button>
+              <button variant="info"  onClick={() => this.props.handleScoreBreakdownClick(result)}> Details</button>
               </Card.Footer>
             </Card>
-          </Col>
+          </Col> */}
+          </>
         )
       })}
-      </CardDeck>
+      {/* </CardDeck> */}
+      </Accordion>
         
     )
   }
