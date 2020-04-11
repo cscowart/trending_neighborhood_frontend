@@ -37,19 +37,18 @@ class ExplorePage extends Component {
     },
     mapView: true,
     showExpandedCategories: false,
-    scoreSubmitted: true, //Do we even need this now
     scoreBreakdownNeighborhood: null,
     pageLoaded: false,
     results: top5neighborhoods //Change back to null when running backend
   }
 
   componentDidMount() {
+    // Checks to see what city was selected on the main landing page
     if (this.props.location.state){
-
     // TODO get default values
     // run API call with all values set at 100
       let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
-      console.log("Page just loaded, this is the neighborhood: ", neighborhood)
+      // console.log("Page just loaded, this is the neighborhood: ", neighborhood)
       this.setState({
         city: this.props.location.state,
         scoreBreakdownNeighborhood: neighborhood
@@ -57,6 +56,7 @@ class ExplorePage extends Component {
     }
   }
 
+  // After a user changes city preference on top button, this updates the this.state.city to the newly selected city
   handleCitySelect = event => {
     this.setState({
       city: Cities[event],
@@ -100,27 +100,26 @@ class ExplorePage extends Component {
       city: this.state.city,
       categories: categoriesSelect
     }
+    // Remove this when working
     console.log(neighborhoodObject)
     // !!!UNCOMMENT TO SEND SCORES TO BACKEND!!!
     // this.getResults(neighborhoodObject)
+    // !!!Start: Remove this when back end is running!!!
     let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
-    // console.log(neighborhood)
     this.setState({
-      scoreSubmitted: true,
-      scoreBreakdownNeighborhood: neighborhood
+      neighborhood: neighborhood
     })
+    // !!! End Remove
   }
 
+  // API Call to the backend to get a new results object
   getResults = async neighborhoodObject => { 
     let results = await backendAPI.findNeighborhood(neighborhoodObject) 
       await (resonse => resonse.json())
       await (data => data)    
-    // console.log(results)
     let neighborhood = this.getHighestNeighborhood(top5neighborhoods)
     this.setState({
-      scoreSubmitted: true,
-      results: results,
-      scoreBreakdownNeighborhood: neighborhood
+    scoreBreakdownNeighborhood: neighborhood
     })
   }
 
@@ -132,33 +131,24 @@ class ExplorePage extends Component {
   handleCategoryScore = event => {
     let cat = event.target.parentElement.id
     let val = parseInt(event.target.value)
-    // console.log(`Pre-Adjusted Value ${val}`)
-
-    
     switch (true) {
-      case (val>87):
-        val=99
-        break;
-      case (val>62):
-        val=75
-        break;
-      case (val>37):
-        val=50
-        break;
-      case (val>12):
-        val=25
-        break;
-      default:
-        val=0
-    }
-    
-
-    // console.log(event.target.parentElement)
-    // console.log(`Adjusted Value ${val}`)
-
+        case (val>87):
+          val=99
+          break;
+        case (val>62):
+          val=75
+          break;
+        case (val>37):
+          val=50
+          break;
+        case (val>12):
+          val=25
+          break;
+        default:
+          val=0
+      }
     const { categories } = { ...this.state }
     const currentState = categories
-    // console.log(currentState)
     currentState[cat] = val
     this.setState({
       categories: currentState
@@ -172,8 +162,8 @@ class ExplorePage extends Component {
   }
 
   handleScoreBreakdownClick = (event, neighborhood) => {
-    // console.log(event)
-    // console.log(neighborhood)
+    console.log(event)
+    console.log(neighborhood)
     this.setState({
       scoreBreakdownNeighborhood: neighborhood
     })
@@ -181,16 +171,14 @@ class ExplorePage extends Component {
 
 
   render() {
-    console.log(this.state)
-    // console.log(top5neighborhoods)
-         return (
-   
+    // console.log(this.state)
+    return (
       <div style={{marginTop: "25px"}}>
         <Row>
           <Col style={{textAlign: "center"}}>
             <h4>Find your future in
               {" "}  
-                <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/>
+              <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/>
             </h4>
           </Col>
         </Row>
@@ -213,10 +201,14 @@ class ExplorePage extends Component {
                   this.setState({ mapView: checked })
               }}/>
           </div>
-          <div style={{height: "960px", width: '70%', marginTop: '50px'}}>
+          <div style={{height: "960px", width: '70%', marginTop: '50px', overflowY: 'auto'}}>
             {this.state.mapView ? 
               <NeighborhoodMap city={ this.state.city } results={ this.state.results} isActive={ this.state.mapView } /> :
-              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 75)} handleScoreBreakdownClick={ this.handleScoreBreakdownClick } />
+              !this.state.showExpandedCategories && !this.state.mapView ?
+              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 75)}  userPreferences={this.state.categories} handleScoreBreakdownClick={ this.handleScoreBreakdownClick } /> :
+              this.state.showExpandedCategories && !this.state.mapView ?
+              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 75)}  userPreferences={this.state.expandedCategories} handleScoreBreakdownClick={ this.handleScoreBreakdownClick } /> :
+              <div></div>
             }
           </div>       
         </Row>
