@@ -1,83 +1,3407 @@
 
-[
-  {
-    "Neighborhood": "Lincoln Park",
-    "Overall Score": 93,
-    "breakdown": {
-      "Walkability": 95,
-      "Public Transit": 63,
-      "Restaurants and Bars": 98,
-      "Entertainment": 85,
-      "Shopping": 75,
-      "Parks": 84,
-      "Biking": 82,
-      "Errands": 62,
-      "Groceries": 56,
-      "Schools": 64
-    }
-  },
-  {
-    "Neighborhood": "Wicker Park",
-    "Overall Score": 90,
-    "breakdown": {
-      "Walkability": 34,
-      "Public Transit": 68,
-      "Restaurants and Bars": 84,
-      "Entertainment": 78,
-      "Shopping": 75,
-      "Parks": 54,
-      "Biking": 26,
-      "Errands": 54,
-      "Groceries": 87,
-      "Schools": 68
-    }
-  },
-  {
-    "Neighborhood": "The Loop",
-    "Overall Score": 85,
-    "breakdown": {
-      "Walkability": 35,
-      "Public Transit": 24,
-      "Restaurants and Bars": 36,
-      "Entertainment": 95,
-      "Shopping": 75,
-      "Parks": 85,
-      "Biking": 92,
-      "Errands": 73,
-      "Groceries": 68,
-      "Schools": 52
-    }
-  },
-  {
-    "Neighborhood": "Wrigleyville",
-    "Overall Score": 95,
-    "breakdown": {
-      "Walkability": 12,
-      "Public Transit": 2,
-      "Restaurants and Bars": 16,
-      "Entertainment": 12,
-      "Shopping": 65,
-      "Parks": 99,
-      "Biking": 97,
-      "Errands": 34,
-      "Groceries": 21,
-      "Schools": 11
-    }
-  },
-  {
-    "Neighborhood": "Lake View",
-    "Overall Score": 70,
-    "breakdown": {
-      "Walkability": 24,
-      "Public Transit": 97,
-      "Restaurants and Bars": 88,
-      "Entertainment": 36,
-      "Shopping": 75,
-      "Parks": 23,
-      "Biking": 10,
-      "Errands": 69,
-      "Groceries": 36,
-      "Schools": 78
-    }
+[{
+  "Neighborhood": "Heart of Italy",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 84.0,
+    "Groceries": 85.0801849365,
+    "Parks": 68.5301437378,
+    "Errands": 88.1132125854,
+    "Restaurants and Bars": 85.7948150635,
+    "Shopping": 93.9285202026,
+    "Entertainment": 62.6001472473,
+    "Schools": 98.7442550659,
+    "Public Transit": 64.0,
+    "Biking": 57.0
   }
-]
+}, {
+  "Neighborhood": "The Bush",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 55.0,
+    "Groceries": 50.2391395569,
+    "Parks": 84.7159576416,
+    "Errands": 66.622718811,
+    "Restaurants and Bars": 45.537727356,
+    "Shopping": 67.0763168335,
+    "Entertainment": 4.22386598587,
+    "Schools": 97.8474273682,
+    "Public Transit": 65.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Rogers Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 99.0080566406,
+    "Parks": 99.9742660522,
+    "Errands": 94.1441040039,
+    "Restaurants and Bars": 92.6360015869,
+    "Shopping": 93.4608230591,
+    "Entertainment": 96.8105163574,
+    "Schools": 94.2852020264,
+    "Public Transit": 77.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "Clearing (E)",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 62.0,
+    "Groceries": 9.28786087036,
+    "Parks": 74.9950942993,
+    "Errands": 76.7222671509,
+    "Restaurants and Bars": 81.3539581299,
+    "Shopping": 66.3366317749,
+    "Entertainment": 64.3874359131,
+    "Schools": 71.9009552002,
+    "Public Transit": 62.0,
+    "Biking": 69.0
+  }
+}, {
+  "Neighborhood": "South Loop",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 98.5588150024,
+    "Parks": 100.0,
+    "Errands": 99.0348358154,
+    "Restaurants and Bars": 96.8858795166,
+    "Shopping": 98.1768112183,
+    "Entertainment": 99.6540374756,
+    "Schools": 96.8874969482,
+    "Public Transit": 100.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "Pulaski Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 47.8750610352,
+    "Parks": 99.7919845581,
+    "Errands": 92.9600219727,
+    "Restaurants and Bars": 86.8361740112,
+    "Shopping": 92.8786468506,
+    "Entertainment": 97.4689331055,
+    "Schools": 100.0,
+    "Public Transit": 76.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "Kilbourn Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 82.0,
+    "Groceries": 76.3998336792,
+    "Parks": 91.0757446289,
+    "Errands": 86.3184204102,
+    "Restaurants and Bars": 74.4823760986,
+    "Shopping": 88.7629318237,
+    "Entertainment": 83.5718460083,
+    "Schools": 90.3831253052,
+    "Public Transit": 67.0,
+    "Biking": 70.0
+  }
+}, {
+  "Neighborhood": "Gold Coast",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 91.0,
+    "Groceries": 97.542388916,
+    "Parks": 99.1606369019,
+    "Errands": 95.4302520752,
+    "Restaurants and Bars": 89.6459884644,
+    "Shopping": 87.1493759155,
+    "Entertainment": 99.6540374756,
+    "Schools": 85.5817718506,
+    "Public Transit": 85.0,
+    "Biking": 84.0
+  }
+}, {
+  "Neighborhood": "Edgewater",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 92.0,
+    "Groceries": 82.4866943359,
+    "Parks": 98.9235839844,
+    "Errands": 97.4685134888,
+    "Restaurants and Bars": 94.083366394,
+    "Shopping": 96.8964080811,
+    "Entertainment": 100.0,
+    "Schools": 94.6324615479,
+    "Public Transit": 77.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Lake View East",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 72.6493453979,
+    "Parks": 99.3757171631,
+    "Errands": 99.4963760376,
+    "Restaurants and Bars": 99.3154525757,
+    "Shopping": 99.8225860596,
+    "Entertainment": 100.0,
+    "Schools": 94.8152999878,
+    "Public Transit": 85.0,
+    "Biking": 89.0
+  }
+}, {
+  "Neighborhood": "Jefferson Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 80.0,
+    "Groceries": 50.8519248962,
+    "Parks": 84.3134231567,
+    "Errands": 91.1169052124,
+    "Restaurants and Bars": 82.6852416992,
+    "Shopping": 87.937789917,
+    "Entertainment": 92.2224349976,
+    "Schools": 83.3378753662,
+    "Public Transit": 59.0,
+    "Biking": 77.0
+  }
+}, {
+  "Neighborhood": "Marquette Park",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 71.350189209,
+    "Parks": 99.2606277466,
+    "Errands": 65.4045410156,
+    "Restaurants and Bars": 53.5483932495,
+    "Shopping": 63.1821060181,
+    "Entertainment": 8.88584327698,
+    "Schools": 60.5011405945,
+    "Public Transit": 54.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Grand Crossing",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 92.1515045166,
+    "Parks": 81.5147857666,
+    "Errands": 48.2168045044,
+    "Restaurants and Bars": 80.4507446289,
+    "Shopping": 82.780921936,
+    "Entertainment": 43.0820465088,
+    "Schools": 96.6881103516,
+    "Public Transit": 72.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Andersonville",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 98.0,
+    "Groceries": 97.993927002,
+    "Parks": 99.8331451416,
+    "Errands": 98.1210479736,
+    "Restaurants and Bars": 95.6609725952,
+    "Shopping": 99.0847549438,
+    "Entertainment": 100.0,
+    "Schools": 100.0,
+    "Public Transit": 70.0,
+    "Biking": 77.0
+  }
+}, {
+  "Neighborhood": "Noble Square",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 90.2201843262,
+    "Parks": 98.3780975342,
+    "Errands": 96.1652832031,
+    "Restaurants and Bars": 94.971244812,
+    "Shopping": 97.3246917725,
+    "Entertainment": 100.0,
+    "Schools": 99.7024230957,
+    "Public Transit": 76.0,
+    "Biking": 96.0
+  }
+}, {
+  "Neighborhood": "West Elsdon",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 98.6075592041,
+    "Parks": 78.3579788208,
+    "Errands": 82.5096054077,
+    "Restaurants and Bars": 81.8977661133,
+    "Shopping": 83.0530014038,
+    "Entertainment": 29.3074913025,
+    "Schools": 92.9577484131,
+    "Public Transit": 58.0,
+    "Biking": 70.0
+  }
+}, {
+  "Neighborhood": "Marynook",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 60.5208282471,
+    "Parks": 94.528678894,
+    "Errands": 80.2489547729,
+    "Restaurants and Bars": 74.787109375,
+    "Shopping": 71.6220550537,
+    "Entertainment": 60.5438995361,
+    "Schools": 77.6815567017,
+    "Public Transit": 57.0,
+    "Biking": 52.0
+  }
+}, {
+  "Neighborhood": "Pilsen",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 87.0,
+    "Groceries": 94.3247756958,
+    "Parks": 95.290435791,
+    "Errands": 80.6370697021,
+    "Restaurants and Bars": 82.2644271851,
+    "Shopping": 93.7126693726,
+    "Entertainment": 97.4317321777,
+    "Schools": 88.0150375366,
+    "Public Transit": 65.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Oriole Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 65.0,
+    "Groceries": 62.4809303284,
+    "Parks": 84.3203277588,
+    "Errands": 68.1869735718,
+    "Restaurants and Bars": 55.9989776611,
+    "Shopping": 65.1104049683,
+    "Entertainment": 69.8722381592,
+    "Schools": 73.6278762817,
+    "Public Transit": 53.0,
+    "Biking": 55.0
+  }
+}, {
+  "Neighborhood": "Beverly Woods",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 68.0,
+    "Groceries": 33.8603096008,
+    "Parks": 91.6900558472,
+    "Errands": 84.5135040283,
+    "Restaurants and Bars": 72.2782440186,
+    "Shopping": 68.119392395,
+    "Entertainment": 85.5488967896,
+    "Schools": 79.3200454712,
+    "Public Transit": 45.0,
+    "Biking": 56.0
+  }
+}, {
+  "Neighborhood": "Park West",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 91.3724212646,
+    "Parks": 100.0,
+    "Errands": 97.2241744995,
+    "Restaurants and Bars": 95.2961502075,
+    "Shopping": 91.0244979858,
+    "Entertainment": 99.3665924072,
+    "Schools": 86.5810317993,
+    "Public Transit": 68.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Belmont Gardens",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 78.0,
+    "Groceries": 77.1098251343,
+    "Parks": 97.6969528198,
+    "Errands": 82.2098693848,
+    "Restaurants and Bars": 65.9981536865,
+    "Shopping": 86.2730789185,
+    "Entertainment": 82.392906189,
+    "Schools": 96.5971984863,
+    "Public Transit": 61.0,
+    "Biking": 71.0
+  }
+}, {
+  "Neighborhood": "Brighton Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 99.8266143799,
+    "Parks": 88.7938308716,
+    "Errands": 69.4562530518,
+    "Restaurants and Bars": 83.6108016968,
+    "Shopping": 71.3190078735,
+    "Entertainment": 61.7925109863,
+    "Schools": 96.2111968994,
+    "Public Transit": 57.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Stateway Gardens",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 62.0,
+    "Groceries": 23.8664608002,
+    "Parks": 89.3076324463,
+    "Errands": 69.5988464355,
+    "Restaurants and Bars": 70.542678833,
+    "Shopping": 67.2192840576,
+    "Entertainment": 94.3717651367,
+    "Schools": 94.2692337036,
+    "Public Transit": 78.0,
+    "Biking": 50.0
+  }
+}, {
+  "Neighborhood": "Ravenswood",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 93.5628585815,
+    "Parks": 99.0783233643,
+    "Errands": 97.5889282227,
+    "Restaurants and Bars": 93.6068878174,
+    "Shopping": 97.3927612305,
+    "Entertainment": 90.9272384644,
+    "Schools": 97.1120147705,
+    "Public Transit": 70.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "Parkway Gardens",
+  "Overall Score": 20,
+  "breakdown": {
+    "Walkability": 51.0,
+    "Groceries": 86.4831619263,
+    "Parks": 3.65100574493,
+    "Errands": 51.8665275574,
+    "Restaurants and Bars": 45.8711776733,
+    "Shopping": 49.3445739746,
+    "Entertainment": 8.00354194641,
+    "Schools": 76.6680984497,
+    "Public Transit": 76.0,
+    "Biking": 65.0
+  }
+}, {
+  "Neighborhood": "South Shore",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 60.0,
+    "Groceries": 3.91194558144,
+    "Parks": 99.2474441528,
+    "Errands": 84.848197937,
+    "Restaurants and Bars": 65.5733108521,
+    "Shopping": 64.5878295898,
+    "Entertainment": 49.1127700806,
+    "Schools": 100.0,
+    "Public Transit": 70.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Washington Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 75.7681274414,
+    "Parks": 96.072517395,
+    "Errands": 80.885635376,
+    "Restaurants and Bars": 62.2034873962,
+    "Shopping": 72.7638397217,
+    "Entertainment": 96.8255004883,
+    "Schools": 78.7616500854,
+    "Public Transit": 72.0,
+    "Biking": 79.0
+  }
+}, {
+  "Neighborhood": "Hanson Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 83.419593811,
+    "Parks": 98.6766052246,
+    "Errands": 86.424446106,
+    "Restaurants and Bars": 79.9227905273,
+    "Shopping": 84.0314941406,
+    "Entertainment": 36.065864563,
+    "Schools": 99.6032180786,
+    "Public Transit": 62.0,
+    "Biking": 77.0
+  }
+}, {
+  "Neighborhood": "Belmont Terrace",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 65.0,
+    "Groceries": 69.6268997192,
+    "Parks": 75.2283630371,
+    "Errands": 78.8785324097,
+    "Restaurants and Bars": 59.9540710449,
+    "Shopping": 61.5755767822,
+    "Entertainment": 34.404460907,
+    "Schools": 83.3262176514,
+    "Public Transit": 52.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Magnolia Glen",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 93.181388855,
+    "Parks": 97.5974578857,
+    "Errands": 90.0432357788,
+    "Restaurants and Bars": 92.2734222412,
+    "Shopping": 93.7554779053,
+    "Entertainment": 99.1796646118,
+    "Schools": 96.2843170166,
+    "Public Transit": 72.0,
+    "Biking": 81.0
+  }
+}, {
+  "Neighborhood": "Schorsch Village",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 72.8081741333,
+    "Parks": 90.4370651245,
+    "Errands": 72.1503601074,
+    "Restaurants and Bars": 64.6037521362,
+    "Shopping": 83.0006637573,
+    "Entertainment": 85.6740722656,
+    "Schools": 77.2481002808,
+    "Public Transit": 54.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Roscoe Village",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 91.9562454224,
+    "Parks": 97.1938247681,
+    "Errands": 96.9260177612,
+    "Restaurants and Bars": 93.8217926025,
+    "Shopping": 98.8273849487,
+    "Entertainment": 97.380279541,
+    "Schools": 84.3451843262,
+    "Public Transit": 69.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Hermosa",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 80.0,
+    "Groceries": 95.8997573853,
+    "Parks": 95.9134216309,
+    "Errands": 74.1937637329,
+    "Restaurants and Bars": 78.9006500244,
+    "Shopping": 83.3672027588,
+    "Entertainment": 33.0995979309,
+    "Schools": 86.6627578735,
+    "Public Transit": 60.0,
+    "Biking": 79.0
+  }
+}, {
+  "Neighborhood": "Near North",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 99.0,
+    "Groceries": 98.4140548706,
+    "Parks": 100.0,
+    "Errands": 99.7897338867,
+    "Restaurants and Bars": 98.5982131958,
+    "Shopping": 99.2326126099,
+    "Entertainment": 100.0,
+    "Schools": 95.2849960327,
+    "Public Transit": 90.0,
+    "Biking": 87.0
+  }
+}, {
+  "Neighborhood": "Dearborn Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 80.0,
+    "Groceries": 66.8754882812,
+    "Parks": 100.0,
+    "Errands": 92.5071868896,
+    "Restaurants and Bars": 80.467880249,
+    "Shopping": 90.2232208252,
+    "Entertainment": 61.682800293,
+    "Schools": 89.6722640991,
+    "Public Transit": 100.0,
+    "Biking": 92.0
+  }
+}, {
+  "Neighborhood": "Rosemoor",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 82.0562973022,
+    "Parks": 61.1306915283,
+    "Errands": 72.4541320801,
+    "Restaurants and Bars": 68.3324508667,
+    "Shopping": 73.2028274536,
+    "Entertainment": 29.0689678192,
+    "Schools": 94.5543746948,
+    "Public Transit": 68.0,
+    "Biking": 65.0
+  }
+}, {
+  "Neighborhood": "Fulton River District",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 94.2420730591,
+    "Parks": 99.2474441528,
+    "Errands": 95.5502700806,
+    "Restaurants and Bars": 96.5151138306,
+    "Shopping": 97.6678314209,
+    "Entertainment": 99.4942932129,
+    "Schools": 57.6263389587,
+    "Public Transit": 97.0,
+    "Biking": 88.0
+  }
+}, {
+  "Neighborhood": "Goose Island",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 86.9825820923,
+    "Parks": 90.6229629517,
+    "Errands": 81.5766220093,
+    "Restaurants and Bars": 78.1749572754,
+    "Shopping": 89.2154159546,
+    "Entertainment": 92.5215835571,
+    "Schools": 70.9154205322,
+    "Public Transit": 79.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "Ukrainian Village",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 93.713180542,
+    "Parks": 99.4943466187,
+    "Errands": 94.7662963867,
+    "Restaurants and Bars": 94.4031600952,
+    "Shopping": 95.939956665,
+    "Entertainment": 99.6540374756,
+    "Schools": 99.5499725342,
+    "Public Transit": 70.0,
+    "Biking": 95.0
+  }
+}, {
+  "Neighborhood": "Ashburn",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 49.0,
+    "Groceries": 9.68961524963,
+    "Parks": 71.465461731,
+    "Errands": 59.5976257324,
+    "Restaurants and Bars": 56.3945236206,
+    "Shopping": 75.9664306641,
+    "Entertainment": 6.36594247818,
+    "Schools": 55.1016235352,
+    "Public Transit": 54.0,
+    "Biking": 47.0
+  }
+}, {
+  "Neighborhood": "Cottage Grove Heights",
+  "Overall Score": 20,
+  "breakdown": {
+    "Walkability": 29.0,
+    "Groceries": 0.0,
+    "Parks": 5.4145116806,
+    "Errands": 52.3786506653,
+    "Restaurants and Bars": 31.0329036713,
+    "Shopping": 41.5689315796,
+    "Entertainment": 6.51431274414,
+    "Schools": 73.4692153931,
+    "Public Transit": 62.0,
+    "Biking": 37.0
+  }
+}, {
+  "Neighborhood": "Chicago Midway Airport",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 23.0,
+    "Groceries": 0.0,
+    "Parks": 0.0,
+    "Errands": 5.95888900757,
+    "Restaurants and Bars": 53.1475257874,
+    "Shopping": 65.3829956055,
+    "Entertainment": 70.0,
+    "Schools": 0.0,
+    "Public Transit": 61.0,
+    "Biking": 30.0
+  }
+}, {
+  "Neighborhood": "Altgeld Gardens",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 24.0,
+    "Groceries": 28.5854682922,
+    "Parks": 86.0002746582,
+    "Errands": 0.0,
+    "Restaurants and Bars": 29.6130332947,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 91.3900604248,
+    "Public Transit": 39.0,
+    "Biking": 34.0
+  }
+}, {
+  "Neighborhood": "Lincoln Square",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 99.0,
+    "Groceries": 98.3015670776,
+    "Parks": 100.0,
+    "Errands": 98.9917297363,
+    "Restaurants and Bars": 98.7078781128,
+    "Shopping": 99.9198913574,
+    "Entertainment": 100.0,
+    "Schools": 96.5668869019,
+    "Public Transit": 70.0,
+    "Biking": 85.0
+  }
+}, {
+  "Neighborhood": "Scottsdale",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 61.0,
+    "Groceries": 65.4756317139,
+    "Parks": 96.5962677002,
+    "Errands": 59.7446594238,
+    "Restaurants and Bars": 56.152973175,
+    "Shopping": 55.3907966614,
+    "Entertainment": 23.010137558,
+    "Schools": 96.16822052,
+    "Public Transit": 53.0,
+    "Biking": 61.0
+  }
+}, {
+  "Neighborhood": "Trumbull Park",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 27.0,
+    "Groceries": 0.0,
+    "Parks": 74.4218444824,
+    "Errands": 2.93832421303,
+    "Restaurants and Bars": 61.8552436829,
+    "Shopping": 2.27107071877,
+    "Entertainment": 5.66951322556,
+    "Schools": 76.2372741699,
+    "Public Transit": 50.0,
+    "Biking": 36.0
+  }
+}, {
+  "Neighborhood": "Heart of Chicago",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 85.0,
+    "Groceries": 97.6335525513,
+    "Parks": 60.2022018433,
+    "Errands": 81.0416259766,
+    "Restaurants and Bars": 85.3497238159,
+    "Shopping": 93.3115158081,
+    "Entertainment": 86.6305007935,
+    "Schools": 95.0966567993,
+    "Public Transit": 67.0,
+    "Biking": 74.0
+  }
+}, {
+  "Neighborhood": "West Rogers Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 99.135093689,
+    "Parks": 87.8601226807,
+    "Errands": 94.3111114502,
+    "Restaurants and Bars": 94.9411621094,
+    "Shopping": 99.2637176514,
+    "Entertainment": 91.5762557983,
+    "Schools": 97.4042892456,
+    "Public Transit": 53.0,
+    "Biking": 74.0
+  }
+}, {
+  "Neighborhood": "Mount Greenwood Heights",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 42.6543769836,
+    "Parks": 79.9593200684,
+    "Errands": 90.8441467285,
+    "Restaurants and Bars": 74.9768981934,
+    "Shopping": 92.2085418701,
+    "Entertainment": 98.8063049316,
+    "Schools": 87.6255722046,
+    "Public Transit": 40.0,
+    "Biking": 66.0
+  }
+}, {
+  "Neighborhood": "North Kenwood",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 69.0,
+    "Groceries": 72.7585601807,
+    "Parks": 85.7516555786,
+    "Errands": 80.0750045776,
+    "Restaurants and Bars": 64.450630188,
+    "Shopping": 70.4489517212,
+    "Entertainment": 48.6848144531,
+    "Schools": 94.4420089722,
+    "Public Transit": 61.0,
+    "Biking": 84.0
+  }
+}, {
+  "Neighborhood": "Arcadia Terrace",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 85.0,
+    "Groceries": 93.7942810059,
+    "Parks": 95.4359970093,
+    "Errands": 79.1331939697,
+    "Restaurants and Bars": 87.5527191162,
+    "Shopping": 79.6731109619,
+    "Entertainment": 75.9720306396,
+    "Schools": 88.8552322388,
+    "Public Transit": 53.0,
+    "Biking": 73.0
+  }
+}, {
+  "Neighborhood": "West Pullman",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 51.0,
+    "Groceries": 66.0965805054,
+    "Parks": 86.2385101318,
+    "Errands": 56.7523841858,
+    "Restaurants and Bars": 36.2106704712,
+    "Shopping": 43.3051147461,
+    "Entertainment": 13.7799940109,
+    "Schools": 89.0877609253,
+    "Public Transit": 57.0,
+    "Biking": 65.0
+  }
+}, {
+  "Neighborhood": "Wicker Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 99.0,
+    "Groceries": 97.997718811,
+    "Parks": 100.0,
+    "Errands": 98.7379302979,
+    "Restaurants and Bars": 99.0331726074,
+    "Shopping": 99.9120254517,
+    "Entertainment": 100.0,
+    "Schools": 92.356552124,
+    "Public Transit": 77.0,
+    "Biking": 95.0
+  }
+}, {
+  "Neighborhood": "Tri-Taylor",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 91.0,
+    "Groceries": 91.2133026123,
+    "Parks": 99.9083480835,
+    "Errands": 95.7086105347,
+    "Restaurants and Bars": 89.6090774536,
+    "Shopping": 86.6024856567,
+    "Entertainment": 94.7744674683,
+    "Schools": 99.7024230957,
+    "Public Transit": 71.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "Sheffield Neighbors",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 88.0,
+    "Groceries": 57.3992652893,
+    "Parks": 100.0,
+    "Errands": 98.0357971191,
+    "Restaurants and Bars": 92.6794281006,
+    "Shopping": 97.7877883911,
+    "Entertainment": 99.8718795776,
+    "Schools": 95.4544372559,
+    "Public Transit": 77.0,
+    "Biking": 84.0
+  }
+}, {
+  "Neighborhood": "Norwood Park East",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 82.0874938965,
+    "Parks": 91.7808074951,
+    "Errands": 88.7977294922,
+    "Restaurants and Bars": 79.4622116089,
+    "Shopping": 84.7428817749,
+    "Entertainment": 58.5398635864,
+    "Schools": 77.5435562134,
+    "Public Transit": 49.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Eden Green",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 24.0,
+    "Groceries": 79.3323898315,
+    "Parks": 56.3012657166,
+    "Errands": 3.67702484131,
+    "Restaurants and Bars": 3.7505428791,
+    "Shopping": 2.84129405022,
+    "Entertainment": 3.06570386887,
+    "Schools": 83.2880096436,
+    "Public Transit": 47.0,
+    "Biking": 35.0
+  }
+}, {
+  "Neighborhood": "Park Manor",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 92.1515045166,
+    "Parks": 81.5147857666,
+    "Errands": 48.2168045044,
+    "Restaurants and Bars": 80.4507446289,
+    "Shopping": 82.780921936,
+    "Entertainment": 43.0820465088,
+    "Schools": 96.6881103516,
+    "Public Transit": 72.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Belmont Heights",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 71.0,
+    "Groceries": 39.2392997742,
+    "Parks": 57.9646339417,
+    "Errands": 84.0465698242,
+    "Restaurants and Bars": 77.6806030273,
+    "Shopping": 86.0252838135,
+    "Entertainment": 73.4862365723,
+    "Schools": 79.551322937,
+    "Public Transit": 55.0,
+    "Biking": 65.0
+  }
+}, {
+  "Neighborhood": "South Deering",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 0.0,
+    "Groceries": 0.0,
+    "Parks": 0.0,
+    "Errands": 0.0,
+    "Restaurants and Bars": 0.766754448414,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 0.0,
+    "Public Transit": 0.0,
+    "Biking": 29.0
+  }
+}, {
+  "Neighborhood": "Stony Island Park",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 62.5235977173,
+    "Parks": 63.957862854,
+    "Errands": 84.2250823975,
+    "Restaurants and Bars": 69.6552505493,
+    "Shopping": 80.9687957764,
+    "Entertainment": 51.939743042,
+    "Schools": 94.2498931885,
+    "Public Transit": 57.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Canaryville",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 60.8192710876,
+    "Parks": 100.0,
+    "Errands": 56.2361679077,
+    "Restaurants and Bars": 68.3108596802,
+    "Shopping": 76.162902832,
+    "Entertainment": 70.0590133667,
+    "Schools": 96.6764373779,
+    "Public Transit": 67.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "Burnside",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 43.0,
+    "Groceries": 68.784942627,
+    "Parks": 58.766254425,
+    "Errands": 13.5358963013,
+    "Restaurants and Bars": 46.3588104248,
+    "Shopping": 37.8421478271,
+    "Entertainment": 7.49719524384,
+    "Schools": 82.3953857422,
+    "Public Transit": 63.0,
+    "Biking": 36.0
+  }
+}, {
+  "Neighborhood": "Edison Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 86.0,
+    "Groceries": 80.9955673218,
+    "Parks": 99.9424514771,
+    "Errands": 88.0547332764,
+    "Restaurants and Bars": 83.46875,
+    "Shopping": 86.3004989624,
+    "Entertainment": 92.409362793,
+    "Schools": 92.5427780151,
+    "Public Transit": 47.0,
+    "Biking": 72.0
+  }
+}, {
+  "Neighborhood": "London Towne",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 39.0,
+    "Groceries": 22.6591281891,
+    "Parks": 59.275390625,
+    "Errands": 41.3324775696,
+    "Restaurants and Bars": 31.3338565826,
+    "Shopping": 56.6654663086,
+    "Entertainment": 44.1670532227,
+    "Schools": 62.0980758667,
+    "Public Transit": 66.0,
+    "Biking": 52.0
+  }
+}, {
+  "Neighborhood": "Douglas Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 55.0,
+    "Groceries": 36.9526901245,
+    "Parks": 77.6095657349,
+    "Errands": 56.2694816589,
+    "Restaurants and Bars": 56.3303756714,
+    "Shopping": 51.7127037048,
+    "Entertainment": 49.0081672668,
+    "Schools": 91.8432540894,
+    "Public Transit": 65.0,
+    "Biking": 80.0
+  }
+}, {
+  "Neighborhood": "Kenwood",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 63.0215644836,
+    "Parks": 96.8890762329,
+    "Errands": 84.7365112305,
+    "Restaurants and Bars": 78.2752609253,
+    "Shopping": 77.4009170532,
+    "Entertainment": 68.5343551636,
+    "Schools": 96.8105163574,
+    "Public Transit": 62.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Ida B. Wells - Darrow Homes",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 63.0,
+    "Groceries": 21.9562473297,
+    "Parks": 98.1925811768,
+    "Errands": 80.3950271606,
+    "Restaurants and Bars": 62.7661933899,
+    "Shopping": 73.4171600342,
+    "Entertainment": 61.4769668579,
+    "Schools": 83.2447891235,
+    "Public Transit": 64.0,
+    "Biking": 77.0
+  }
+}, {
+  "Neighborhood": "The Island",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 27.0,
+    "Groceries": 4.83335733414,
+    "Parks": 100.0,
+    "Errands": 44.9495201111,
+    "Restaurants and Bars": 57.7624740601,
+    "Shopping": 19.2264442444,
+    "Entertainment": 99.2379226685,
+    "Schools": 2.36005043983,
+    "Public Transit": 55.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "McKinley Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 88.3329544067,
+    "Parks": 96.2954101562,
+    "Errands": 86.6967315674,
+    "Restaurants and Bars": 75.6317062378,
+    "Shopping": 77.5651626587,
+    "Entertainment": 96.0089645386,
+    "Schools": 86.2926559448,
+    "Public Transit": 66.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "West Woodlawn",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 64.0,
+    "Groceries": 51.6896362305,
+    "Parks": 13.5572624207,
+    "Errands": 83.6470184326,
+    "Restaurants and Bars": 61.2579727173,
+    "Shopping": 70.1659545898,
+    "Entertainment": 85.783706665,
+    "Schools": 83.8416442871,
+    "Public Transit": 73.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Lake Calumet",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 4.0,
+    "Groceries": 0.0,
+    "Parks": 0.0,
+    "Errands": 9.06409358978,
+    "Restaurants and Bars": 5.31767129898,
+    "Shopping": 15.8781442642,
+    "Entertainment": 0.0,
+    "Schools": 0.0,
+    "Public Transit": 0.0,
+    "Biking": 28.0
+  }
+}, {
+  "Neighborhood": "River West",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 86.0,
+    "Groceries": 62.2329864502,
+    "Parks": 84.7487792969,
+    "Errands": 95.367401123,
+    "Restaurants and Bars": 88.8787918091,
+    "Shopping": 96.6149673462,
+    "Entertainment": 100.0,
+    "Schools": 85.1237182617,
+    "Public Transit": 80.0,
+    "Biking": 89.0
+  }
+}, {
+  "Neighborhood": "Printers Row",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 99.0,
+    "Groceries": 99.0080566406,
+    "Parks": 100.0,
+    "Errands": 99.4944000244,
+    "Restaurants and Bars": 99.1782455444,
+    "Shopping": 99.39868927,
+    "Entertainment": 100.0,
+    "Schools": 100.0,
+    "Public Transit": 100.0,
+    "Biking": 88.0
+  }
+}, {
+  "Neighborhood": "Garfield Ridge",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 50.5258560181,
+    "Parks": 50.3694992065,
+    "Errands": 88.3595733643,
+    "Restaurants and Bars": 78.3976593018,
+    "Shopping": 81.9161834717,
+    "Entertainment": 52.9701919556,
+    "Schools": 91.2043609619,
+    "Public Transit": 44.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Palmer Square",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 95.9555435181,
+    "Parks": 97.9821548462,
+    "Errands": 93.1317214966,
+    "Restaurants and Bars": 93.3143692017,
+    "Shopping": 92.6474456787,
+    "Entertainment": 96.0467071533,
+    "Schools": 97.6910476685,
+    "Public Transit": 72.0,
+    "Biking": 99.0
+  }
+}, {
+  "Neighborhood": "River's Edge",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 38.0,
+    "Groceries": 43.6039161682,
+    "Parks": 89.23777771,
+    "Errands": 57.4890861511,
+    "Restaurants and Bars": 32.7507858276,
+    "Shopping": 38.2482566833,
+    "Entertainment": 11.5529956818,
+    "Schools": 13.3126716614,
+    "Public Transit": 50.0,
+    "Biking": 66.0
+  }
+}, {
+  "Neighborhood": "South Austin",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 71.0,
+    "Groceries": 51.7714691162,
+    "Parks": 100.0,
+    "Errands": 72.9374542236,
+    "Restaurants and Bars": 62.6409950256,
+    "Shopping": 81.8296737671,
+    "Entertainment": 80.3140563965,
+    "Schools": 96.0322113037,
+    "Public Transit": 68.0,
+    "Biking": 74.0
+  }
+}, {
+  "Neighborhood": "Little Calumet River",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 10.0,
+    "Groceries": 0.0,
+    "Parks": 5.17028808594,
+    "Errands": 0.0,
+    "Restaurants and Bars": 38.0962028503,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 27.9186668396,
+    "Public Transit": 41.0,
+    "Biking": 31.0
+  }
+}, {
+  "Neighborhood": "West Garfield Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 89.0,
+    "Groceries": 100.0,
+    "Parks": 97.7994842529,
+    "Errands": 85.4450073242,
+    "Restaurants and Bars": 79.8225479126,
+    "Shopping": 94.3676681519,
+    "Entertainment": 92.4776611328,
+    "Schools": 98.6000976562,
+    "Public Transit": 73.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Albany Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 100.0,
+    "Parks": 98.6209487915,
+    "Errands": 95.0695800781,
+    "Restaurants and Bars": 91.4584732056,
+    "Shopping": 94.9966964722,
+    "Entertainment": 99.1796646118,
+    "Schools": 79.469833374,
+    "Public Transit": 56.0,
+    "Biking": 69.0
+  }
+}, {
+  "Neighborhood": "Old Norwood Park",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 61.0,
+    "Groceries": 7.09266471863,
+    "Parks": 94.3768386841,
+    "Errands": 80.4065704346,
+    "Restaurants and Bars": 64.1999435425,
+    "Shopping": 83.7776412964,
+    "Entertainment": 63.7897758484,
+    "Schools": 92.0932235718,
+    "Public Transit": 61.0,
+    "Biking": 62.0
+  }
+}, {
+  "Neighborhood": "Gage Park",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 93.2300949097,
+    "Parks": 42.7941207886,
+    "Errands": 78.0909423828,
+    "Restaurants and Bars": 80.7812194824,
+    "Shopping": 57.9318847656,
+    "Entertainment": 74.4958648682,
+    "Schools": 77.3715133667,
+    "Public Transit": 60.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "West Chesterfield",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 41.0,
+    "Groceries": 8.44522190094,
+    "Parks": 88.7254257202,
+    "Errands": 55.4825782776,
+    "Restaurants and Bars": 44.1868133545,
+    "Shopping": 29.1061763763,
+    "Entertainment": 34.8686485291,
+    "Schools": 84.1600494385,
+    "Public Transit": 81.0,
+    "Biking": 47.0
+  }
+}, {
+  "Neighborhood": "Prairie Shores",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 53.0,
+    "Groceries": 35.4170875549,
+    "Parks": 99.4463272095,
+    "Errands": 54.9596633911,
+    "Restaurants and Bars": 40.3491706848,
+    "Shopping": 64.4493865967,
+    "Entertainment": 62.5716018677,
+    "Schools": 98.7007369995,
+    "Public Transit": 63.0,
+    "Biking": 78.0
+  }
+}, {
+  "Neighborhood": "Wrightwood Neighbors",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 91.0,
+    "Groceries": 80.8670578003,
+    "Parks": 100.0,
+    "Errands": 97.5191268921,
+    "Restaurants and Bars": 93.6782226562,
+    "Shopping": 93.0664672852,
+    "Entertainment": 98.9621124268,
+    "Schools": 79.2489471436,
+    "Public Transit": 79.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Big Oaks",
+  "Overall Score": 20,
+  "breakdown": {
+    "Walkability": 41.0,
+    "Groceries": 32.9644393921,
+    "Parks": 16.8619918823,
+    "Errands": 46.7229537964,
+    "Restaurants and Bars": 49.8350601196,
+    "Shopping": 35.3547363281,
+    "Entertainment": 10.9656352997,
+    "Schools": 83.5612411499,
+    "Public Transit": 47.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Brynford Park",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 45.0,
+    "Groceries": 19.7786884308,
+    "Parks": 87.9083709717,
+    "Errands": 57.2710952759,
+    "Restaurants and Bars": 38.0242614746,
+    "Shopping": 67.3347473145,
+    "Entertainment": 8.91382026672,
+    "Schools": 96.3398666382,
+    "Public Transit": 45.0,
+    "Biking": 67.0
+  }
+}, {
+  "Neighborhood": "Chatham",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 46.9530944824,
+    "Parks": 94.7229232788,
+    "Errands": 83.6249389648,
+    "Restaurants and Bars": 76.4776916504,
+    "Shopping": 84.7622451782,
+    "Entertainment": 45.3096084595,
+    "Schools": 98.9112930298,
+    "Public Transit": 65.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "Harbour Point Estates",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 16.0,
+    "Groceries": 7.26570367813,
+    "Parks": 27.1201095581,
+    "Errands": 9.86416244507,
+    "Restaurants and Bars": 43.5958518982,
+    "Shopping": 12.4081573486,
+    "Entertainment": 0.0,
+    "Schools": 9.9317741394,
+    "Public Transit": 31.0,
+    "Biking": 30.0
+  }
+}, {
+  "Neighborhood": "Chicago Lawn",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 65.0,
+    "Groceries": 56.1845855713,
+    "Parks": 91.6045837402,
+    "Errands": 54.6393890381,
+    "Restaurants and Bars": 74.7319030762,
+    "Shopping": 63.9322433472,
+    "Entertainment": 34.9153327942,
+    "Schools": 97.2297821045,
+    "Public Transit": 59.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "Bronzeville",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 69.0,
+    "Groceries": 31.5917720795,
+    "Parks": 65.4316558838,
+    "Errands": 78.6498718262,
+    "Restaurants and Bars": 72.4105758667,
+    "Shopping": 83.2779312134,
+    "Entertainment": 86.0547866821,
+    "Schools": 93.5681304932,
+    "Public Transit": 68.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Brainerd",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 66.0,
+    "Groceries": 35.5637893677,
+    "Parks": 90.7894134521,
+    "Errands": 73.8897247314,
+    "Restaurants and Bars": 75.7110061646,
+    "Shopping": 60.4938659668,
+    "Entertainment": 57.3501777649,
+    "Schools": 90.3487472534,
+    "Public Transit": 64.0,
+    "Biking": 62.0
+  }
+}, {
+  "Neighborhood": "West Lawn",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 82.0,
+    "Groceries": 80.3956222534,
+    "Parks": 83.0722808838,
+    "Errands": 83.1353225708,
+    "Restaurants and Bars": 82.4283981323,
+    "Shopping": 82.4556884766,
+    "Entertainment": 97.9994430542,
+    "Schools": 73.0897903442,
+    "Public Transit": 50.0,
+    "Biking": 66.0
+  }
+}, {
+  "Neighborhood": "Beverly",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 71.0,
+    "Groceries": 75.1742248535,
+    "Parks": 73.2201309204,
+    "Errands": 76.3573608398,
+    "Restaurants and Bars": 67.5427856445,
+    "Shopping": 82.6206054688,
+    "Entertainment": 32.1459503174,
+    "Schools": 75.1498641968,
+    "Public Transit": 53.0,
+    "Biking": 72.0
+  }
+}, {
+  "Neighborhood": "The Gap",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 76.0,
+    "Groceries": 70.063911438,
+    "Parks": 100.0,
+    "Errands": 82.5168533325,
+    "Restaurants and Bars": 73.1674118042,
+    "Shopping": 78.8899841309,
+    "Entertainment": 93.3488845825,
+    "Schools": 100.0,
+    "Public Transit": 74.0,
+    "Biking": 83.0
+  }
+}, {
+  "Neighborhood": "Lincoln Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 92.0,
+    "Groceries": 73.4104232788,
+    "Parks": 100.0,
+    "Errands": 97.4532241821,
+    "Restaurants and Bars": 97.8550415039,
+    "Shopping": 96.9976425171,
+    "Entertainment": 100.0,
+    "Schools": 93.1871795654,
+    "Public Transit": 83.0,
+    "Biking": 89.0
+  }
+}, {
+  "Neighborhood": "Lathrop Homes",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 84.0,
+    "Groceries": 81.8302154541,
+    "Parks": 96.0231628418,
+    "Errands": 92.6983108521,
+    "Restaurants and Bars": 83.9472045898,
+    "Shopping": 95.6330871582,
+    "Entertainment": 65.3785705566,
+    "Schools": 74.3666152954,
+    "Public Transit": 64.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Back of the Yards",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 88.0,
+    "Groceries": 94.7464294434,
+    "Parks": 99.1797332764,
+    "Errands": 89.3714828491,
+    "Restaurants and Bars": 85.7979660034,
+    "Shopping": 92.2828521729,
+    "Entertainment": 52.6414718628,
+    "Schools": 98.991065979,
+    "Public Transit": 60.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Lithuanian Plaza",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 14.6644334793,
+    "Parks": 82.092338562,
+    "Errands": 84.3515319824,
+    "Restaurants and Bars": 67.2076721191,
+    "Shopping": 76.1661453247,
+    "Entertainment": 2.36005043983,
+    "Schools": 91.0235977173,
+    "Public Transit": 58.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "The Loop",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 72.6867218018,
+    "Parks": 100.0,
+    "Errands": 99.6535339355,
+    "Restaurants and Bars": 99.7268676758,
+    "Shopping": 99.9995346069,
+    "Entertainment": 100.0,
+    "Schools": 98.4678192139,
+    "Public Transit": 100.0,
+    "Biking": 79.0
+  }
+}, {
+  "Neighborhood": "South Old Irving Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 87.0,
+    "Groceries": 91.0812988281,
+    "Parks": 83.5094070435,
+    "Errands": 90.0588989258,
+    "Restaurants and Bars": 84.4327316284,
+    "Shopping": 91.8394622803,
+    "Entertainment": 60.3219909668,
+    "Schools": 92.8346099854,
+    "Public Transit": 70.0,
+    "Biking": 69.0
+  }
+}, {
+  "Neighborhood": "Wentworth Gardens",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 51.0,
+    "Groceries": 16.0406093597,
+    "Parks": 61.8059997559,
+    "Errands": 66.1745834351,
+    "Restaurants and Bars": 52.6460456848,
+    "Shopping": 60.1281776428,
+    "Entertainment": 86.5952148438,
+    "Schools": 85.5758895874,
+    "Public Transit": 72.0,
+    "Biking": 49.0
+  }
+}, {
+  "Neighborhood": "Chrysler Village",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 43.0,
+    "Groceries": 22.6389827728,
+    "Parks": 78.3919525146,
+    "Errands": 65.9338378906,
+    "Restaurants and Bars": 45.016998291,
+    "Shopping": 56.6995506287,
+    "Entertainment": 0.0,
+    "Schools": 49.4641799927,
+    "Public Transit": 53.0,
+    "Biking": 41.0
+  }
+}, {
+  "Neighborhood": "Portage Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 74.0,
+    "Groceries": 61.9516601562,
+    "Parks": 91.6992340088,
+    "Errands": 80.7923049927,
+    "Restaurants and Bars": 86.3856048584,
+    "Shopping": 76.1161270142,
+    "Entertainment": 41.9115867615,
+    "Schools": 60.5925636292,
+    "Public Transit": 57.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "Hegewisch",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 76.0,
+    "Groceries": 99.8266143799,
+    "Parks": 71.1113891602,
+    "Errands": 73.4639282227,
+    "Restaurants and Bars": 73.2718505859,
+    "Shopping": 69.6756286621,
+    "Entertainment": 54.5955276489,
+    "Schools": 99.9083099365,
+    "Public Transit": 33.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Sauganash Woods",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 37.0,
+    "Groceries": 34.5732688904,
+    "Parks": 81.1963882446,
+    "Errands": 67.4451293945,
+    "Restaurants and Bars": 12.7239713669,
+    "Shopping": 54.1416015625,
+    "Entertainment": 0.72391474247,
+    "Schools": 54.7839698792,
+    "Public Transit": 47.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "River North",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 97.0,
+    "Groceries": 92.7637863159,
+    "Parks": 97.4843597412,
+    "Errands": 99.4489898682,
+    "Restaurants and Bars": 99.486907959,
+    "Shopping": 99.8612518311,
+    "Entertainment": 100.0,
+    "Schools": 87.9057922363,
+    "Public Transit": 100.0,
+    "Biking": 85.0
+  }
+}, {
+  "Neighborhood": "Powder Horn Lake",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 5.0,
+    "Groceries": 0.0,
+    "Parks": 13.2104682922,
+    "Errands": 1.95141625404,
+    "Restaurants and Bars": 16.4622879028,
+    "Shopping": 3.11358523369,
+    "Entertainment": 0.0,
+    "Schools": 10.0973529816,
+    "Public Transit": 0.0,
+    "Biking": 29.0
+  }
+}, {
+  "Neighborhood": "Archer Heights",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 74.0,
+    "Groceries": 94.6190872192,
+    "Parks": 39.3059501648,
+    "Errands": 80.7767868042,
+    "Restaurants and Bars": 82.9036178589,
+    "Shopping": 70.6954269409,
+    "Entertainment": 27.1178188324,
+    "Schools": 71.8016891479,
+    "Public Transit": 50.0,
+    "Biking": 55.0
+  }
+}, {
+  "Neighborhood": "Fernwood",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 57.0,
+    "Groceries": 7.45991945267,
+    "Parks": 99.3127746582,
+    "Errands": 73.4974822998,
+    "Restaurants and Bars": 66.5552978516,
+    "Shopping": 75.2064437866,
+    "Entertainment": 5.77376079559,
+    "Schools": 92.8928375244,
+    "Public Transit": 52.0,
+    "Biking": 47.0
+  }
+}, {
+  "Neighborhood": "Greektown",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 94.2756500244,
+    "Parks": 77.6961364746,
+    "Errands": 97.7121047974,
+    "Restaurants and Bars": 97.7500076294,
+    "Shopping": 95.7221984863,
+    "Entertainment": 100.0,
+    "Schools": 85.0197143555,
+    "Public Transit": 98.0,
+    "Biking": 85.0
+  }
+}, {
+  "Neighborhood": "Pill Hill",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 61.0,
+    "Groceries": 27.2548046112,
+    "Parks": 73.284576416,
+    "Errands": 70.7622451782,
+    "Restaurants and Bars": 62.7319564819,
+    "Shopping": 73.1572418213,
+    "Entertainment": 55.9364547729,
+    "Schools": 97.3800354004,
+    "Public Transit": 57.0,
+    "Biking": 61.0
+  }
+}, {
+  "Neighborhood": "Fuller Park",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 55.0,
+    "Groceries": 20.6103973389,
+    "Parks": 85.6252288818,
+    "Errands": 71.1782608032,
+    "Restaurants and Bars": 63.8172721863,
+    "Shopping": 62.0013313293,
+    "Entertainment": 13.7656593323,
+    "Schools": 95.4120941162,
+    "Public Transit": 74.0,
+    "Biking": 56.0
+  }
+}, {
+  "Neighborhood": "The Robert Taylor Homes",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 98.0,
+    "Groceries": 92.9574813843,
+    "Parks": 100.0,
+    "Errands": 99.921875,
+    "Restaurants and Bars": 99.9266433716,
+    "Shopping": 99.9970932007,
+    "Entertainment": 100.0,
+    "Schools": 93.4942932129,
+    "Public Transit": 100.0,
+    "Biking": 81.0
+  }
+}, {
+  "Neighborhood": "Hollywood Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 63.0894851685,
+    "Parks": 97.5928497314,
+    "Errands": 83.5300598145,
+    "Restaurants and Bars": 72.1987609863,
+    "Shopping": 74.3425292969,
+    "Entertainment": 64.8006896973,
+    "Schools": 78.1603240967,
+    "Public Transit": 56.0,
+    "Biking": 71.0
+  }
+}, {
+  "Neighborhood": "South East Ravenswood",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 93.5628585815,
+    "Parks": 99.0783233643,
+    "Errands": 97.5889282227,
+    "Restaurants and Bars": 93.6068878174,
+    "Shopping": 97.3927612305,
+    "Entertainment": 90.9272384644,
+    "Schools": 97.1120147705,
+    "Public Transit": 70.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "West Town",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 94.0,
+    "Groceries": 94.5968475342,
+    "Parks": 99.7919845581,
+    "Errands": 92.9009628296,
+    "Restaurants and Bars": 94.4561004639,
+    "Shopping": 94.7923355103,
+    "Entertainment": 85.0197143555,
+    "Schools": 87.4283065796,
+    "Public Transit": 73.0,
+    "Biking": 87.0
+  }
+}, {
+  "Neighborhood": "Irving Woods",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 51.0,
+    "Groceries": 62.1631851196,
+    "Parks": 71.7004547119,
+    "Errands": 55.0900802612,
+    "Restaurants and Bars": 46.8967437744,
+    "Shopping": 40.0587348938,
+    "Entertainment": 12.9736213684,
+    "Schools": 90.0492095947,
+    "Public Transit": 50.0,
+    "Biking": 53.0
+  }
+}, {
+  "Neighborhood": "Edgebrook",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 80.0,
+    "Groceries": 76.3498840332,
+    "Parks": 100.0,
+    "Errands": 89.8063583374,
+    "Restaurants and Bars": 70.3365249634,
+    "Shopping": 89.3637466431,
+    "Entertainment": 71.8713302612,
+    "Schools": 71.0759963989,
+    "Public Transit": 44.0,
+    "Biking": 79.0
+  }
+}, {
+  "Neighborhood": "Streeterville",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 99.1976623535,
+    "Parks": 99.871925354,
+    "Errands": 99.6833724976,
+    "Restaurants and Bars": 99.5361328125,
+    "Shopping": 99.4820251465,
+    "Entertainment": 100.0,
+    "Schools": 45.6497459412,
+    "Public Transit": 100.0,
+    "Biking": 83.0
+  }
+}, {
+  "Neighborhood": "Ravenswood Manor",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 85.0,
+    "Groceries": 73.8768997192,
+    "Parks": 100.0,
+    "Errands": 91.7405319214,
+    "Restaurants and Bars": 84.0536117554,
+    "Shopping": 88.5927352905,
+    "Entertainment": 96.7507476807,
+    "Schools": 76.9682846069,
+    "Public Transit": 66.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "Edgewater Beach",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 85.0,
+    "Groceries": 92.9579925537,
+    "Parks": 99.0082168579,
+    "Errands": 93.7432022095,
+    "Restaurants and Bars": 87.3544921875,
+    "Shopping": 85.2051391602,
+    "Entertainment": 87.7862472534,
+    "Schools": 67.2028045654,
+    "Public Transit": 74.0,
+    "Biking": 88.0
+  }
+}, {
+  "Neighborhood": "Logan Square",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 91.0,
+    "Groceries": 87.6006546021,
+    "Parks": 99.4362411499,
+    "Errands": 92.8372344971,
+    "Restaurants and Bars": 88.8027877808,
+    "Shopping": 91.2502059937,
+    "Entertainment": 99.4461898804,
+    "Schools": 87.4347763062,
+    "Public Transit": 70.0,
+    "Biking": 99.0
+  }
+}, {
+  "Neighborhood": "West Humboldt Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 73.3860244751,
+    "Parks": 98.806388855,
+    "Errands": 81.1022415161,
+    "Restaurants and Bars": 67.1443710327,
+    "Shopping": 87.6028518677,
+    "Entertainment": 73.809425354,
+    "Schools": 78.988067627,
+    "Public Transit": 64.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Sleepy Hollow",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 59.5991287231,
+    "Parks": 51.0187492371,
+    "Errands": 53.4721908569,
+    "Restaurants and Bars": 61.395488739,
+    "Shopping": 73.0404510498,
+    "Entertainment": 27.38697052,
+    "Schools": 83.9696807861,
+    "Public Transit": 44.0,
+    "Biking": 44.0
+  }
+}, {
+  "Neighborhood": "East Pilsen",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 90.0,
+    "Groceries": 91.6435470581,
+    "Parks": 99.7024765015,
+    "Errands": 89.3192825317,
+    "Restaurants and Bars": 84.8226852417,
+    "Shopping": 94.4190216064,
+    "Entertainment": 100.0,
+    "Schools": 91.1689300537,
+    "Public Transit": 69.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Old Town",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 85.3817901611,
+    "Parks": 99.18724823,
+    "Errands": 96.6591110229,
+    "Restaurants and Bars": 94.974067688,
+    "Shopping": 92.6430358887,
+    "Entertainment": 94.3341522217,
+    "Schools": 93.2877502441,
+    "Public Transit": 84.0,
+    "Biking": 90.0
+  }
+}, {
+  "Neighborhood": "Ravenswood Gardens",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 87.0,
+    "Groceries": 83.0771713257,
+    "Parks": 100.0,
+    "Errands": 91.7465286255,
+    "Restaurants and Bars": 88.1889038086,
+    "Shopping": 91.4383392334,
+    "Entertainment": 83.7467651367,
+    "Schools": 84.3367614746,
+    "Public Transit": 67.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Dunning",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 85.1371078491,
+    "Parks": 60.0012435913,
+    "Errands": 93.0969009399,
+    "Restaurants and Bars": 87.682975769,
+    "Shopping": 94.4518203735,
+    "Entertainment": 52.9435844421,
+    "Schools": 62.7255592346,
+    "Public Transit": 56.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "LeClaire Courts",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 41.0,
+    "Groceries": 1.43287408352,
+    "Parks": 53.4454498291,
+    "Errands": 60.1043510437,
+    "Restaurants and Bars": 52.4880867004,
+    "Shopping": 50.7839508057,
+    "Entertainment": 3.06570386887,
+    "Schools": 74.9818344116,
+    "Public Transit": 40.0,
+    "Biking": 45.0
+  }
+}, {
+  "Neighborhood": "Near West Side",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 99.4797058105,
+    "Parks": 100.0,
+    "Errands": 96.5383682251,
+    "Restaurants and Bars": 95.8138885498,
+    "Shopping": 97.2614593506,
+    "Entertainment": 91.0330200195,
+    "Schools": 87.8188247681,
+    "Public Transit": 79.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "Little Village",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 89.0,
+    "Groceries": 98.1193313599,
+    "Parks": 88.8213348389,
+    "Errands": 88.9188842773,
+    "Restaurants and Bars": 86.1950149536,
+    "Shopping": 91.7096328735,
+    "Entertainment": 98.0299682617,
+    "Schools": 97.8700866699,
+    "Public Transit": 60.0,
+    "Biking": 71.0
+  }
+}, {
+  "Neighborhood": "Chinatown",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 97.0,
+    "Groceries": 100.0,
+    "Parks": 100.0,
+    "Errands": 95.7682800293,
+    "Restaurants and Bars": 98.1279983521,
+    "Shopping": 95.4067230225,
+    "Entertainment": 100.0,
+    "Schools": 100.0,
+    "Public Transit": 79.0,
+    "Biking": 81.0
+  }
+}, {
+  "Neighborhood": "North Austin",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 20.683511734,
+    "Parks": 93.6236343384,
+    "Errands": 89.8427886963,
+    "Restaurants and Bars": 76.7682037354,
+    "Shopping": 84.094833374,
+    "Entertainment": 96.0874786377,
+    "Schools": 86.3112640381,
+    "Public Transit": 61.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Peterson Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 84.0,
+    "Groceries": 80.040184021,
+    "Parks": 99.6032714844,
+    "Errands": 89.7897796631,
+    "Restaurants and Bars": 79.0285797119,
+    "Shopping": 80.5793151855,
+    "Entertainment": 91.8852005005,
+    "Schools": 98.4694061279,
+    "Public Transit": 55.0,
+    "Biking": 87.0
+  }
+}, {
+  "Neighborhood": "Gladstone Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 55.3680801392,
+    "Parks": 93.1703414917,
+    "Errands": 91.2813262939,
+    "Restaurants and Bars": 81.7807693481,
+    "Shopping": 87.8829727173,
+    "Entertainment": 93.0904846191,
+    "Schools": 79.90599823,
+    "Public Transit": 59.0,
+    "Biking": 76.0
+  }
+}, {
+  "Neighborhood": "West Englewood",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 79.0,
+    "Groceries": 95.6915054321,
+    "Parks": 94.0279388428,
+    "Errands": 70.2103805542,
+    "Restaurants and Bars": 73.5363845825,
+    "Shopping": 72.4607925415,
+    "Entertainment": 68.3719482422,
+    "Schools": 97.1116027832,
+    "Public Transit": 66.0,
+    "Biking": 62.0
+  }
+}, {
+  "Neighborhood": "Old Town Triangle",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 85.3817901611,
+    "Parks": 99.18724823,
+    "Errands": 96.6591110229,
+    "Restaurants and Bars": 94.974067688,
+    "Shopping": 92.6430358887,
+    "Entertainment": 94.3341522217,
+    "Schools": 93.2877502441,
+    "Public Transit": 84.0,
+    "Biking": 90.0
+  }
+}, {
+  "Neighborhood": "Irving Park",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 90.0,
+    "Groceries": 74.2940368652,
+    "Parks": 99.3127746582,
+    "Errands": 94.7736816406,
+    "Restaurants and Bars": 87.1099472046,
+    "Shopping": 96.7091674805,
+    "Entertainment": 99.5499725342,
+    "Schools": 100.0,
+    "Public Transit": 70.0,
+    "Biking": 70.0
+  }
+}, {
+  "Neighborhood": "South Commons",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 62.0,
+    "Groceries": 55.7900390625,
+    "Parks": 97.9988708496,
+    "Errands": 71.1814727783,
+    "Restaurants and Bars": 43.7105178833,
+    "Shopping": 61.2909240723,
+    "Entertainment": 79.2666091919,
+    "Schools": 98.0127487183,
+    "Public Transit": 67.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "West De Paul",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 86.0,
+    "Groceries": 57.7210769653,
+    "Parks": 99.871925354,
+    "Errands": 94.9722671509,
+    "Restaurants and Bars": 92.2836685181,
+    "Shopping": 93.5348358154,
+    "Entertainment": 92.4737854004,
+    "Schools": 92.301361084,
+    "Public Transit": 69.0,
+    "Biking": 89.0
+  }
+}, {
+  "Neighborhood": "Avalon Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 77.0,
+    "Groceries": 76.0569229126,
+    "Parks": 90.1125564575,
+    "Errands": 89.4183959961,
+    "Restaurants and Bars": 65.7002944946,
+    "Shopping": 76.1586303711,
+    "Entertainment": 70.2520294189,
+    "Schools": 97.204208374,
+    "Public Transit": 63.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "North Mayfair",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 77.0,
+    "Groceries": 59.8755760193,
+    "Parks": 99.0372772217,
+    "Errands": 83.7484207153,
+    "Restaurants and Bars": 77.9243469238,
+    "Shopping": 81.2993545532,
+    "Entertainment": 91.3880767822,
+    "Schools": 82.0813903809,
+    "Public Transit": 60.0,
+    "Biking": 69.0
+  }
+}, {
+  "Neighborhood": "Edgewater Glen",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 88.0,
+    "Groceries": 81.8805465698,
+    "Parks": 96.0203170776,
+    "Errands": 88.6396942139,
+    "Restaurants and Bars": 86.2973175049,
+    "Shopping": 90.8057403564,
+    "Entertainment": 95.4419403076,
+    "Schools": 94.9767684937,
+    "Public Transit": 73.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "Humboldt Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 74.0,
+    "Groceries": 83.2365188599,
+    "Parks": 91.2966537476,
+    "Errands": 75.7826919556,
+    "Restaurants and Bars": 66.6101150513,
+    "Shopping": 78.154083252,
+    "Entertainment": 49.216342926,
+    "Schools": 81.7181015015,
+    "Public Transit": 67.0,
+    "Biking": 87.0
+  }
+}, {
+  "Neighborhood": "West Chatham",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 67.0,
+    "Groceries": 24.8152046204,
+    "Parks": 92.4069595337,
+    "Errands": 85.3220367432,
+    "Restaurants and Bars": 74.5606613159,
+    "Shopping": 79.9733886719,
+    "Entertainment": 40.8208351135,
+    "Schools": 88.0158538818,
+    "Public Transit": 65.0,
+    "Biking": 53.0
+  }
+}, {
+  "Neighborhood": "East Garfield Park",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 99.3650436401,
+    "Parks": 88.3890228271,
+    "Errands": 68.8705062866,
+    "Restaurants and Bars": 70.6947097778,
+    "Shopping": 69.0236434937,
+    "Entertainment": 7.19531822205,
+    "Schools": 94.1556167603,
+    "Public Transit": 78.0,
+    "Biking": 98.0
+  }
+}, {
+  "Neighborhood": "West Morgan Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 78.0,
+    "Groceries": 79.4016189575,
+    "Parks": 94.1130142212,
+    "Errands": 86.5652999878,
+    "Restaurants and Bars": 74.0106887817,
+    "Shopping": 76.7081069946,
+    "Entertainment": 75.522064209,
+    "Schools": 73.8739089966,
+    "Public Transit": 40.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Wolf Lake",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 3.0,
+    "Groceries": 0.0,
+    "Parks": 70.0,
+    "Errands": 0.0,
+    "Restaurants and Bars": 0.0,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 0.0,
+    "Public Transit": 0.0,
+    "Biking": 30.0
+  }
+}, {
+  "Neighborhood": "Homan Square",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 77.0,
+    "Groceries": 82.9703903198,
+    "Parks": 92.4449386597,
+    "Errands": 81.1346817017,
+    "Restaurants and Bars": 64.8251113892,
+    "Shopping": 75.8209457397,
+    "Entertainment": 81.890411377,
+    "Schools": 97.4119491577,
+    "Public Transit": 68.0,
+    "Biking": 67.0
+  }
+}, {
+  "Neighborhood": "The Villa",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 80.5296096802,
+    "Parks": 88.1901168823,
+    "Errands": 89.2475738525,
+    "Restaurants and Bars": 83.8506622314,
+    "Shopping": 85.4708404541,
+    "Entertainment": 52.5280265808,
+    "Schools": 89.7046508789,
+    "Public Transit": 72.0,
+    "Biking": 62.0
+  }
+}, {
+  "Neighborhood": "Kelvin Park",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 71.0,
+    "Groceries": 73.328704834,
+    "Parks": 95.8681869507,
+    "Errands": 71.5894241333,
+    "Restaurants and Bars": 75.4113998413,
+    "Shopping": 74.7397537231,
+    "Entertainment": 7.21996498108,
+    "Schools": 76.9207382202,
+    "Public Transit": 60.0,
+    "Biking": 76.0
+  }
+}, {
+  "Neighborhood": "Margate Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 100.0,
+    "Parks": 99.7405166626,
+    "Errands": 97.2603302002,
+    "Restaurants and Bars": 95.2558059692,
+    "Shopping": 96.2556762695,
+    "Entertainment": 99.6540374756,
+    "Schools": 93.6410751343,
+    "Public Transit": 79.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Mount Greenwood",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 75.0,
+    "Groceries": 42.6543769836,
+    "Parks": 79.9593200684,
+    "Errands": 90.8441467285,
+    "Restaurants and Bars": 74.9768981934,
+    "Shopping": 92.2085418701,
+    "Entertainment": 98.8063049316,
+    "Schools": 87.6255722046,
+    "Public Transit": 40.0,
+    "Biking": 66.0
+  }
+}, {
+  "Neighborhood": "Ford City",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 48.0,
+    "Groceries": 16.2173881531,
+    "Parks": 64.9538726807,
+    "Errands": 65.5512619019,
+    "Restaurants and Bars": 49.7543869019,
+    "Shopping": 92.8317337036,
+    "Entertainment": 94.9429244995,
+    "Schools": 24.8024291992,
+    "Public Transit": 62.0,
+    "Biking": 50.0
+  }
+}, {
+  "Neighborhood": "Old Edgebrook",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 67.0,
+    "Groceries": 60.934753418,
+    "Parks": 100.0,
+    "Errands": 86.5214080811,
+    "Restaurants and Bars": 66.2164077759,
+    "Shopping": 86.6379165649,
+    "Entertainment": 55.8516349792,
+    "Schools": 37.5389328003,
+    "Public Transit": 44.0,
+    "Biking": 70.0
+  }
+}, {
+  "Neighborhood": "Longwood Manor",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 61.0,
+    "Groceries": 8.12188148499,
+    "Parks": 94.0174179077,
+    "Errands": 77.8821640015,
+    "Restaurants and Bars": 65.7503128052,
+    "Shopping": 72.5098114014,
+    "Entertainment": 67.2322235107,
+    "Schools": 89.4025115967,
+    "Public Transit": 64.0,
+    "Biking": 49.0
+  }
+}, {
+  "Neighborhood": "North Center",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 74.729850769,
+    "Parks": 73.5111236572,
+    "Errands": 92.3122787476,
+    "Restaurants and Bars": 86.7141418457,
+    "Shopping": 93.5298538208,
+    "Entertainment": 66.953994751,
+    "Schools": 96.3686218262,
+    "Public Transit": 66.0,
+    "Biking": 88.0
+  }
+}, {
+  "Neighborhood": "Golden Gate",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 28.0,
+    "Groceries": 75.8032913208,
+    "Parks": 88.3237380981,
+    "Errands": 0.0,
+    "Restaurants and Bars": 11.5238580704,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 95.7487106323,
+    "Public Transit": 42.0,
+    "Biking": 35.0
+  }
+}, {
+  "Neighborhood": "Winneconna Parkway",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 57.5982322693,
+    "Parks": 92.6656494141,
+    "Errands": 76.9226531982,
+    "Restaurants and Bars": 68.4305038452,
+    "Shopping": 77.1694641113,
+    "Entertainment": 52.8167572021,
+    "Schools": 87.6128311157,
+    "Public Transit": 68.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "Washington Heights",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 60.8842010498,
+    "Parks": 93.0501403809,
+    "Errands": 33.1501655579,
+    "Restaurants and Bars": 62.1992797852,
+    "Shopping": 49.1914253235,
+    "Entertainment": 51.7004165649,
+    "Schools": 99.5164413452,
+    "Public Transit": 63.0,
+    "Biking": 67.0
+  }
+}, {
+  "Neighborhood": "Avondale",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 89.0,
+    "Groceries": 84.9154281616,
+    "Parks": 100.0,
+    "Errands": 91.1527099609,
+    "Restaurants and Bars": 86.8363647461,
+    "Shopping": 91.5747451782,
+    "Entertainment": 95.336151123,
+    "Schools": 99.4706573486,
+    "Public Transit": 68.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Oakland",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 53.0,
+    "Groceries": 44.6937141418,
+    "Parks": 91.6659469604,
+    "Errands": 71.0713348389,
+    "Restaurants and Bars": 36.2229232788,
+    "Shopping": 51.4456863403,
+    "Entertainment": 61.320110321,
+    "Schools": 77.597869873,
+    "Public Transit": 49.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Lake Meadows",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 83.0,
+    "Groceries": 96.6741333008,
+    "Parks": 100.0,
+    "Errands": 87.4587097168,
+    "Restaurants and Bars": 72.8092956543,
+    "Shopping": 83.0501327515,
+    "Entertainment": 87.9816665649,
+    "Schools": 97.3748550415,
+    "Public Transit": 63.0,
+    "Biking": 76.0
+  }
+}, {
+  "Neighborhood": "Uptown",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 100.0,
+    "Parks": 99.7405166626,
+    "Errands": 97.2603302002,
+    "Restaurants and Bars": 95.2558059692,
+    "Shopping": 96.2556762695,
+    "Entertainment": 99.6540374756,
+    "Schools": 93.6410751343,
+    "Public Transit": 79.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Riverdale",
+  "Overall Score": 10,
+  "breakdown": {
+    "Walkability": 35.0,
+    "Groceries": 79.9223022461,
+    "Parks": 77.5219573975,
+    "Errands": 27.5078430176,
+    "Restaurants and Bars": 17.7893810272,
+    "Shopping": 0.0,
+    "Entertainment": 42.8933944702,
+    "Schools": 74.2324676514,
+    "Public Transit": 40.0,
+    "Biking": 33.0
+  }
+}, {
+  "Neighborhood": "Groveland Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 75.9984893799,
+    "Parks": 100.0,
+    "Errands": 74.6962738037,
+    "Restaurants and Bars": 56.2513580322,
+    "Shopping": 66.4619064331,
+    "Entertainment": 90.3231277466,
+    "Schools": 95.3132858276,
+    "Public Transit": 56.0,
+    "Biking": 82.0
+  }
+}, {
+  "Neighborhood": "Bridgeport",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 89.0,
+    "Groceries": 98.5753097534,
+    "Parks": 99.1195678711,
+    "Errands": 88.2887268066,
+    "Restaurants and Bars": 88.6004486084,
+    "Shopping": 85.5331344604,
+    "Entertainment": 73.306427002,
+    "Schools": 95.8219070435,
+    "Public Transit": 57.0,
+    "Biking": 92.0
+  }
+}, {
+  "Neighborhood": "Kennedy Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 65.0,
+    "Groceries": 56.6709251404,
+    "Parks": 87.4115753174,
+    "Errands": 81.2270431519,
+    "Restaurants and Bars": 61.7727775574,
+    "Shopping": 64.4225463867,
+    "Entertainment": 45.7640228271,
+    "Schools": 82.3111190796,
+    "Public Transit": 42.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Sauganash",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 62.0,
+    "Groceries": 70.5253448486,
+    "Parks": 90.5310668945,
+    "Errands": 80.0209274292,
+    "Restaurants and Bars": 54.560710907,
+    "Shopping": 54.382774353,
+    "Entertainment": 3.85069942474,
+    "Schools": 81.4561080933,
+    "Public Transit": 40.0,
+    "Biking": 67.0
+  }
+}, {
+  "Neighborhood": "New Eastside",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 100.0,
+    "Parks": 100.0,
+    "Errands": 98.5257873535,
+    "Restaurants and Bars": 96.3192977905,
+    "Shopping": 95.3659591675,
+    "Entertainment": 97.9789657593,
+    "Schools": 71.3504638672,
+    "Public Transit": 100.0,
+    "Biking": 80.0
+  }
+}, {
+  "Neighborhood": "Buena Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 98.2758102417,
+    "Parks": 100.0,
+    "Errands": 96.0205383301,
+    "Restaurants and Bars": 90.8625106812,
+    "Shopping": 91.9936828613,
+    "Entertainment": 100.0,
+    "Schools": 97.9095687866,
+    "Public Transit": 82.0,
+    "Biking": 94.0
+  }
+}, {
+  "Neighborhood": "Forest Glen",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 75.2668838501,
+    "Parks": 100.0,
+    "Errands": 74.1934738159,
+    "Restaurants and Bars": 72.5628051758,
+    "Shopping": 69.3022079468,
+    "Entertainment": 71.8479690552,
+    "Schools": 61.7835998535,
+    "Public Transit": 44.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Union Ridge",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 60.0,
+    "Groceries": 12.991235733,
+    "Parks": 54.3374977112,
+    "Errands": 85.0626296997,
+    "Restaurants and Bars": 70.3272857666,
+    "Shopping": 82.1994781494,
+    "Entertainment": 15.3707952499,
+    "Schools": 81.7612838745,
+    "Public Transit": 59.0,
+    "Biking": 64.0
+  }
+}, {
+  "Neighborhood": "East Side",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 76.0,
+    "Groceries": 95.4971237183,
+    "Parks": 39.5626564026,
+    "Errands": 85.568611145,
+    "Restaurants and Bars": 71.771736145,
+    "Shopping": 75.5215606689,
+    "Entertainment": 60.4891433716,
+    "Schools": 95.8600311279,
+    "Public Transit": 39.0,
+    "Biking": 72.0
+  }
+}, {
+  "Neighborhood": "Englewood",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 74.0,
+    "Groceries": 88.4897384644,
+    "Parks": 51.3748168945,
+    "Errands": 76.1036300659,
+    "Restaurants and Bars": 68.9573669434,
+    "Shopping": 76.6888275146,
+    "Entertainment": 57.491771698,
+    "Schools": 89.9384765625,
+    "Public Transit": 74.0,
+    "Biking": 65.0
+  }
+}, {
+  "Neighborhood": "Norwood Park West",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 48.0,
+    "Groceries": 3.61846351624,
+    "Parks": 89.3416290283,
+    "Errands": 70.0623931885,
+    "Restaurants and Bars": 53.4235687256,
+    "Shopping": 42.2409515381,
+    "Entertainment": 32.332824707,
+    "Schools": 94.2087173462,
+    "Public Transit": 50.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Fifth City",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 69.0,
+    "Groceries": 89.7955932617,
+    "Parks": 98.9622650146,
+    "Errands": 67.991859436,
+    "Restaurants and Bars": 53.6741027832,
+    "Shopping": 65.6695327759,
+    "Entertainment": 45.040184021,
+    "Schools": 96.5403747559,
+    "Public Transit": 77.0,
+    "Biking": 80.0
+  }
+}, {
+  "Neighborhood": "Woodlawn",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 60.0,
+    "Groceries": 35.4685020447,
+    "Parks": 76.308883667,
+    "Errands": 69.7824172974,
+    "Restaurants and Bars": 58.8846511841,
+    "Shopping": 62.01902771,
+    "Entertainment": 79.1629714966,
+    "Schools": 95.7597427368,
+    "Public Transit": 74.0,
+    "Biking": 70.0
+  }
+}, {
+  "Neighborhood": "West Beverly",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 65.0,
+    "Groceries": 24.5747375488,
+    "Parks": 96.7114334106,
+    "Errands": 78.4645462036,
+    "Restaurants and Bars": 73.4018783569,
+    "Shopping": 79.3646240234,
+    "Entertainment": 46.7285842896,
+    "Schools": 90.1770019531,
+    "Public Transit": 41.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "Beverly View",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 57.0,
+    "Groceries": 25.0484218597,
+    "Parks": 57.7956962585,
+    "Errands": 79.6754150391,
+    "Restaurants and Bars": 59.0024642944,
+    "Shopping": 69.7950057983,
+    "Entertainment": 62.7374954224,
+    "Schools": 66.0460586548,
+    "Public Transit": 60.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Ranch Triangle",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 95.0,
+    "Groceries": 93.6202316284,
+    "Parks": 100.0,
+    "Errands": 98.0219497681,
+    "Restaurants and Bars": 95.7017440796,
+    "Shopping": 99.7685241699,
+    "Entertainment": 92.784576416,
+    "Schools": 95.4034500122,
+    "Public Transit": 81.0,
+    "Biking": 86.0
+  }
+}, {
+  "Neighborhood": "Schorsch Forest View",
+  "Overall Score": 20,
+  "breakdown": {
+    "Walkability": 56.0,
+    "Groceries": 51.3687553406,
+    "Parks": 0.0,
+    "Errands": 77.3080368042,
+    "Restaurants and Bars": 66.8024673462,
+    "Shopping": 68.7084121704,
+    "Entertainment": 26.3239459991,
+    "Schools": 33.3111572266,
+    "Public Transit": 32.0,
+    "Biking": 43.0
+  }
+}, {
+  "Neighborhood": "Lakewood - Balmoral",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 89.5643234253,
+    "Parks": 98.8411865234,
+    "Errands": 96.0544128418,
+    "Restaurants and Bars": 91.5947494507,
+    "Shopping": 93.3854675293,
+    "Entertainment": 97.0242385864,
+    "Schools": 93.2704772949,
+    "Public Transit": 77.0,
+    "Biking": 72.0
+  }
+}, {
+  "Neighborhood": "Jackson Park Highlands",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 64.0,
+    "Groceries": 0.0,
+    "Parks": 81.9661026001,
+    "Errands": 86.0284042358,
+    "Restaurants and Bars": 70.2649002075,
+    "Shopping": 79.6388626099,
+    "Entertainment": 86.4580459595,
+    "Schools": 92.9654464722,
+    "Public Transit": 70.0,
+    "Biking": 59.0
+  }
+}, {
+  "Neighborhood": "Hyde Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 91.0,
+    "Groceries": 96.4054794312,
+    "Parks": 100.0,
+    "Errands": 90.5587005615,
+    "Restaurants and Bars": 90.33253479,
+    "Shopping": 88.7570648193,
+    "Entertainment": 97.7350234985,
+    "Schools": 95.8723907471,
+    "Public Transit": 66.0,
+    "Biking": 97.0
+  }
+}, {
+  "Neighborhood": "East Beverly",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 58.0,
+    "Groceries": 4.07719182968,
+    "Parks": 96.9010238647,
+    "Errands": 76.367980957,
+    "Restaurants and Bars": 58.7687110901,
+    "Shopping": 81.8151855469,
+    "Entertainment": 75.281867981,
+    "Schools": 83.9299316406,
+    "Public Transit": 53.0,
+    "Biking": 66.0
+  }
+}, {
+  "Neighborhood": "Montclare",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 76.0,
+    "Groceries": 91.0338058472,
+    "Parks": 93.8420257568,
+    "Errands": 84.1703338623,
+    "Restaurants and Bars": 73.6398544312,
+    "Shopping": 59.1351737976,
+    "Entertainment": 33.5523338318,
+    "Schools": 92.3040237427,
+    "Public Transit": 60.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Cragin",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 82.0,
+    "Groceries": 98.9112319946,
+    "Parks": 68.0298538208,
+    "Errands": 83.3762512207,
+    "Restaurants and Bars": 90.0894317627,
+    "Shopping": 85.8735656738,
+    "Entertainment": 6.30666399002,
+    "Schools": 78.7770843506,
+    "Public Transit": 58.0,
+    "Biking": 68.0
+  }
+}, {
+  "Neighborhood": "Bowmanville",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 90.0,
+    "Groceries": 97.3545837402,
+    "Parks": 92.2367248535,
+    "Errands": 91.5208740234,
+    "Restaurants and Bars": 82.9275283813,
+    "Shopping": 92.344039917,
+    "Entertainment": 100.0,
+    "Schools": 96.9554977417,
+    "Public Transit": 62.0,
+    "Biking": 76.0
+  }
+}, {
+  "Neighborhood": "Cabrini Green",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 88.0,
+    "Groceries": 80.4828186035,
+    "Parks": 100.0,
+    "Errands": 93.3127975464,
+    "Restaurants and Bars": 87.794342041,
+    "Shopping": 90.6731796265,
+    "Entertainment": 87.1227874756,
+    "Schools": 92.7605743408,
+    "Public Transit": 83.0,
+    "Biking": 79.0
+  }
+}, {
+  "Neighborhood": "Gresham",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 73.0,
+    "Groceries": 56.7005729675,
+    "Parks": 90.1112060547,
+    "Errands": 87.7118835449,
+    "Restaurants and Bars": 71.7826766968,
+    "Shopping": 79.3767776489,
+    "Entertainment": 49.7219314575,
+    "Schools": 93.6957168579,
+    "Public Transit": 60.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Vittum Park",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 55.0,
+    "Groceries": 7.98535442352,
+    "Parks": 74.1095809937,
+    "Errands": 70.3112945557,
+    "Restaurants and Bars": 64.9446411133,
+    "Shopping": 76.3882369995,
+    "Entertainment": 4.81328773499,
+    "Schools": 85.5416564941,
+    "Public Transit": 52.0,
+    "Biking": 60.0
+  }
+}, {
+  "Neighborhood": "West Loop Gate",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 96.8122253418,
+    "Parks": 98.4679107666,
+    "Errands": 99.6233978271,
+    "Restaurants and Bars": 99.7892227173,
+    "Shopping": 98.5453643799,
+    "Entertainment": 99.2161712646,
+    "Schools": 59.9723548889,
+    "Public Transit": 100.0,
+    "Biking": 84.0
+  }
+}, {
+  "Neighborhood": "Parkview",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 90.6079940796,
+    "Parks": 100.0,
+    "Errands": 97.3655700684,
+    "Restaurants and Bars": 95.2370529175,
+    "Shopping": 93.1898956299,
+    "Entertainment": 99.4942932129,
+    "Schools": 89.0155487061,
+    "Public Transit": 76.0,
+    "Biking": 91.0
+  }
+}, {
+  "Neighborhood": "Illinois Medical District",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 71.0,
+    "Groceries": 79.5422821045,
+    "Parks": 82.0540542603,
+    "Errands": 97.4174423218,
+    "Restaurants and Bars": 76.113899231,
+    "Shopping": 74.9359588623,
+    "Entertainment": 76.6514892578,
+    "Schools": 99.0372009277,
+    "Public Transit": 74.0,
+    "Biking": 93.0
+  }
+}, {
+  "Neighborhood": "East Hyde Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 90.0,
+    "Groceries": 95.8132247925,
+    "Parks": 97.674621582,
+    "Errands": 95.2546005249,
+    "Restaurants and Bars": 88.2522735596,
+    "Shopping": 95.7926712036,
+    "Entertainment": 88.7281112671,
+    "Schools": 93.3543395996,
+    "Public Transit": 65.0,
+    "Biking": 98.0
+  }
+}, {
+  "Neighborhood": "Wildwood",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 64.0,
+    "Groceries": 52.3120422363,
+    "Parks": 87.3116455078,
+    "Errands": 78.9556045532,
+    "Restaurants and Bars": 56.1425895691,
+    "Shopping": 63.3538246155,
+    "Entertainment": 62.0176124573,
+    "Schools": 91.9685668945,
+    "Public Transit": 41.0,
+    "Biking": 49.0
+  }
+}, {
+  "Neighborhood": "Old Irving Park",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 81.0,
+    "Groceries": 66.9395065308,
+    "Parks": 93.072479248,
+    "Errands": 92.5803375244,
+    "Restaurants and Bars": 83.8871841431,
+    "Shopping": 92.4316711426,
+    "Entertainment": 61.4944458008,
+    "Schools": 90.5818099976,
+    "Public Transit": 72.0,
+    "Biking": 71.0
+  }
+}, {
+  "Neighborhood": "University Village - Little Italy",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 82.0,
+    "Groceries": 33.3112831116,
+    "Parks": 99.7024765015,
+    "Errands": 93.180557251,
+    "Restaurants and Bars": 94.9067382812,
+    "Shopping": 94.8770065308,
+    "Entertainment": 99.8718795776,
+    "Schools": 96.3879241943,
+    "Public Transit": 80.0,
+    "Biking": 92.0
+  }
+}, {
+  "Neighborhood": "Sheridan Park",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 96.0,
+    "Groceries": 96.9671707153,
+    "Parks": 100.0,
+    "Errands": 96.3784179688,
+    "Restaurants and Bars": 96.3185424805,
+    "Shopping": 98.4893798828,
+    "Entertainment": 99.6540374756,
+    "Schools": 94.4973373413,
+    "Public Transit": 79.0,
+    "Biking": 95.0
+  }
+}, {
+  "Neighborhood": "East Chatham",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 82.0,
+    "Groceries": 76.4734039307,
+    "Parks": 96.5694351196,
+    "Errands": 90.7749023438,
+    "Restaurants and Bars": 79.8260498047,
+    "Shopping": 86.3815612793,
+    "Entertainment": 74.4526596069,
+    "Schools": 90.1815872192,
+    "Public Transit": 64.0,
+    "Biking": 55.0
+  }
+}, {
+  "Neighborhood": "Morgan Park",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 67.0,
+    "Groceries": 77.5007324219,
+    "Parks": 98.2863082886,
+    "Errands": 60.4349365234,
+    "Restaurants and Bars": 59.7941970825,
+    "Shopping": 54.7349243164,
+    "Entertainment": 50.2778892517,
+    "Schools": 95.7504348755,
+    "Public Transit": 50.0,
+    "Biking": 77.0
+  }
+}, {
+  "Neighborhood": "Princeton Park",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 36.0,
+    "Groceries": 4.21375083923,
+    "Parks": 82.1470413208,
+    "Errands": 36.8767356873,
+    "Restaurants and Bars": 38.2277755737,
+    "Shopping": 47.851474762,
+    "Entertainment": 7.07130002975,
+    "Schools": 86.4167938232,
+    "Public Transit": 80.0,
+    "Biking": 40.0
+  }
+}, {
+  "Neighborhood": "Clearing (W)",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 72.0,
+    "Groceries": 38.7753143311,
+    "Parks": 79.5590286255,
+    "Errands": 85.222076416,
+    "Restaurants and Bars": 74.1217193604,
+    "Shopping": 78.7509155273,
+    "Entertainment": 93.7625045776,
+    "Schools": 95.1089096069,
+    "Public Transit": 36.0,
+    "Biking": 71.0
+  }
+}, {
+  "Neighborhood": "Marycrest",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 70.0,
+    "Groceries": 76.06224823,
+    "Parks": 64.6589050293,
+    "Errands": 71.0626678467,
+    "Restaurants and Bars": 70.1583023071,
+    "Shopping": 75.2255096436,
+    "Entertainment": 64.887878418,
+    "Schools": 72.5539321899,
+    "Public Transit": 50.0,
+    "Biking": 53.0
+  }
+}, {
+  "Neighborhood": "Pullman",
+  "Overall Score": 50,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 21.9332714081,
+    "Parks": 90.2137908936,
+    "Errands": 69.485496521,
+    "Restaurants and Bars": 57.4077072144,
+    "Shopping": 60.5430679321,
+    "Entertainment": 99.6032180786,
+    "Schools": 93.6850738525,
+    "Public Transit": 59.0,
+    "Biking": 49.0
+  }
+}, {
+  "Neighborhood": "Mayfair",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 77.0,
+    "Groceries": 59.8755760193,
+    "Parks": 99.0372772217,
+    "Errands": 83.7484207153,
+    "Restaurants and Bars": 77.9243469238,
+    "Shopping": 81.2993545532,
+    "Entertainment": 91.3880767822,
+    "Schools": 82.0813903809,
+    "Public Transit": 60.0,
+    "Biking": 69.0
+  }
+}, {
+  "Neighborhood": "Wrigleyville",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 84.486000061,
+    "Parks": 99.238067627,
+    "Errands": 93.7514190674,
+    "Restaurants and Bars": 98.9357070923,
+    "Shopping": 94.3940963745,
+    "Entertainment": 97.0508728027,
+    "Schools": 86.4366912842,
+    "Public Transit": 84.0,
+    "Biking": 89.0
+  }
+}, {
+  "Neighborhood": "O'Hare International Airport",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 4.0,
+    "Groceries": 0.775622904301,
+    "Parks": 0.0,
+    "Errands": 0.0,
+    "Restaurants and Bars": 11.6583166122,
+    "Shopping": 7.23576211929,
+    "Entertainment": 0.0,
+    "Schools": 0.0,
+    "Public Transit": 40.0,
+    "Biking": 28.0
+  }
+}, {
+  "Neighborhood": "Calumet Heights",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 49.0,
+    "Groceries": 35.6310005188,
+    "Parks": 78.1522903442,
+    "Errands": 67.4885940552,
+    "Restaurants and Bars": 47.9828453064,
+    "Shopping": 37.5054168701,
+    "Entertainment": 6.67901659012,
+    "Schools": 92.2023239136,
+    "Public Transit": 57.0,
+    "Biking": 53.0
+  }
+}, {
+  "Neighborhood": "Calumet River",
+  "Overall Score": 0,
+  "breakdown": {
+    "Walkability": 10.0,
+    "Groceries": 0.0,
+    "Parks": 5.17028808594,
+    "Errands": 0.0,
+    "Restaurants and Bars": 38.0962028503,
+    "Shopping": 0.0,
+    "Entertainment": 0.0,
+    "Schools": 27.9186668396,
+    "Public Transit": 41.0,
+    "Biking": 31.0
+  }
+}, {
+  "Neighborhood": "Bucktown",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 88.0,
+    "Groceries": 68.8817520142,
+    "Parks": 100.0,
+    "Errands": 93.4895324707,
+    "Restaurants and Bars": 88.231300354,
+    "Shopping": 95.4775695801,
+    "Entertainment": 97.0242385864,
+    "Schools": 96.6565704346,
+    "Public Transit": 72.0,
+    "Biking": 95.0
+  }
+}, {
+  "Neighborhood": "Graceland West",
+  "Overall Score": 90,
+  "breakdown": {
+    "Walkability": 86.0,
+    "Groceries": 68.1875686646,
+    "Parks": 91.8395767212,
+    "Errands": 87.6517105103,
+    "Restaurants and Bars": 89.7863311768,
+    "Shopping": 94.1818466187,
+    "Entertainment": 90.206993103,
+    "Schools": 98.3452758789,
+    "Public Transit": 76.0,
+    "Biking": 96.0
+  }
+}, {
+  "Neighborhood": "Budlong Woods",
+  "Overall Score": 80,
+  "breakdown": {
+    "Walkability": 87.0,
+    "Groceries": 92.6036224365,
+    "Parks": 83.1194915771,
+    "Errands": 90.9812545776,
+    "Restaurants and Bars": 80.4120025635,
+    "Shopping": 90.0882263184,
+    "Entertainment": 86.810295105,
+    "Schools": 92.9559860229,
+    "Public Transit": 61.0,
+    "Biking": 72.0
+  }
+}, {
+  "Neighborhood": "Roseland",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 59.0,
+    "Groceries": 92.3883743286,
+    "Parks": 93.5867462158,
+    "Errands": 55.4876556396,
+    "Restaurants and Bars": 61.498878479,
+    "Shopping": 18.4773082733,
+    "Entertainment": 6.64032697678,
+    "Schools": 88.3937072754,
+    "Public Transit": 71.0,
+    "Biking": 49.0
+  }
+}, {
+  "Neighborhood": "O'Hare",
+  "Overall Score": 70,
+  "breakdown": {
+    "Walkability": 66.0,
+    "Groceries": 91.0283813477,
+    "Parks": 33.7900810242,
+    "Errands": 79.470703125,
+    "Restaurants and Bars": 66.076210022,
+    "Shopping": 42.4941902161,
+    "Entertainment": 64.7316513062,
+    "Schools": 82.2333831787,
+    "Public Transit": 60.0,
+    "Biking": 42.0
+  }
+}, {
+  "Neighborhood": "Tally's Corner",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 98.0,
+    "Groceries": 92.9574813843,
+    "Parks": 100.0,
+    "Errands": 99.921875,
+    "Restaurants and Bars": 99.9266433716,
+    "Shopping": 99.9970932007,
+    "Entertainment": 100.0,
+    "Schools": 93.4942932129,
+    "Public Transit": 100.0,
+    "Biking": 81.0
+  }
+}, {
+  "Neighborhood": "Belmont Central",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 74.0,
+    "Groceries": 92.1024703979,
+    "Parks": 87.8538513184,
+    "Errands": 73.5757675171,
+    "Restaurants and Bars": 79.1198272705,
+    "Shopping": 73.8500671387,
+    "Entertainment": 8.96337795258,
+    "Schools": 69.2170257568,
+    "Public Transit": 58.0,
+    "Biking": 75.0
+  }
+}, {
+  "Neighborhood": "Wrightwood",
+  "Overall Score": 30,
+  "breakdown": {
+    "Walkability": 42.0,
+    "Groceries": 4.07641983032,
+    "Parks": 73.8908843994,
+    "Errands": 60.9962043762,
+    "Restaurants and Bars": 38.4160270691,
+    "Shopping": 44.5553474426,
+    "Entertainment": 41.8764228821,
+    "Schools": 88.5657730103,
+    "Public Transit": 56.0,
+    "Biking": 50.0
+  }
+}, {
+  "Neighborhood": "South Chicago",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 77.0,
+    "Groceries": 98.343963623,
+    "Parks": 91.2732009888,
+    "Errands": 75.0366897583,
+    "Restaurants and Bars": 76.259803772,
+    "Shopping": 72.9329223633,
+    "Entertainment": 11.5800666809,
+    "Schools": 89.5201339722,
+    "Public Transit": 62.0,
+    "Biking": 54.0
+  }
+}, {
+  "Neighborhood": "North Park",
+  "Overall Score": 40,
+  "breakdown": {
+    "Walkability": 66.0,
+    "Groceries": 96.0751647949,
+    "Parks": 89.1682128906,
+    "Errands": 73.2182235718,
+    "Restaurants and Bars": 61.9410858154,
+    "Shopping": 65.3741531372,
+    "Entertainment": 13.1303129196,
+    "Schools": 97.4870986938,
+    "Public Transit": 45.0,
+    "Biking": 63.0
+  }
+}, {
+  "Neighborhood": "Lake View",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 93.0,
+    "Groceries": 86.6387329102,
+    "Parks": 86.3788070679,
+    "Errands": 97.9365539551,
+    "Restaurants and Bars": 96.4692153931,
+    "Shopping": 97.9398574829,
+    "Entertainment": 100.0,
+    "Schools": 88.1085281372,
+    "Public Transit": 82.0,
+    "Biking": 78.0
+  }
+}, {
+  "Neighborhood": "East Ukrainian Village",
+  "Overall Score": 100,
+  "breakdown": {
+    "Walkability": 97.0,
+    "Groceries": 98.3309936523,
+    "Parks": 98.8856048584,
+    "Errands": 96.4343261719,
+    "Restaurants and Bars": 96.2045516968,
+    "Shopping": 96.405960083,
+    "Entertainment": 97.3194351196,
+    "Schools": 98.6499176025,
+    "Public Transit": 76.0,
+    "Biking": 96.0
+  }
+}, {
+  "Neighborhood": "Galewood",
+  "Overall Score": 60,
+  "breakdown": {
+    "Walkability": 67.0,
+    "Groceries": 63.6061782837,
+    "Parks": 82.5746688843,
+    "Errands": 73.8931427002,
+    "Restaurants and Bars": 61.909778595,
+    "Shopping": 74.9182434082,
+    "Entertainment": 61.3512954712,
+    "Schools": 72.9003753662,
+    "Public Transit": 57.0,
+    "Biking": 71.0
+  }
+}]

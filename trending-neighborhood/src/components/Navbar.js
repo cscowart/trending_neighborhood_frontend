@@ -18,12 +18,8 @@ class NavBar extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/explore" style={{
-              fontSize: "20px"
-            }}>Explore</Nav.Link>
-            <Nav.Link href="#link"style={{
-              fontSize: "20px"
-            }}>Events</Nav.Link>
+            <Nav.Link href="/explore" style={{fontSize: "20px"}}>Explore</Nav.Link>
+            <Nav.Link href="#link"style={{fontSize: "20px"}}>Events</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

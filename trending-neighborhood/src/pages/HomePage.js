@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
-// import CitySelectJumbotron from '../components/CitySelectJumboton';
-// import NeighborhoodPreferencesForm from '../components/NeighborhoodPreferencesForm';
 import { Row, Col } from 'react-bootstrap'
 import Cities from '../config/Cities.json';
 // import backendAPI from "../api/backendAPI"
 import CitySelectDropdown from '../components/CitySelectDropdown'
 import defaultIMG from '../media/default.webp'
-// import chicagoIMG from '../media/chicago.jpg'
-// import nycIMG from '../media/nyc.jpg'
-// import austinIMG from '../media/austin.png'
-// import atlantaIMG from '../media/atlanta.png'
 
 import NYBackgroundVideo from '../media/NYBackgroundVideo.mp4'
 import LABackgroundVideo from '../media/LABackgroundVideo.mp4'
@@ -22,8 +16,6 @@ import WashingtonDCBackgroundVideo from '../media/WashingtonDCBackgroundVideo.mp
 import ChicagoBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
 import defaultBackgroundVideo from '../media/defaultBackgroundVideo.mp4'
 import { geolocated } from "react-geolocated";
-
-
 
 class HomePage extends Component {
   state = {
@@ -42,17 +34,12 @@ class HomePage extends Component {
     })   
   }
   
-  componentDidMount= () => {
-    let count=0}
+  componentDidMount= () => {let count=0}
   
-    
-  
-
   componentDidUpdate = () => {
     
     if (this.state.videoChange<2){
       this.setState({videoChange: this.props.videoChange+1})
-
 
     let distance=0
     let R=0
@@ -60,12 +47,12 @@ class HomePage extends Component {
     const coordinates = [
       ['New York', 40.6635, -73.9387],
       ['Los Angeles', 34.0194, -118.4108],
-      ['Washington DC', 41.881832, -87.623177],
+      ['Chicago', 41.881832, -87.623177],
       ['Houston', 29.7866, -95.3909],
       ['Phoenix', 33.5722, -112.0901],
       ['Philadelphia', 40.0094, -75.1333],
       ['Denver',  39.7619,  -104.8811],
-      ['Chicago', 38.9041, -77.0172]
+      ['Washington DC', 38.9041, -77.0172]
     ]
 
     let distances = {
@@ -78,8 +65,7 @@ class HomePage extends Component {
       'Denver':0,
       'Washington DC':0
     }
-    // let backgroundVideo = "defaultBackGroundVideo"
-  
+
   if (this.props.coords) {
       {coordinates.map((cityCoords)=> {
         let lat1 = this.props.coords.latitude
@@ -117,71 +103,17 @@ class HomePage extends Component {
         case'Denver': this.setState({backgroundVideo: DenverBackgroundVideo}); break;
         case'Washington DC': this.setState({backgroundVideo: WashingtonDCBackgroundVideo}); break;
         default: this.setState({backgroundVideo: defaultBackgroundVideo})
-        
-        console.log("New Background Video: ", this.state.backgroundVideo)
         this.setState({videoChange: this.state.videoChange+1})
-      }
-      }
-    }
-    // if (this.state.videoChange==1){
-      // this.setState({videoChange: 2})}
-
-  
-  }
-  
-      
-      // console.log(BackgroundVideo)
-
-// const coordinates = {
-//   'Chicago': [41.881832, -87.623177]
-// }
-  
-
-  // componentDidUpdate = (prevState) => {
-  //   console.log(prevState)
-  //   if (this.state.city !== prevState.city){
-  //     switch(this.state.city) {
-  //       case "Atlanta":
-  //         this.setState({
-  //           backgroundImage: atlantaIMG
-  //         })
-  //         break;
-  //       case "Austin":
-  //         this.setState({
-  //           backgroundImage: austinIMG
-  //         })
-  //         break;
-  //       case "Chicago":
-  //         this.setState({
-  //           backgroundImage: chicagoIMG
-  //         })
-  //         break;
-  //       case "New York City":
-  //         this.setState({
-  //           backgroundImage: nycIMG
-  //         })
-  //         break;
-  //       default:
-  //         this.setState({
-  //           backgroundImage: defaultIMG
-  //         })
-  //     }
-  //   }
-  // }
-
+      }}}}
 
   render() {
-    
-
-
     console.log(this.state)
     if (this.state.redirect) {
       return <Redirect to={{
-        pathname: '/explore',
-        state: this.state.city,
-      }}
-      />;
+          pathname: '/explore',
+          state: this.state.city,}}/>;
     }
+
     return (
       <>
       <div style={{
@@ -193,19 +125,16 @@ class HomePage extends Component {
         position: 'fixed',
         zIndex: '1'
       }}>
-      {/* <div> */}
         <video cover loop="true" src={ this.state.backgroundVideo } ref="video" type="video/mp4" autoPlay="true" id="vid" muted>
           <source src={ this.state.backgroundVideo } ref="video" type="video/mp4"></source>
         </video>
       </div>
       <div style={{position: 'absolute', top: '25%', left: '33%', opacity: '0.7', zIndex: '2' }}>
-      
         <h1 className="justify-content-md-center" style={{ color: 'white'}}> Your new city awaits in</h1>
-        
         <Row className="justify-content-md-center" >
           <Col></Col>
           <Col md='auto' >
-            <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/>
+            <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>
           </Col>
           <Col></Col>
         </Row>

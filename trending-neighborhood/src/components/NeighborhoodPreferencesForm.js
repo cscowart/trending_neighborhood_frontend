@@ -69,10 +69,7 @@ class NeighborhoodPreferencesForm extends Component {
           <Button className="text-center" variant="success" type="submit" > Build it! </Button>
         </Card>
        </Form>
-      // this.props.handleResetValues
     );
-  }
-}
-}
+  }}}
 
 export default NeighborhoodPreferencesForm;
