@@ -120,13 +120,12 @@ class ScoreBreakdown extends Component {
 
     return (
       <div >
-        <h1>Showing neighborhood: {this.props.results["Neighborhood"]} </h1>
-        <CardDeck className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3  row-cols-xl-4"> 
+        <CardDeck className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3  row-cols-xl-5"> 
 
         {sortedArray.map(category => {
           return (
-            <Col className="my-4 mx-5">
-              <Card style={{width: '250px'}}>
+            <Col className="my-4 ">
+              <Card style={{width: '190px'}}>
               {/* <ReactSpeedometer
                 width={300}
                 height={175}
@@ -171,12 +170,12 @@ class ScoreBreakdown extends Component {
               
             <Card.Body>
               <h1 style={this.getScoreColor(this.props.results.breakdown[category[1]])}>{this.props.results.breakdown[category[1]]}</h1>
-              <Card.Title>{category[1]}</Card.Title>
             </Card.Body>
-            <Card.Footer>
+              <Card.Footer>{category[1]}</Card.Footer>
+            {/* <Card.Footer>
               <small className="text-muted">Maybe a link to {category[1]} in {this.props.results["Neighborhood"]}</small>
               
-            </Card.Footer>
+            </Card.Footer> */}
           </Card>
             </Col>
           )

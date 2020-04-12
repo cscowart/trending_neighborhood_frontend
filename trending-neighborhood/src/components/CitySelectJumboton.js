@@ -3,11 +3,11 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Row, Col } from 'react-bootstrap'
 
 import CitySelectDropdown from './CitySelectDropdown'
-import chicagoIMG from '../images/chicago.jpg'
-import nycIMG from '../images/nyc.jpg'
-import austinIMG from '../images/austin.png'
-import defaultIMG from '../images/default.webp'
-import atlantaIMG from '../images/atlanta.png'
+import chicagoIMG from '../media/chicago.jpg'
+import nycIMG from '../media/nyc.jpg'
+import austinIMG from '../media/austin.png'
+import defaultIMG from '../media/default.webp'
+import atlantaIMG from '../media/atlanta.png'
 
 class CitySelectJumbotron extends Component {
   state = {

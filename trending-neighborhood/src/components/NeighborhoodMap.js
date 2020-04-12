@@ -129,8 +129,8 @@ ${sortedArray[4][1]}: ${sortedArray[4][0]}
 ${sortedArray[5][1]}: ${sortedArray[5][0]}
 ${sortedArray[6][1]}: ${sortedArray[6][0]}
 ${sortedArray[7][1]}: ${sortedArray[7][0]}
-${sortedArray[8][1]}: ${sortedArray[2][0]}
-${sortedArray[9][1]}: ${sortedArray[0][0]}
+${sortedArray[8][1]}: ${sortedArray[8][0]}
+${sortedArray[9][1]}: ${sortedArray[9][0]}
 </pre></Popup>`
     layer.bindPopup(popupContent)
     } else {

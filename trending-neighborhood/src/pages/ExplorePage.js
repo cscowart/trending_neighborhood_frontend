@@ -9,13 +9,13 @@ import NeighborhoodMap from "../components/NeighborhoodMap"
 import ListView from '../components/ListView'
 import top5neighborhoods from '../mock_data/top5neighborhoods'
 import ScoreBreakdown from '../components/ScoreBreakdown';
+import { geolocated } from "react-geolocated";
 
 class ExplorePage extends Component {
   state = {
     city: "",
     categories: {
       "Walkability": 0,
-      "Public Transit": 0,
       "Restaurants and Bars": 0,
       "Entertainment": 0,
       "Shopping": 0,
@@ -54,6 +54,10 @@ class ExplorePage extends Component {
         scoreBreakdownNeighborhood: neighborhood
       })
     }
+
+
+    	
+
   }
 
   // After a user changes city preference on top button, this updates the this.state.city to the newly selected city
@@ -172,6 +176,7 @@ class ExplorePage extends Component {
 
   render() {
     // console.log(this.state)
+     
     return (
       <div style={{marginTop: "25px"}}>
         <Row>
@@ -182,6 +187,7 @@ class ExplorePage extends Component {
             </h4>
           </Col>
         </Row>
+        {this.props.coords ? <Row>You are at: {this.props.coords.latitude} lat, {this.props.coords.longitude} lon</Row>:<div></div>}
         <div style={{position: 'absolute', top: '18%', right: '2%', zIndex: '3'}}>
           {this.state.showExpandedCategories ? <NeighborhoodPreferencesForm city={this.state.city} categories={ this.state.expandedCategories } handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={ this.handleCategoriesSubmit } handleCategoryScore={this.handleCategoryScore}
            handleResetValues={this.handleResetValues}/> : <NeighborhoodPreferencesForm city={this.state.city} categories={ this.state.categories } handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={ this.handleCategoriesSubmit } handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/> }
@@ -230,4 +236,10 @@ class ExplorePage extends Component {
   }
 }
 
-export default ExplorePage;
+export default 
+geolocated({
+  positionOptions: {
+      enableHighAccuracy: false,
+  },
+  userDecisionTimeout: 5000,
+})(ExplorePage)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import Logo from '../images/up-n-up-logo_new-yellow.png'
+import Logo from '../media/up-n-up-logo_new-yellow.png'
 
 class NavBar extends Component {
   render() {

@@ -66,7 +66,7 @@ class NeighborhoodPreferencesForm extends Component {
             /> */}
 
           {/* <Dropdown.Divider /> */}
-          <ListGroup.Item className="text-center" variant="success" as="button" type="submit" > Build it! </ListGroup.Item>
+          <Button className="text-center" variant="success" type="submit" > Build it! </Button>
         </Card>
        </Form>
       // this.props.handleResetValues
