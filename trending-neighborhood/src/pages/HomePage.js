@@ -12,15 +12,15 @@ import defaultIMG from '../media/default.webp'
 // import austinIMG from '../media/austin.png'
 // import atlantaIMG from '../media/atlanta.png'
 
-import NYBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import LABackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import HoustonBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import PhoenixBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import PhiladelphiaBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import ColumbusBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import WashingtonDCBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
-import defaultBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
+import NYBackgroundVideo from '../media/NYBackgroundVideo.mp4'
+import LABackgroundVideo from '../media/LABackgroundVideo.mp4'
+import HoustonBackgroundVideo from '../media/HoustonBackgroundVideo.mp4'
+import PhoenixBackgroundVideo from '../media/PhoenixBackgroundVideo.mp4'
+import PhiladelphiaBackgroundVideo from '../media/PhiladelphiaBackgroundVideo.mp4'
+import DenverBackgroundVideo from '../media/DenverBackgroundVideo.mp4'
+import WashingtonDCBackgroundVideo from '../media/WashingtonDCBackgroundVideo.mp4'
 import ChicagoBackgroundVideo from '../media/ChicagoBackgroundVideo.mp4'
+import defaultBackgroundVideo from '../media/defaultBackgroundVideo.mp4'
 import { geolocated } from "react-geolocated";
 
 
@@ -29,7 +29,7 @@ class HomePage extends Component {
   state = {
     backgroundImage: defaultIMG,
     backgroundVideo: defaultBackgroundVideo,
-    videoChange: false,
+    videoChange: 0,
     closestCity: "",
     city: "",
     redirect: false,
@@ -42,25 +42,30 @@ class HomePage extends Component {
     })   
   }
   
-  // componentDidMount= () => {
+  componentDidMount= () => {
+    let count=0}
   
     
   
 
   componentDidUpdate = () => {
+    
+    if (this.state.videoChange<2){
+      this.setState({videoChange: this.props.videoChange+1})
+
 
     let distance=0
     let R=0
-
+    // Chicago
     const coordinates = [
       ['New York', 40.6635, -73.9387],
       ['Los Angeles', 34.0194, -118.4108],
-      ['Chicago', 41.881832, -87.623177],
+      ['Washington DC', 41.881832, -87.623177],
       ['Houston', 29.7866, -95.3909],
       ['Phoenix', 33.5722, -112.0901],
       ['Philadelphia', 40.0094, -75.1333],
-      ['Columbus', 39.9852, -82.9848],
-      ['Washington DC', 38.9041, -77.0172]
+      ['Denver',  39.7619,  -104.8811],
+      ['Chicago', 38.9041, -77.0172]
     ]
 
     let distances = {
@@ -70,12 +75,12 @@ class HomePage extends Component {
       'Houston': 0,
       'Phoenix': 0,
       'Philadelphia':0,
-      'Columbus':0,
+      'Denver':0,
       'Washington DC':0
     }
-    let backgroundVideo = "defaultBackGroundVideo"
+    // let backgroundVideo = "defaultBackGroundVideo"
   
-  
+  if (this.props.coords) {
       {coordinates.map((cityCoords)=> {
         let lat1 = this.props.coords.latitude
         let lon1 = this.props.coords.longitude
@@ -98,7 +103,7 @@ class HomePage extends Component {
         let lowest = Math.min.apply(null, keys.map(function(x) { return distances[x]} ));
         let closest  = keys.filter(function(y) { return distances[y] === lowest });
         this.setState({closestCity: closest[0]})
-        console.log("Closest City: ", closest[0])
+        console.log("Closest City: ", this.state.closestCity)
       })}
       
        
@@ -109,12 +114,20 @@ class HomePage extends Component {
         case'Houston': this.setState({backgroundVideo: HoustonBackgroundVideo}); break;
         case'Phoenix': this.setState({backgroundVideo: PhoenixBackgroundVideo}); break;
         case'Philadelphia': this.setState({backgroundVideo: PhiladelphiaBackgroundVideo}); break;
-        case'Columbus': this.setState({backgroundVideo: ColumbusBackgroundVideo}); break;
+        case'Denver': this.setState({backgroundVideo: DenverBackgroundVideo}); break;
         case'Washington DC': this.setState({backgroundVideo: WashingtonDCBackgroundVideo}); break;
         default: this.setState({backgroundVideo: defaultBackgroundVideo})
-      console.log("New Background Video: ", this.state.backgroundVideo)
+        
+        console.log("New Background Video: ", this.state.backgroundVideo)
+        this.setState({videoChange: this.state.videoChange+1})
       }
       }
+    }
+    // if (this.state.videoChange==1){
+      // this.setState({videoChange: 2})}
+
+  
+  }
   
       
       // console.log(BackgroundVideo)
@@ -172,10 +185,10 @@ class HomePage extends Component {
     return (
       <>
       <div style={{
-        height: '100%',
-        width: '100%',
+        height: '100vh',
+        width: '100vh',
         float: 'center',
-        top: '0',
+        bottom: '0',
         padding: 'none',
         position: 'fixed',
         zIndex: '1'
