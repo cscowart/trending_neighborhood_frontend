@@ -48,7 +48,8 @@ class ScoreBreakdown extends Component {
 
   render() {
     let sortedArray=[]
-    for (let i in this.props.userPreferences){sortedArray.push([this.props.userPreferences[i], i])}
+    for (let i in this.props.userPreferences){
+      if ((!this.props.showExpandedCategories && this.props.userPreferences[i][0]==1) || (this.props.showExpandedCategories)) {sortedArray.push([this.props.userPreferences[i][1], i])}}
     sortedArray=sortedArray.reverse().sort().reverse() 
 
     return (

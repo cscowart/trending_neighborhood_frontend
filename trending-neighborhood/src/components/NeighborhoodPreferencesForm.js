@@ -31,22 +31,23 @@ class NeighborhoodPreferencesForm extends Component {
           <Card.Header>Customize my Neighborhood</Card.Header>
           <ListGroup style={{width: '100%'}}>      
             <ListGroup.Item style={{zIndex: '3'}}>
-              {Object.entries(this.props.categories).map((category, index) => {
+              {Object.entries(this.props.categories).map((category) => {
+                if ((!this.props.showExpandedCategories && category[1][0]==1) || (this.props.showExpandedCategories)) {
                 return (
                 <>  
                   <b>{category[0]}</b>
-                  <Form.Group id={this.getPreferenceName(index)} key={index} controlId="neighborhoodPreferences">
-                    <Form.Control type="range" defaultValue={category[1]} custom onChange={this.props.handleCategoryScore}/>
+                  <Form.Group id={category[0]} key={category[0]} controlId="neighborhoodPreferences">
+                    <Form.Control type="range" defaultValue={category[1][1]} custom onChange={this.props.handleCategoryScore}/>
                   </Form.Group>
                 </>    
-                    )
+                    )}
                   })}
               </ListGroup.Item>
             </ListGroup>
               
             <BootstrapSwitchButton 
               // width={200}
-              checked={true}
+              checked={!this.props.showExpandedCategories}
               onlabel='Complicate things!'
               offlabel='Too much?'
               offstyle='info'

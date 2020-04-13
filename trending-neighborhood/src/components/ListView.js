@@ -59,7 +59,7 @@ class ListView extends Component {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey={result["Neighborhood"]}>
               <Card.Body>
-                <ScoreBreakdown results={result} userPreferences={this.props.userPreferences}/>
+                <ScoreBreakdown results={result} userPreferences={this.props.userPreferences} showExpandedCategories={this.props.showExpandedCategories}/>
               </Card.Body>
             </Accordion.Collapse>
           </Card>

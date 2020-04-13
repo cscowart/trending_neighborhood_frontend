@@ -15,26 +15,18 @@ class ExplorePage extends Component {
   state = {
     city: "",
     categories: {
-      "Walkability": 0,
-      "Restaurants and Bars": 0,
-      "Entertainment": 0,
-      "Shopping": 0,
-      "Parks": 0,
+      "Walkability": [1, 0],
+      "Public Transit": [2, 0],
+      "Restaurants and Bars": [1, 0],
+      "Entertainment": [1, 0],
+      "Shopping": [1, 0],
+      "Parks": [1, 0],
+      "Biking": [2, 0],
+      "Errands": [2, 0],
+      "Groceries": [2, 0],
+      "Schools": [2, 0],
     },
-    expandedCategories: {
-      "Walkability": 0,
-      "Public Transit": 0,
-      "Restaurants and Bars": 0,
-      "Entertainment": 0,
-      "Shopping": 0,
-      "Parks": 0,
-      "Biking": 0,
-      "Errands": 0,
-      "Groceries": 0,
-      "Schools": 0,
-      // crime: 0,
-      // localEvents: 0,
-    },
+ 
     mapView: true,
     showExpandedCategories: false,
     scoreBreakdownNeighborhood: null,
@@ -66,7 +58,6 @@ class ExplorePage extends Component {
 
   // After a user changes city preference on top button, this updates the this.state.city to the newly selected city
   handleCitySelect = event => {
-    console.log(event)
     this.setState({
       city: Cities[event],
       isDefault: true,
@@ -79,24 +70,16 @@ class ExplorePage extends Component {
   handleResetValues = event => {
     this.setState({
       categories: {
-        "Walkability": 0,
-        "Public Transit": 0,
-        "Restaurants and Bars": 0,
-        "Entertainment": 0,
-        "Shopping": 0,
-        "Parks": 0,
-      },
-      expandedCategories: {
-        "Walkability": 0,
-        "Public Transit": 0,
-        "Restaurants and Bars": 0,
-        "Entertainment": 0,
-        "Shopping": 0,
-        "Parks": 0,
-        "Biking": 0,
-        "Errands": 0,
-        "Groceries": 0,
-        "Schools": 0,
+        "Walkability": [1, 0],
+        "Public Transit": [2, 0],
+        "Restaurants and Bars": [1, 0],
+        "Entertainment": [1, 0],
+        "Shopping": [1, 0],
+        "Parks": [1, 0],
+        "Biking": [2, 0],
+        "Errands": [2, 0],
+        "Groceries": [2, 0],
+        "Schools": [2, 0],
       },
     })
   }
@@ -105,11 +88,11 @@ class ExplorePage extends Component {
   handleCategoriesSubmit = event => {
     event.preventDefault()
     let categoriesSelect = null
-    if (this.state.showExpandedCategories) {
-      categoriesSelect = this.state.expandedCategories
-    } else {
+    // if (this.state.showExpandedCategories) {
+    //   categoriesSelect = this.state.expandedCategories
+    // } else {
       categoriesSelect = this.state.categories
-    }
+    // }
     const neighborhoodObject = {
       city: this.state.city,
       categories: categoriesSelect
@@ -133,24 +116,15 @@ class ExplorePage extends Component {
     let cat = event.target.parentElement.id
     let val = parseInt(event.target.value)
     switch (true) {
-        case (val>87):
-          val=99
-          break;
-        case (val>62):
-          val=75
-          break;
-        case (val>37):
-          val=50
-          break;
-        case (val>12):
-          val=25
-          break;
-        default:
-          val=0
-      }
+      case (val>87): val=99;break;
+      case (val>62): val=75; break;
+      case (val>37): val=50; break;
+      case (val>12): val=25; break;
+      default: val=0
+    }
     const { categories } = { ...this.state }
     const currentState = categories
-    currentState[cat] = val
+    currentState[cat][1] = val
     this.setState({
       categories: currentState
     })
@@ -162,7 +136,7 @@ class ExplorePage extends Component {
       showExpandedCategories: !this.state.showExpandedCategories,
     })
   }
-
+  
   render() {
     return (
       <div style={{marginTop: "25px"}}>
@@ -174,8 +148,8 @@ class ExplorePage extends Component {
           </Col>
         </Row>
         <div style={{position: 'absolute', top: '18%', right: '2%', zIndex: '3'}}>
-          {this.state.showExpandedCategories ? <NeighborhoodPreferencesForm city={this.state.city} categories={ this.state.expandedCategories } handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={ this.handleCategoriesSubmit } handleCategoryScore={this.handleCategoryScore}
-           handleResetValues={this.handleResetValues}/> : <NeighborhoodPreferencesForm city={this.state.city} categories={ this.state.categories } handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={ this.handleCategoriesSubmit } handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/> }
+           <NeighborhoodPreferencesForm city={this.state.city} categories={this.state.categories} handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={this.handleCategoriesSubmit} handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/> }
+
         </div>
         <Row className="mx-3" style={{ height: '600', width: '100vw',}}>
           <div style={{position: 'absolute', top: '10%', left: '60px', zIndex: '2', }}>
@@ -194,12 +168,14 @@ class ExplorePage extends Component {
           </div>
           <div style={{height: "960px", width: '70%', marginTop: '50px', overflowY: 'auto'}}>
             {this.state.mapView ? 
-              <NeighborhoodMap city={ this.state.city } results={ this.state.results} isActive={ this.state.mapView } /> :
-              !this.state.showExpandedCategories && !this.state.mapView ?
-              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} /> :
-              this.state.showExpandedCategories && !this.state.mapView ?
-              <ListView  city={ this.state.city } results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={ this.state.expandedCategories } /> :
-              <div></div>
+              // <NeighborhoodMap city={ this.state.city } results={ this.state.results} isActive={ this.state.mapView } /> :
+              // !this.state.showExpandedCategories && !this.state.mapView ?
+              // <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} /> :
+              // this.state.showExpandedCategories && !this.state.mapView ?
+              // <ListView  city={ this.state.city } results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={ this.state.expandedCategories } /> :
+
+              <NeighborhoodMap city={ this.state.city } categories={this.state.categories} results={ this.state.results} isActive={ this.state.mapView } showExpandedCategories={this.state.showExpandedCategories}/> :
+              <ListView  city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} showExpandedCategories={this.state.showExpandedCategories}/> 
             }
           </div>       
         </Row>
