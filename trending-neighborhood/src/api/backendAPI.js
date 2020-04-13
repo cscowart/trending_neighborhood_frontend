@@ -16,6 +16,17 @@ const findNeighborhood = (neighborhoodObject) => {
     })
 }
 
+const getDefaultNeighborhood = (city) => {
+  return (fetch(`${url}default_view/${city}`))
+    .then(resonse => resonse.json())
+    .then(data => JSON.parse(data))
+    .catch((error) => {
+    console.log('Error:', error);
+    })
+}
+
+
 export default {
   findNeighborhood,
+  getDefaultNeighborhood,
 }
