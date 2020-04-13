@@ -10,9 +10,9 @@ class NeighborhoodMap extends Component{
     lng: -87.629,
     zoom: 12,
     scrollWheelZoom: false,
-    change: false
+    change: false,
   }
-
+  
   componentWillUnmount() {
     if (this.view) {
       // destroy the map view
@@ -21,13 +21,15 @@ class NeighborhoodMap extends Component{
   }
 
   componentDidMount(){
+    console.log("Mounting")
     this.getCityCenter()
   }
 
-  componentDidUpdate(prevProps){
-    if (this.props.categories !== prevProps.categories){
-      // console.log("Update!")
-      this.setState({change: !this.state.change})
+  componentDidUpdate(prevProps, prevState){
+    if (prevProps.results !== this.props.results){
+      this.setState(
+        {change: !this.state.change
+      })
     }
     if (this.props.city !==  prevProps.city){
       this.getCityCenter()
@@ -46,14 +48,17 @@ class NeighborhoodMap extends Component{
 
   onEachFeature(feature, layer)  {
     let matching = layer.options.results.find(element => element["Neighborhood"] == feature.properties.name)
-    // let categories = layer.options.categories
     let expanded = layer.options.showExpandedCategories
     let color = ""
     let score = null
     if (matching) {
       score = matching["Overall Score"]
       switch(true) {
+        case (score > 95): color = '#00412c'; break;
+        case (score > 92): color = '#00592c'; break;
         case (score > 90): color = '#006d2c'; break;
+        case (score > 85): color = '#237845'; break;
+        case (score > 82): color = '#237d45'; break;
         case (score > 80): color = '#238b45'; break;
         case (score > 70): color = '#41ae76'; break;
         case (score > 60): color = '#66c2a4'; break;
@@ -68,13 +73,11 @@ class NeighborhoodMap extends Component{
         fillOpacity: .75,
         fillColor: color,
       })
-
+  
       let sortedArray=[]
       for (let i in matching.breakdown) {
-        if ((!expanded && layer.options.categories[i][0]==1) || (expanded)) {sortedArray.push([layer.options.categories[i][1], matching.breakdown[i], i])}}
+        if ((!expanded && layer.options.categories[i][0]==1) || (expanded)) {sortedArray.push([layer.options.categories[i][1], parseInt(matching.breakdown[i]), i])}}
         sortedArray=sortedArray.sort(function (a,b) { return b[0]-a[0] || b[1]-a[1]})
-        // console.log("Sorted Array: ", sortedArray)  
-
       if (!expanded) {
       const popupContent = ` 
         <Popup>
@@ -122,25 +125,23 @@ class NeighborhoodMap extends Component{
     }
   
   render() {
-    if (this.props.results === null) {
-      return (
-        <ReactLoading type={"bars"} color={"#ffffff"} height={'20%'} width={'20%'} />
-      )
-    }
+    console.log(this.props)
     const position = [this.state.lat, this.state.lng]
+    let isChanged = this.state.change
     return (
-      <Map scrollWheelZoom={false} center={position} zoom={this.state.zoom} style={{height: "960px", width: '100%'}}>
+      <Map scrollWheelZoom={false} center={position} zoom={this.state.zoom} > {/* style={{height: "960px", width: '100%'}}*/}
         <TileLayer //Layer that displays the watermark on the bottom right of the map
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
         <GeoJSON //Layer that imports all the neighborhood boundaries and makes them clickable
+          key={isChanged}
           data={ChicagoNeighborhoods}
           results={this.props.results}
           onEachFeature={this.onEachFeature}
           showExpandedCategories={this.props.showExpandedCategories}
           categories={this.props.categories}
-        />    
+        /> 
       </Map>
     )
   }
