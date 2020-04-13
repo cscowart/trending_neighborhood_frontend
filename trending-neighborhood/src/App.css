@@ -3,15 +3,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .App {
-  text-align:  center;
+  /* text-align:  center; */
+  /* width: 80% !important;
+  height: 80% !important; */
+  overflow-x: hidden;
 }
 
 .leaflet-container {
-  height: 960px;
-  width: 100%;
+  width: 98% !important;
+  height: 87% !important;
+  margin-right: 15px;
+  /* margin-top: 25px; */
   position: absolute;
   top: 104px;
   z-Index: 1;
-  left: 23px;
-  right: 23px;
+}
+
+#map-list-layer {
+  margin-left: 15px;
+
+  width: 80% !important;
+  height: 80% !important;
+}
+
+#neighborhood-map {
+  width: 80% !important;
+  overflow-x: hidden;
+}
+
+#list-view {
+  width: 80% ! important;
+}
+
+
+/* #map-list-components{
+  width: 80% !important;
+  height: 80% !important;
+} */
+
+#video-layer {
+  position: absolute;
+}
+
+#home-page-header {
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff
+}
+
+#home-page {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+#navbar {
+  color: #ffffff;
+  background-color: #000;
+  z-index: 999;
+  opacity: 0.8;
+  width: 100% !important;
+}
+
+#nav {
+  color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 20px;
 }

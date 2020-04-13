@@ -116,7 +116,7 @@ class HomePage extends Component {
 
     return (
       <>
-      <div style={{
+      <div id="video-layer" style={{
         height: '100vh',
         width: '100vh',
         float: 'center',
@@ -129,9 +129,10 @@ class HomePage extends Component {
           <source src={ this.state.backgroundVideo } ref="video" type="video/mp4"></source>
         </video>
       </div>
-      <div style={{position: 'absolute', top: '25%', left: '33%', opacity: '0.7', zIndex: '2' }}>
-        <h1 className="justify-content-md-center" style={{ color: 'white'}}> Your new city awaits in</h1>
+      <div id="home-page" > {/*style={{position: 'absolute', top: '25%', left: '33%', opacity: '0.7', zIndex: '2' }}*/}
+
         <Row className="justify-content-md-center" >
+          <h1 id="home-page-header" > Your new city awaits in</h1> {/*className="justify-content-md-center" style={{ color: 'white'}}*/}
           <Col></Col>
           <Col md='auto' >
             <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>

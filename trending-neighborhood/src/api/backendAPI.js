@@ -1,7 +1,7 @@
 const url = "http://127.0.0.1:8000/"
 
 const findNeighborhood = (neighborhoodObject) => {
-  return (fetch(`${url}user_submit`, {
+  return(fetch(`${url}user_submit`, {
   headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
@@ -9,17 +9,18 @@ const findNeighborhood = (neighborhoodObject) => {
   method: 'POST',
   body: JSON.stringify(neighborhoodObject)
   }))
-    .then(resonse => resonse.json())
-    .then(data => JSON.parse(data))
+    .then(response => response.json())
+    .then(data => data)
     .catch((error) => {
     console.log('Error:', error);
     })
 }
 
-const getDefaultNeighborhood = (city) => {
+const getDefaultNeighborhoods = (city) => {
+  console.log(city)
   return (fetch(`${url}default_view/${city}`))
     .then(resonse => resonse.json())
-    .then(data => JSON.parse(data))
+    .then(data => data)
     .catch((error) => {
     console.log('Error:', error);
     })
@@ -28,5 +29,5 @@ const getDefaultNeighborhood = (city) => {
 
 export default {
   findNeighborhood,
-  getDefaultNeighborhood,
+  getDefaultNeighborhoods,
 }
