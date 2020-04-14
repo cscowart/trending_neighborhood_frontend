@@ -14,7 +14,7 @@ class ListView extends Component {
 
   render() {
     return (
-      <Accordion className = "mt-4" defaultActiveKey="0">
+      <Accordion style={{marginTop: '150px'}} defaultActiveKey="0">
       {this.props.results.map((result, index) => {
         let sortedArray=[]
         for (let i in result.breakdown){sortedArray.push([result.breakdown[i], i])}

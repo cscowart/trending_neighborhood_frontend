@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, Dropdown, DropdownButton, ToggleButton, ButtonGroup, Card, Row, Col, Button, Form } from 'react-bootstrap'
+import { ListGroup, Dropdown, DropdownItem, DropdownButton, ToggleButton, ButtonGroup, Card, Row, Col, Button, Form } from 'react-bootstrap'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 // import CategorySlider from './CategorySlider'
 
@@ -27,25 +27,38 @@ class NeighborhoodPreferencesForm extends Component {
     else {
       return (
       <Form id="preferences" onSubmit={ this.props.handleCategoriesSubmit }>
-        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '100', width: '300px', overflow: 'auto'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
+        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '560px', width: '380px', opacity: '0.9'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
           <Card.Header>Customize my Neighborhood</Card.Header>
-          <ListGroup style={{width: '100%'}}>      
-            <ListGroup.Item style={{zIndex: '3'}}>
-              {Object.entries(this.props.categories).map((category) => {
-                if ((!this.props.showExpandedCategories && category[1][0]==1) || (this.props.showExpandedCategories)) {
+          <Card.Body style={{overflow: 'auto'}}>
+            {Object.entries(this.props.categories).map(     (category) => {
+              console.log(category)
+              let categoryName=category[0]
+              let score = category[1][1]
+              let valueText=""
+              switch (true) {
+                case (score>87): valueText="Very important"; break;
+                case (score>62): valueText="Moderately important"; break;
+                case (score>37): valueText="Somewhat important"; break;
+                case (score>0): valueText="A little important"; break;
+                default: valueText="How important is this?"
+              }
+              if ((!this.props.showExpandedCategories && category[1][0]==1) || (this.props.showExpandedCategories)) {
                 return (
-                <>  
-                  <b>{category[0]}</b>
-                  <Form.Group id={category[0]} key={category[0]} controlId="neighborhoodPreferences">
-                    <Form.Control type="range" defaultValue={category[1][1]} custom onChange={this.props.handleCategoryScore}/>
+                  <>  
+                  <b>{categoryName}: </b>&ensp; <span className="text-muted justify-end"> {valueText}</span>
+                  <Form.Group id={categoryName} key={categoryName} controlId="neighborhoodPreferences">
+                    <Form.Control type="range" value={score} custom onChange={this.props.handleCategoryScore}/>
                   </Form.Group>
-                </>    
+                  </>    
                     )}
                   })}
-              </ListGroup.Item>
-            </ListGroup>
-              
-            <BootstrapSwitchButton 
+          </Card.Body>
+          <Card.Footer>
+            <ListGroup>
+              <DropdownItem className="text-center" variant="info" onClick={ this.props.handleResetValues} > Reset all categories </DropdownItem>
+
+              <Dropdown.Divider />
+              <BootstrapSwitchButton 
               // width={200}
               checked={!this.props.showExpandedCategories}
               onlabel='Complicate things!'
@@ -53,21 +66,13 @@ class NeighborhoodPreferencesForm extends Component {
               offstyle='info'
               size='md'
               onChange={ this.props.handleExpandedCategories }
-            />
-          {/* <Dropdown.Divider />
-          <BootstrapSwitchButton 
-              // width={200}
-              checked={true}
-              onlabel='Reset All Values'
-              offlabel='Return Previous Values'
-              onstyle='warning'
-              offstyle='info'
-              size='md'
-              onChange={ this.props.handleResetValues ).reset() }
-            /> */}
+              />
 
-          {/* <Dropdown.Divider /> */}
-          <Button className="text-center" variant="success" type="submit" > Build it! </Button>
+            <Dropdown.Divider />
+            <Button className="text-center" variant="success" type="submit" > Build it! </Button>
+
+            </ListGroup>
+          </Card.Footer>
         </Card>
        </Form>
     );
