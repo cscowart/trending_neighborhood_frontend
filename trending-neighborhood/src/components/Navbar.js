@@ -19,19 +19,14 @@ class NavBar extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav id="nav" > {/*className="mr-auto"*/}
-            <NavDropdown title="Explore" id="city-nav-dropdown">
+            <NavDropdown title="Explore" id="explore-nav-dropdown">
               {Cities.map((city, index) => {
                 return (
-                  
+                  <NavDropdown.Item key={index} href="#action/3.1">{city}</NavDropdown.Item>
                 )
               })}
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link id="nav-link" href="/explore" >Explore</Nav.Link> {/*style={{fontSize: "20px"}}*/}
+            {/* <Nav.Link id="nav-link" href="/explore" >Explore</Nav.Link> style={{fontSize: "20px"}} */}
             {/* <ExploreCitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/> */}
             <Nav.Link id="nav-link" href="#link">Events</Nav.Link> {/*style={{fontSize: "20px"}}*/}
           </Nav>

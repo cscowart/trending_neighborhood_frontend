@@ -34,19 +34,20 @@ class ExplorePage extends Component {
     results: null //If testing w/o back end, use top5neighborhoods & import top5neighborhoods from '../mock_data/top5neighborhoods'
   }
 
-  componentDidUpdate(prevState, prevProps) {
-    // console.log('THIS IS WHAT IS UP')
-    console.log("this.state.results: ", this.state.categories)
-    // console.log(prevState)
-    console.log("prevProps: ", prevProps.categories)
-    // console.log("current Props: ", this.props)
+  // componentDidUpdate(prevState, prevProps) {
+  //   // console.log('THIS IS WHAT IS UP')
+  //   // console.log("this.state.results: ", this.state.categories)
+  //   // console.log(prevState)
+  //   // console.log("prevProps: ", prevProps.categories)
+  //   // console.log("current Props: ", this.props)
 
-    if (prevProps.categories !== this.state.categories){
-      this.setState({results: this.state.results})
-    }
-  }
+  //   if (prevProps.categories !== this.state.categories){
+  //     this.setState({results: this.state.results})
+  //   }
+  // }
 
   componentDidMount() {
+    // console.log(this.props)
     // Checks to see what city was selected on the main landing page
     if (this.props.location.state && this.state.isDefault){
       this.setState({
@@ -81,7 +82,8 @@ class ExplorePage extends Component {
   }
 
   // Resets the user preference scores when going to a new city page
-  handleResetValues = event => {
+  handleResetValues=()=> {
+    console.log("Reset!")
     this.setState({
       categories: {
         "Walkability": [1, 0],
@@ -131,8 +133,9 @@ class ExplorePage extends Component {
   handleCategoryScore = event => {
     let cat = event.target.parentElement.id
     let val = parseInt(event.target.value)
+    let text="Not Important"
     switch (true) {
-      case (val>87): val=99;break;
+      case (val>87): val=99; break;
       case (val>62): val=75; break;
       case (val>37): val=50; break;
       case (val>12): val=25; break;
@@ -143,7 +146,7 @@ class ExplorePage extends Component {
     currentState[cat][1] = val
     // console.log(`Current State: ${currentState}`)
     this.setState({
-      categories: currentState
+      categories: currentState,
     })
   }
 
@@ -167,7 +170,7 @@ class ExplorePage extends Component {
               {/* <ExploreCitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/> */}
           </Col>
         </Row>
-        <div style={{position: 'absolute', top: '18%', right: '2%', zIndex: '3'}}>
+        <div style={{position: 'absolute', top: '22%', right: '2%', zIndex: '3'}}>
            <NeighborhoodPreferencesForm city={this.state.city} categories={this.state.categories} handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={this.handleCategoriesSubmit} handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/>
         </div>
         <Row id="map-list-layer" > {/*/ className="mx-3" style={{ height: '600', width: '100vw',}}*/}

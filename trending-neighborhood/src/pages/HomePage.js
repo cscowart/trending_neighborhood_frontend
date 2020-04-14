@@ -19,7 +19,6 @@ import { geolocated } from "react-geolocated";
 
 class HomePage extends Component {
   state = {
-    backgroundImage: defaultIMG,
     backgroundVideo: defaultBackgroundVideo,
     videoChange: 0,
     closestCity: "",
@@ -133,7 +132,7 @@ class HomePage extends Component {
 
         <Row className="justify-content-md-center" >
           <h1 id="home-page-header" > Your new city awaits in</h1> {/*className="justify-content-md-center" style={{ color: 'white'}}*/}
-          <Col></Col>
+                    <Col></Col>
           <Col md='auto' >
             <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>
           </Col>

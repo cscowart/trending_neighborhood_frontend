@@ -14,7 +14,7 @@ function App() {
             <NavBar />
             <Route exact path="/" component={HomePage} />
             <Route exact path="/explore" component={ExplorePage} />
-            {/* <Route exact path="/sections/:sectionID" component={SectionPage} />
+            {/* <Route exact path="/explore/:cityID" component={ExplorePage} />
             <Route exact path="/add-article" component={AddArticlePage} />
             <Route exact path="/login" component={LoginPage} /> */}
           </div>
