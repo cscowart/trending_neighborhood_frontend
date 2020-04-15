@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {Col, Card, CardDeck} from 'react-bootstrap'
-import ReactSpeedometer from "react-d3-speedometer"
-
 
 class ScoreBreakdown extends Component {
 
@@ -77,47 +75,3 @@ class ScoreBreakdown extends Component {
 }
 
 export default ScoreBreakdown
-
-// keeping this for now in case we want to use this spedometer somewhere later
-
-{/* <ReactSpeedometer
-  width={300}
-  height={175}
-  needleHeightRatio={0.7}
-  // Get value from API Return not the category score
-  value={this.props.results.breakdown[category[1]] * 10} 
-  currentValueText="Happiness Level"
-  customSegmentLabels={[
-    {
-      text: "Very Bad",
-      position: "INSIDE",
-      color: "#555",
-    },
-    {
-      text: "Bad",
-      position: "INSIDE",
-      color: "#555",
-    },
-    {
-      text: "Ok",
-      position: "INSIDE",
-      color: "#555",
-      fontSize: "19px",
-    },
-    {
-      text: "Good",
-      position: "INSIDE",
-      color: "#555",
-    },
-    {
-      text: "Very Good",
-      position: "INSIDE",
-      color: "#555",
-    },
-  ]}
-  ringWidth={47}
-  needleTransitionDuration={3333}
-  needleTransition="easeElastic"
-  needleColor={"#90f2ff"}
-  textColor={"#d8dee9"}
-/> */}

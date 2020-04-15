@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import backendAPI from '../api/backendAPI';
-import { Media, Pagination } from 'react-bootstrap';
+import { FormControl, FormGroup, Media, Pagination } from 'react-bootstrap';
 import moment from 'moment'
+import ReactLoading from 'react-loading';
 
 class EventPage extends Component {
   state = {
@@ -37,12 +38,21 @@ class EventPage extends Component {
   }
 
 
+  handleSearch = async (event) => {
+    let userInput = event.target.value
+    if (userInput !== '') {
+      let response = await backendAPI.searchEvents(this.state.city, userInput)
+      console.log(response)
+    }
+  }
 
 
   render() {
     if (this.state.isLoading) {
       return (
-        <h1>Loading...</h1>
+        <div >
+          <ReactLoading className='react-loading' type={'bars'} color={'blue'} height={'20%'} width={'20%'} />
+        </div>
       )
     }
     // sort the events by date
@@ -50,6 +60,9 @@ class EventPage extends Component {
     let active = 1
     return (
       <div id="event-page">
+        <FormGroup>
+          <FormControl onChange={this.handleSearch} type="text" placeholder="Search" />
+        </FormGroup>
         {/* <Pagination> */}
         {sortedEvents.map((event, index) => {
 
