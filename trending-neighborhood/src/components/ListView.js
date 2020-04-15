@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Accordion, Button, ListGroup, ListGroupItem, Row, Col, Card, CardDeck } from 'react-bootstrap';
+import { PageItem, Pagination, Accordion, Button, ListGroup, ListGroupItem, Row, Col, Card, CardDeck } from 'react-bootstrap';
 import ScoreBreakdown from './ScoreBreakdown';
 import { geolocated } from "react-geolocated";
 import CityCoords from '../config/CityCoords.json';
 import GetDistance from '../HelperFunctions/GetDistance'
-
 
 
 
@@ -17,9 +16,10 @@ class ListView extends Component {
     }
 
   render() {
+    let rnd=Math.random()
     console.log("props", this.props)
     return (
-      <CardDeck  sm style={{marginTop: '150px', width: '400px'}} md style={{marginTop: '150px', width: '400px'}} lg style={{marginTop: '150px', width: '800px'}} xl style={{marginTop: '150px', width: '1100px'}}> 
+      <CardDeck  id="list-view" sm-style={{marginTop: '150px', width: '400px'}} md-style={{marginTop: '150px', width: '400px'}} lg-style={{marginTop: '150px', width: '400px'}} xl-style={{marginTop: '150px', width: '1100px'}} > 
       {this.props.results.map((result, index) => {
         let sortedArray=[]
         for (let i in result.breakdown){sortedArray.push([result.breakdown[i], i])}
@@ -52,27 +52,28 @@ class ListView extends Component {
             
             return(
         // <Card key={index} >
-
-          <Col className="my-4 ">
+        <Row className="my-4" xl={3} >
+          <Col >
             <Card className="mx-3" key={index} style={{height: '300px', width: '300px'}}>
-              <Card.Img variant="top" src={`https://placeimg.com/400/400/arch?${index}`} style={{opacity: '0.5'}}/>
+              <Card.Img variant="top" src={`https://placeimg.com/400/400/arch?${rnd}${index}`} style={{opacity: '0.5'}}/>
               <Card.ImgOverlay>
                 <Card.Body className="bg-white" style={{opacity: '0.7'}}>
                   <Card.Title className="text-center">{result["Neighborhood"]}<br/>
                     <small className="text-muted">{distance} miles away from you</small>
                   </Card.Title>
-                  {/* <h1 style={this.getScoreColor(this.props.results.breakdown[category[1]])}> */}
                   {sortedArray.slice(0, 5).map((category) => {
                     return(
                       <ul id="list-view-categories">{category[1]}: {parseInt(category[0])}</ul>
                     )    
                   })}
-                {/* <ul >Link to something</ul> */}
+                <small centered><Button size="xs">I'm a link!</Button> <Button size="xs">I'm a link!</Button>
+                </small>
                 </Card.Body>
          
               </Card.ImgOverlay>
             </Card>
           </Col>
+        </Row>
             )
             {/* ) */}
           {/* })} */}

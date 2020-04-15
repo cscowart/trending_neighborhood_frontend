@@ -11,6 +11,7 @@ import NeighborhoodMap from "../components/NeighborhoodMap"
 import ListView from '../components/ListView'
 import ScoreBreakdown from '../components/ScoreBreakdown';
 import { geolocated } from "react-geolocated";
+import MapLegend from '../components/MapLegend'
 // import top5neighborhoods from '../mock_data/top5neighborhoods'
 
 class ExplorePage extends Component {
@@ -199,11 +200,15 @@ class ExplorePage extends Component {
               }}/>
           </div>
           <div id="map-list-components"> {/*style={{height: "960px", width: '70%', marginTop: '50px', overflowY: 'auto'}}*/}
-            {this.state.mapView ? 
-              <NeighborhoodMap id="neighborhood-map" city={ this.state.city } categories={this.state.categories} results={ this.state.results} isActive={ this.state.mapView } showExpandedCategories={this.state.showExpandedCategories}/> :
+            {this.state.mapView ?
+              <div> 
+                <NeighborhoodMap id="neighborhood-map" city={ this.state.city } categories={this.state.categories} results={ this.state.results} isActive={ this.state.mapView } showExpandedCategories={this.state.showExpandedCategories}/>
+                <MapLegend />
+              </div>  :
               <ListView  id="list-view" city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} showExpandedCategories={this.state.showExpandedCategories}/> 
             }
-          </div>       
+          </div>
+                
         </Row>
       </div>
     );

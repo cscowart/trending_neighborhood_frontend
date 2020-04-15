@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom';
 import backendAPI from '../api/backendAPI';
 import { Media, Pagination } from 'react-bootstrap';
 import moment from 'moment'
@@ -39,7 +40,6 @@ class EventPage extends Component {
 
 
   render() {
-    console.log(this.state.results)
     if (this.state.isLoading) {
       return (
         <h1>Loading...</h1>
@@ -52,7 +52,7 @@ class EventPage extends Component {
       <div id="event-page">
         {/* <Pagination> */}
         {sortedEvents.map((event, index) => {
-          // console.log(event)
+
           // Loops through to pick out an image that has a "16_9" aspect ratio
           let image = event.images[0].url
           for (let i = 0; i < event.images.length; i++){
@@ -61,15 +61,8 @@ class EventPage extends Component {
               break;
             }
           }
-          let href = "https://www.google.com/maps/place/" + event.address + ",+" + event.city + ",+" + event.state + event.zip
-          href = href.replace(/ /g, "%20")
-          let links = document.getElementsByClassName("dynamicLink")
-          for (var i = 0; i < links.length; i++) {
-            links[i].href = href;
-            links[i].innerHTML = href.replace('http://',"");
-         }
-         console.log(links)
-          // console.log(formattedMapLink)
+          let url = "https://www.google.com/maps/place/" + event.address + ",+" + event.city + ",+" + event.state + "%20" + event.zip
+          url = url.replace(/ /g, "%20")
           return (
             // <Pagination.Item key={index} active={index === active}>
               <Media 
@@ -89,10 +82,12 @@ class EventPage extends Component {
               <Media.Body>
                 <p>{moment(`${event.date}, ${event.time}`).format('llll')}</p>
                 <h5>Event Title Here</h5>
-                <a href="link" className="dynamicLink">
-                {links[index]}
-                </a>
-                <a href={event.eventUrl}>Tickets to this event</a>
+                <div id="address-tickets-div">
+                  <a href={url} id="event-address">
+                    {event.address}<br/> {event.city}, {event.state} {event.zip}
+                  </a>
+                  <a href={event.eventUrl} id="event-link">Tickets to this event</a>
+                </div>
               </Media.Body>
             </Media>
           // </Pagination.Item>

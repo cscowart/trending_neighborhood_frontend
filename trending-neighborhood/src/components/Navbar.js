@@ -74,7 +74,7 @@ class NavBar extends Component {
   render() {
     console.log("City: ",this.state.city)
     return (
-      <Navbar id="navbar" > 
+      <Navbar id="navbar" sticky="top"> 
         <Navbar.Brand href="/">
           <img style={{opacity: 'none'}}
             src={Logo}
