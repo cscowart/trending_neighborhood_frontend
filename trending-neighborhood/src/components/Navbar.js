@@ -1,12 +1,80 @@
 import React, { Component } from 'react'
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import Logo from '../media/up-n-up-logo_new-yellow.png'
+import { Redirect, Link } from 'react-router-dom'
+// import { connect } from 'react-redux'
+import { withRouter } from "react-router";
 import Cities from '../config/Cities.json'
 
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import Logo from '../media/up-n-up-logo_new-yellow.png'
+
 class NavBar extends Component {
+  state={
+    city: "",
+    redirect: false,
+    events: true
+  }
+
+  componentDidMount() {
+
+    // console.log(`url: '${window.location.pathname}'`)
+    // console.log("Current URL: ",window.location.pathname)
+    if (window.location.pathname != "/") {
+      let path = window.location.pathname.split('/')
+      let city = path[2].replace(/%20/g, " ")
+      this.setState({
+        city: city,
+        events: false
+      })
+    }   
+    else {
+      this.setState({
+        events: true
+      })}
+  }
+  
+  componentDidUpdate(prevProps, prevState){
+ 
+    if (window.location.pathname !== "/" && this.state.events == true  ) {
+      let path = window.location.pathname.split('/')
+      let city = path[2].replace(/%20/g, " ")
+      this.setState({
+        city: city,
+        events: false
+      })
+    }
+
+
+    if (prevState.city !== this.state.city ){
+      // && prevProps.match.url !=="/"
+      let path = window.location.pathname.split('/')
+      let city = path[2].replace(/%20/g, " ")
+      // console.log("City from url: ",city)
+      this.setState({
+        city: city,
+      })
+    }
+}
+
+
+  createNavList = () => {
+    const sections = Cities.map((city, index) => {
+      return (
+        <NavDropdown.Item as={Link} to={{
+            pathname: `/explore/${city}`,
+            city: city,
+          }}>
+          {city}
+        </NavDropdown.Item>  
+      ) 
+    })
+    return sections
+  }
+
+
   render() {
+    console.log("City: ",this.state.city)
     return (
-      <Navbar id="navbar" > {/*className="bg-transparent" style={{position: 'absolute', top: '0', left: '0', zIndex: '2'}} bg="light" expand="lg"*/}
+      <Navbar id="navbar" sticky="top"> 
         <Navbar.Brand href="/">
           <img style={{opacity: 'none'}}
             src={Logo}
@@ -20,15 +88,15 @@ class NavBar extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav id="nav" > {/*className="mr-auto"*/}
             <NavDropdown title="Explore" id="explore-nav-dropdown">
-              {Cities.map((city, index) => {
-                return (
-                  <NavDropdown.Item key={index} href="#action/3.1">{city}</NavDropdown.Item>
-                )
-              })}
+            {this.createNavList()}
             </NavDropdown>
-            {/* <Nav.Link id="nav-link" href="/explore" >Explore</Nav.Link> style={{fontSize: "20px"}} */}
-            {/* <ExploreCitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/> */}
-            <Nav.Link id="nav-link" href="#link">Events</Nav.Link> {/*style={{fontSize: "20px"}}*/}
+
+            <Nav.Link disabled={this.state.events} as={Link} to={{
+              pathname: `/events/${this.state.city}`,
+              city: this.state.city,
+            }}>Events</Nav.Link> 
+        
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -36,5 +104,5 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter((NavBar));
 

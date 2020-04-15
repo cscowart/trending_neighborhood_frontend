@@ -13,7 +13,6 @@ import SFNeighborhoods from '../geojson/SF-zillow-neighborhoods.json';
 import DCNeighborhoods from '../geojson/DC-zillow-neighborhoods.json';
 import ReactLoading from 'react-loading';
 
-
 class NeighborhoodMap extends Component{
   state = {
     lat: 41.878,
@@ -138,7 +137,21 @@ class NeighborhoodMap extends Component{
     }
   }
 
+  zoomIn = () => {
+    this.setState({
+      zoom: this.state.zoom + 3
+    })
+  }
+
+  clickToFeature = (e) => {
+    let layer = e.target
+    console.log(layer)
+  }
+
   onEachFeature(feature, layer)  {
+    // layer.on({
+    //   click: this.clickToFeature
+    // })
     let matching = layer.options.results.find(element => element["Neighborhood"] == feature.properties.name)
     let expanded = layer.options.showExpandedCategories
     let color = ""
@@ -173,7 +186,7 @@ class NeighborhoodMap extends Component{
         sortedArray=sortedArray.sort(function (a,b) { return b[0]-a[0] || b[1]-a[1]})
       if (!expanded) {
       const popupContent = ` 
-        <Popup>
+        <Popup onClick={this.zoomIn}>
           <p>
             <b>${feature.properties.name} </b><br><br>
             ${sortedArray[0][2]}: ${sortedArray[0][1]}<br>
@@ -212,20 +225,19 @@ class NeighborhoodMap extends Component{
           fillOpacity: 0.25,
           fillColor: '#fff2af',
         })
-        const popupContent = ` <Popup><b>${feature.properties.name}</b></Popup>`
+        const popupContent = ` <Popup id="map-pop-up"><b>${feature.properties.name}</b></Popup>`
         layer.bindPopup(popupContent)
       }
     }
   
   render() {
-    console.log(this.props)
     const position = [this.state.lat, this.state.lng]
     let isChanged = this.state.change
     return (
       <Map scrollWheelZoom={false} center={position} zoom={this.state.zoom} > {/* style={{height: "960px", width: '100%'}}*/}
         <TileLayer //Layer that displays the watermark on the bottom right of the map
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png'
+          attribution='<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>'
             />
         <GeoJSON //Layer that imports all the neighborhood boundaries and makes them clickable
           key={isChanged}

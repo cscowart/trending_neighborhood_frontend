@@ -17,8 +17,18 @@ const findNeighborhood = (neighborhoodObject) => {
 }
 
 const getDefaultNeighborhoods = (city) => {
-  console.log(city)
+    console.log(city)
   return (fetch(`${url}default_view/${city}`))
+    .then(resonse => resonse.json())
+    .then(data => data)
+    .catch((error) => {
+    console.log('Error:', error);
+    })
+}
+
+const getCityEvents = (city) => {
+  // console.log(city)
+  return (fetch(`${url}events/${city}`)) //Change
     .then(resonse => resonse.json())
     .then(data => data)
     .catch((error) => {
@@ -30,4 +40,5 @@ const getDefaultNeighborhoods = (city) => {
 export default {
   findNeighborhood,
   getDefaultNeighborhoods,
+  getCityEvents,
 }
