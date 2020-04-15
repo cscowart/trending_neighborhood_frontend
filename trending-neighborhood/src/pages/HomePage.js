@@ -34,7 +34,10 @@ class HomePage extends Component {
     })   
   }
   
-  componentDidMount= () => {let count=0}
+  componentDidMount= () => {
+    document.body.style.backgroundColor = "blacks"
+
+    let count=0}
   
   componentDidUpdate = () => {
     
@@ -89,31 +92,25 @@ class HomePage extends Component {
     }
 
     return (
-      <>
-      <div id="video-layer" style={{
-        height: '100vh',
-        width: '100vh',
-        float: 'center',
-        bottom: '0',
-        padding: 'none',
-        position: 'fixed',
-        zIndex: '1'
-      }}>
+      <div id="home-page">
+      <div id="video-layer">
         <video cover loop="true" src={ this.state.backgroundVideo } ref="video" type="video/mp4" autoPlay="true" id="vid" muted>
           <source src={ this.state.backgroundVideo } ref="video" type="video/mp4"></source>
         </video>
       </div>
-      <div id="home-page" > 
-        <Row className="justify-content-md-center" >
-          <h1 id="home-page-header" > Your new city awaits in</h1> 
-                    <Col></Col>
-          <Col md='auto' >
-            <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>
-          </Col>
-          <Col></Col>
-        </Row>
+      <Row >
+        <Col></Col><Col>
+          <div> 
+            <h1 id="home-page-header"> Choose your city to find your ideal neighborhood</h1> 
+            <Row >
+              <Col></Col><Col>
+                <CitySelectDropdown id="home-page-city-select" cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>
+              </Col><Col></Col>
+            </Row>
+          </div>
+        </Col><Col></Col>
+      </Row>
       </div>
-      </>
     );
   }
 }
