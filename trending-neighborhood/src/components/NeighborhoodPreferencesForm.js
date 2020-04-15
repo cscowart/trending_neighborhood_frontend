@@ -31,7 +31,6 @@ class NeighborhoodPreferencesForm extends Component {
           <Card.Header>Customize my Neighborhood</Card.Header>
           <Card.Body style={{overflow: 'auto'}}>
             {Object.entries(this.props.categories).map(     (category) => {
-              console.log(category)
               let categoryName=category[0]
               let score = category[1][1]
               let valueText=""

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Col, Row} from 'react-bootstrap';
+import { Redirect, Link } from 'react-router-dom'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import ReactLoading from 'react-loading';
 import NeighborhoodPreferencesForm from '../components/NeighborhoodPreferencesForm';
@@ -10,17 +11,18 @@ import NeighborhoodMap from "../components/NeighborhoodMap"
 import ListView from '../components/ListView'
 import ScoreBreakdown from '../components/ScoreBreakdown';
 import { geolocated } from "react-geolocated";
+// import top5neighborhoods from '../mock_data/top5neighborhoods'
 
 class ExplorePage extends Component {
   state = {
-    city: "Chicago",
+    city: "",
     categories: {
       "Walkability": [1, 0],
-      "Public Transit": [2, 0],
       "Restaurants and Bars": [1, 0],
       "Entertainment": [1, 0],
       "Shopping": [1, 0],
       "Parks": [1, 0],
+      "Public Transit": [2, 0],
       "Biking": [2, 0],
       "Errands": [2, 0],
       "Groceries": [2, 0],
@@ -31,33 +33,40 @@ class ExplorePage extends Component {
     scoreBreakdownNeighborhood: null,
     isLoading: false,
     isDefault: true,
-    results: null //If testing w/o back end, use top5neighborhoods & import top5neighborhoods from '../mock_data/top5neighborhoods'
+    redirect: true,
+    results: null, //If testing w/o back end, use top5neighborhoods & import top5neighborhoods from '../mock_data/top5neighborhoods'
   }
-
-  // componentDidUpdate(prevState, prevProps) {
-  //   // console.log('THIS IS WHAT IS UP')
-  //   // console.log("this.state.results: ", this.state.categories)
-  //   // console.log(prevState)
-  //   // console.log("prevProps: ", prevProps.categories)
-  //   // console.log("current Props: ", this.props)
-
-  //   if (prevProps.categories !== this.state.categories){
-  //     this.setState({results: this.state.results})
-  //   }
-  // }
 
   componentDidMount() {
-    // console.log(this.props)
+    let path = window.location.pathname.split('/')
+    let city = path[2].replace(/%20/g, " ")
+    console.log(city)
     // Checks to see what city was selected on the main landing page
-    if (this.props.location.state && this.state.isDefault){
+    if (this.props.location.city && this.state.isDefault){
       this.setState({
-        city: this.props.location.state,
+        city: this.props.location.city,
         isLoading: true,
-      })
-      // console.log(this.state.city) //Check to see if this can get passed at this.state.city
-      this.getDefaultResults(this.props.location.state)
+      }) 
+      this.getDefaultResults(this.props.location.city)
+    } else if (city && this.state.isDefault){
+      this.setState({
+        city: city,
+        isLoading: true,
+      }) 
+      this.getDefaultResults(city)
     }
   }
+
+  componentDidUpdate(prevProps) {
+    // console.log(prevProps.match.url)
+    // console.log(window.location.pathname.replace(/%20/g, " "))
+    // let sanitized
+    if (prevProps.match.url != window.location.pathname.replace(/%20/g, " ")){
+      console.log("I changed!")
+      window.location.reload()
+      }
+    }
+  
 
   getDefaultResults = async (city) => { 
     let results = await backendAPI.getDefaultNeighborhoods(city)   
@@ -87,11 +96,11 @@ class ExplorePage extends Component {
     this.setState({
       categories: {
         "Walkability": [1, 0],
-        "Public Transit": [2, 0],
         "Restaurants and Bars": [1, 0],
         "Entertainment": [1, 0],
         "Shopping": [1, 0],
         "Parks": [1, 0],
+        "Public Transit": [2, 0],
         "Biking": [2, 0],
         "Errands": [2, 0],
         "Groceries": [2, 0],
@@ -158,6 +167,7 @@ class ExplorePage extends Component {
   }
   
   render() {
+  
     if (this.state.isLoading === true) {
       return (
         <ReactLoading type={"bars"} color={"#ffffff"} height={'20%'} width={'20%'} />

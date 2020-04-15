@@ -212,13 +212,12 @@ class NeighborhoodMap extends Component{
           fillOpacity: 0.25,
           fillColor: '#fff2af',
         })
-        const popupContent = ` <Popup><b>${feature.properties.name}</b></Popup>`
+        const popupContent = ` <Popup id="map-pop-up"><b>${feature.properties.name}</b></Popup>`
         layer.bindPopup(popupContent)
       }
     }
   
   render() {
-    console.log(this.props)
     const position = [this.state.lat, this.state.lng]
     let isChanged = this.state.change
     return (

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
 import Cities from '../config/Cities.json';
+import CityCoords from '../config/CityCoords.json';
+import GetDistance from '../HelperFunctions/GetDistance'
 // import backendAPI from "../api/backendAPI"
 import CitySelectDropdown from '../components/CitySelectDropdown'
 import defaultIMG from '../media/default.webp'
-
 import NYBackgroundVideo from '../media/NYBackgroundVideo.mp4'
 import LABackgroundVideo from '../media/LABackgroundVideo.mp4'
 import HoustonBackgroundVideo from '../media/HoustonBackgroundVideo.mp4'
@@ -42,53 +43,27 @@ class HomePage extends Component {
 
     let distance=0
     let R=0
-    // Chicago
-    const coordinates = [
-      ['New York', 40.6635, -73.9387],
-      ['Los Angeles', 34.0194, -118.4108],
-      ['Chicago', 41.881832, -87.623177],
-      ['Houston', 29.7866, -95.3909],
-      ['Phoenix', 33.5722, -112.0901],
-      ['Philadelphia', 40.0094, -75.1333],
-      ['Denver',  39.7619,  -104.8811],
-      ['Washington DC', 38.9041, -77.0172]
-    ]
 
-    let distances = {
-      'New York': 0,
-      'Los Angeles':0,
-      'Chicago': 0,
-      'Houston': 0,
-      'Phoenix': 0,
-      'Philadelphia':0,
-      'Denver':0,
-      'Washington DC':0
-    }
+    let distances={}
 
   if (this.props.coords) {
-      {coordinates.map((cityCoords)=> {
+      {CityCoords.map((cityCoords)=> {
         let lat1 = this.props.coords.latitude
         let lon1 = this.props.coords.longitude
         
         let lat2 = cityCoords[1]
         let lon2 = cityCoords[2]
+
+
+        let distance = GetDistance(lat1, lon1, lat2, lon2)
         
-        R = 6371000; // meters -- to convert to miles / 1609
-        let φ1 = lat1*Math.PI/180;
-        let φ2 = lat2*Math.PI/180;
-        let Δφ = (lat2-lat1)*Math.PI/180;
-        let Δλ = (lon2-lon1)*Math.PI/180;
-        let a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
-        Math.cos(φ1) * Math.cos(φ2) *
-        Math.sin(Δλ/2) * Math.sin(Δλ/2);
-        let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        distance = parseInt(R * c);
         distances[cityCoords[0]]=distance
+        // console.log(distances)
         let keys = Object.keys(distances);
         let lowest = Math.min.apply(null, keys.map(function(x) { return distances[x]} ));
         let closest  = keys.filter(function(y) { return distances[y] === lowest });
         this.setState({closestCity: closest[0]})
-        console.log("Closest City: ", this.state.closestCity)
+        // console.log("Closest City: ", this.state.closestCity)
       })}
       
        
@@ -106,11 +81,11 @@ class HomePage extends Component {
       }}}}
 
   render() {
-    console.log(this.state)
     if (this.state.redirect) {
       return <Redirect to={{
-          pathname: '/explore',
-          state: this.state.city,}}/>;
+          pathname: `/explore/${this.state.city}`,
+          city: this.state.city,
+      }}/>;
     }
 
     return (
@@ -128,10 +103,9 @@ class HomePage extends Component {
           <source src={ this.state.backgroundVideo } ref="video" type="video/mp4"></source>
         </video>
       </div>
-      <div id="home-page" > {/*style={{position: 'absolute', top: '25%', left: '33%', opacity: '0.7', zIndex: '2' }}*/}
-
+      <div id="home-page" > 
         <Row className="justify-content-md-center" >
-          <h1 id="home-page-header" > Your new city awaits in</h1> {/*className="justify-content-md-center" style={{ color: 'white'}}*/}
+          <h1 id="home-page-header" > Your new city awaits in</h1> 
                     <Col></Col>
           <Col md='auto' >
             <CitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={this.handleCitySelect}/>
