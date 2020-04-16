@@ -47,13 +47,13 @@ class ExplorePage extends Component {
       this.setState({
         city: this.props.location.city,
         isLoading: true,
-      }) 
+      })
       this.getDefaultResults(this.props.location.city)
     } else if (city && this.state.isDefault){
       this.setState({
         city: city,
         isLoading: true,
-      }) 
+      })
       this.getDefaultResults(city)
     }
   }
@@ -67,16 +67,17 @@ class ExplorePage extends Component {
       window.location.reload()
       }
     }
-  
 
-  getDefaultResults = async (city) => { 
+
+
+  getDefaultResults = async (city) => {
     let objCity = city
     if (objCity === "Washington D.C.") {
       objCity = "Washington"
     } else if (objCity === "New York City") {
       objCity = "New York"
     }
-    let results = await backendAPI.getDefaultNeighborhoods(objCity)   
+    let results = await backendAPI.getDefaultNeighborhoods(objCity)
     // const results = top5neighborhoods //Comment out line when running API and uncomment the above lines
     console.log(results)
     this.setState({
@@ -116,7 +117,7 @@ class ExplorePage extends Component {
     })
   }
 
-  // Creates a neighborhoodObject to be used in the POST request after a user submits their preferences. 
+  // Creates a neighborhoodObject to be used in the POST request after a user submits their preferences.
   handleCategoriesSubmit = event => {
     event.preventDefault()
     let categoriesSelect = Object.entries(this.state.categories)
@@ -140,15 +141,15 @@ class ExplorePage extends Component {
   }
 
   // API Call to the backend to get a new results object
-  getResults = async neighborhoodObject => { 
-    let results = await backendAPI.findNeighborhood(neighborhoodObject) 
+  getResults = async neighborhoodObject => {
+    let results = await backendAPI.findNeighborhood(neighborhoodObject)
     this.setState({
       results: results,
       isDefault: false,
     })
   }
 
-  // Rounds the user score preferences 
+  // Rounds the user score preferences
   handleCategoryScore = event => {
     let cat = event.target.parentElement.id
     let val = parseInt(event.target.value)
@@ -175,16 +176,16 @@ class ExplorePage extends Component {
       showExpandedCategories: !this.state.showExpandedCategories,
     })
   }
-  
+
   render() {
-  
+
     if (this.state.isLoading === true) {
       return (
         <ReactLoading type={"bars"} color={"#ffffff"} height={'20%'} width={'20%'} />
       )
     }
     return (
-      <div id="explore-page"> 
+      <div id="explore-page">
         <Row>
           <Col style={{textAlign: "center"}}>
           </Col>
@@ -192,9 +193,9 @@ class ExplorePage extends Component {
         <div style={{position: 'absolute', top: '22%', right: '2%', zIndex: '3'}}>
            <NeighborhoodPreferencesForm city={this.state.city} categories={this.state.categories} handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={this.handleCategoriesSubmit} handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/>
         </div>
-        <Row id="map-list-layer" > 
+        <Row id="map-list-layer" >
           <div style={{position: 'absolute', top: '10%', left: '60px', zIndex: '2', }}>
-             <BootstrapSwitchButton 
+             <BootstrapSwitchButton
               style={"mt-4"}
               checked={this.state.mapView}
               width={100}
@@ -207,23 +208,23 @@ class ExplorePage extends Component {
                 this.setState({ mapView: checked })
               }}/>
           </div>
-          <div id="map-list-components"> 
+          <div id="map-list-components">
             {this.state.mapView ?
-              <div> 
+              <div>
                 <NeighborhoodMap id="neighborhood-map" city={ this.state.city } categories={this.state.categories} results={ this.state.results} isActive={ this.state.mapView } showExpandedCategories={this.state.showExpandedCategories}/>
                 <MapLegend />
               </div>  :
-              <ListView  id="list-view" city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} showExpandedCategories={this.state.showExpandedCategories}/> 
+              <ListView  id="list-view" city={this.state.city} results={this.state.results.filter(neighborhood => neighborhood["Overall Score"] >= 100)}  userPreferences={this.state.categories} showExpandedCategories={this.state.showExpandedCategories}/>
             }
           </div>
-                
+
         </Row>
       </div>
     );
   }
 }
 
-export default 
+export default
   geolocated({
     positionOptions: {
         enableHighAccuracy: false,

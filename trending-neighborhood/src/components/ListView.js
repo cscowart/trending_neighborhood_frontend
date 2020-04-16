@@ -63,8 +63,8 @@ class ListView extends Component {
                       <ul id="list-view-categories">{category[1]}: {parseInt(category[0])}</ul>
                     )    
                   })}
-                <small centered><Button size="xs">I'm a link!</Button> <Button size="xs">I'm a link!</Button>
-                </small>
+                {/* <small centered><Button size="xs">I'm a link!</Button> <Button size="xs">I'm a link!</Button>
+                </small> */}
                 </Card.Body>
          
               </Card.ImgOverlay>
@@ -72,27 +72,7 @@ class ListView extends Component {
           </Col>
         </Row>
             )
-            {/* ) */}
-          {/* })} */}
-{/* 
-            <Accordion.Toggle as={Card.Header} variant="link" eventKey={result["Neighborhood"]}>
-            <Row sm='auto'>
-            {this.props.coords ? 
-              <Col><small className="text-muted">{distance} miles away from you</small></Col>:<div></div>}               
-              <Col>{result["Neighborhood"]}</Col>
-              <Col style={{maxWidth: '5px'}}></Col>
-              <Col></Col>
-              </Row>
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey={result["Neighborhood"]}>
-              <Card.Body>
-              <ScoreBreakdown results={result} userPreferences={this.props.userPreferences} showExpandedCategories={this.props.showExpandedCategories}/>
-              </Card.Body>
-              </Accordion.Collapse>
-            </Card> */}
-        {/* ) 
-    )}}
-      // })} */}
+            
       })}
       </CardDeck>
       )

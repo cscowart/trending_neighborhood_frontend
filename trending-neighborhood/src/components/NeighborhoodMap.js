@@ -15,7 +15,7 @@ import ReactLoading from 'react-loading';
 
 class NeighborhoodMap extends Component{
   state = {
-    lat: 41.878,
+    lat: 41.83,
     lng: -87.629,
     zoom: 12,
     scrollWheelZoom: false,
@@ -65,7 +65,7 @@ class NeighborhoodMap extends Component{
       break; 
       case "Chicago":
         this.setState({
-          lat: 41.878, 
+          lat: 41.83, 
           lng: -87.629,
           zoom: 12,
           cityGeo: ChicagoNeighborhoods,
@@ -97,8 +97,8 @@ class NeighborhoodMap extends Component{
       break;  
       case "New York City":
         this.setState({
-          lat: 40.712, 
-          lng: -74.006,
+          lat: 40.78, 
+          lng: -73.92,
           zoom: 12,
           cityGeo: NYCNeighborhoods,
         }); 
@@ -122,7 +122,7 @@ class NeighborhoodMap extends Component{
       case "Washington D.C.":
         this.setState({
           lat: 38.9072, 
-          lng: -77.0369,
+          lng: -77.0009,
           zoom: 12,
           cityGeo: DCNeighborhoods,
         }); 

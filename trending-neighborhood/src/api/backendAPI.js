@@ -1,4 +1,5 @@
 const url = "http://127.0.0.1:8000/"
+// const url = "http://up-n-up.herokuapp.com/api/
 
 const findNeighborhood = (neighborhoodObject) => {
   return(fetch(`${url}user_submit`, {
@@ -36,16 +37,17 @@ const getCityEvents = (city) => {
     })
 }
 
-async function searchEvents(city, textToSearchFor) {
-  let response = await fetch(`${url}events/${city}?filter={"where":{"eventName":{"ilike":"${textToSearchFor}"}}}`)
-  let data = await response.json()
-  return data
-}
+// async function searchEvents(city, textToSearchFor) {
+//   console.log(textToSearchFor)
+//   let response = await fetch(`${url}events/${city}?filter={"where":{"eventName":{"ilike":"${textToSearchFor}"}}}`)
+//   let data = await response.json()
+//   return data
+// }
 
 
 export default {
   findNeighborhood,
   getDefaultNeighborhoods,
   getCityEvents,
-  searchEvents
+  // searchEvents,
 }
