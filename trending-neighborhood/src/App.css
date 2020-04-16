@@ -185,3 +185,18 @@
   bottom: 4%;
   left: 2%;
 }
+#preference-form-header {
+  text-align: center;
+}
+
+#preference-form-subheader {
+  font-size: 18px;
+}
+
+.react-loading {
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 10em;
+  vertical-align: middle;
+}

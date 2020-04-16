@@ -70,9 +70,15 @@ class ExplorePage extends Component {
   
 
   getDefaultResults = async (city) => { 
-    let results = await backendAPI.getDefaultNeighborhoods(city)   
+    let objCity = city
+    if (objCity === "Washington D.C.") {
+      objCity = "Washington"
+    } else if (objCity === "New York City") {
+      objCity = "New York"
+    }
+    let results = await backendAPI.getDefaultNeighborhoods(objCity)   
     // const results = top5neighborhoods //Comment out line when running API and uncomment the above lines
-    // console.log(results)
+    console.log(results)
     this.setState({
       results: results,
       isLoading: false,
@@ -113,7 +119,6 @@ class ExplorePage extends Component {
   // Creates a neighborhoodObject to be used in the POST request after a user submits their preferences. 
   handleCategoriesSubmit = event => {
     event.preventDefault()
-
     let categoriesSelect = Object.entries(this.state.categories)
     let category = Object.entries(this.state.categories).map(obj => obj[0])
     let score = categoriesSelect.map(obj => obj[1][1])
@@ -121,10 +126,14 @@ class ExplorePage extends Component {
     for(let index = 0; index < category.length; index++) {
       submitCategories[`${category[index]}`] = score[index]
     }
-
-    // console.log("OUTPUT", submitCategories)
+    let objCity = this.state.city
+    if (objCity === "Washington D.C.") {
+      objCity = "Washington"
+    } else if (objCity === "New York City") {
+      objCity = "New York"
+    }
     const neighborhoodObject = {
-      city: this.state.city,
+      city: objCity,
       categories: submitCategories
     }
     this.getResults(neighborhoodObject)
@@ -175,16 +184,15 @@ class ExplorePage extends Component {
       )
     }
     return (
-      <div id="explore-page"> {/*style={{marginTop: "25px"}}*/}
+      <div id="explore-page"> 
         <Row>
           <Col style={{textAlign: "center"}}>
-              {/* <ExploreCitySelectDropdown cities={ Cities } city={this.state.city}  handleCitySelect={ this.handleCitySelect }/> */}
           </Col>
         </Row>
         <div style={{position: 'absolute', top: '22%', right: '2%', zIndex: '3'}}>
            <NeighborhoodPreferencesForm city={this.state.city} categories={this.state.categories} handleExpandedCategories={this.handleExpandedCategories} showExpandedCategories={this.state.showExpandedCategories} handleCategoriesSubmit={this.handleCategoriesSubmit} handleCategoryScore={this.handleCategoryScore} handleResetValues={this.handleResetValues}/>
         </div>
-        <Row id="map-list-layer" > {/*/ className="mx-3" style={{ height: '600', width: '100vw',}}*/}
+        <Row id="map-list-layer" > 
           <div style={{position: 'absolute', top: '10%', left: '60px', zIndex: '2', }}>
              <BootstrapSwitchButton 
               style={"mt-4"}
@@ -199,7 +207,7 @@ class ExplorePage extends Component {
                 this.setState({ mapView: checked })
               }}/>
           </div>
-          <div id="map-list-components"> {/*style={{height: "960px", width: '70%', marginTop: '50px', overflowY: 'auto'}}*/}
+          <div id="map-list-components"> 
             {this.state.mapView ?
               <div> 
                 <NeighborhoodMap id="neighborhood-map" city={ this.state.city } categories={this.state.categories} results={ this.state.results} isActive={ this.state.mapView } showExpandedCategories={this.state.showExpandedCategories}/>

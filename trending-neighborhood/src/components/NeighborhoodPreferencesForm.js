@@ -27,10 +27,11 @@ class NeighborhoodPreferencesForm extends Component {
     else {
       return (
       <Form id="preferences" onSubmit={ this.props.handleCategoriesSubmit }>
-        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '560px', width: '380px', opacity: '0.9'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
-          <Card.Header>Customize my Neighborhood</Card.Header>
+        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '560px', width: '400px', opacity: '0.9'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
+          <Card.Header id="preference-form-header"><b>Customize My Neighborhood</b></Card.Header>
           <Card.Body style={{overflow: 'auto'}}>
-            {Object.entries(this.props.categories).map(     (category) => {
+            <h5 id="preference-form-subheader">How important is each category to you?</h5>
+            {Object.entries(this.props.categories).map((category) => {
               let categoryName=category[0]
               let score = category[1][1]
               let valueText=""
@@ -39,12 +40,12 @@ class NeighborhoodPreferencesForm extends Component {
                 case (score>62): valueText="Moderately important"; break;
                 case (score>37): valueText="Somewhat important"; break;
                 case (score>0): valueText="A little important"; break;
-                default: valueText="How important is this?"
+                default: valueText=""
               }
               if ((!this.props.showExpandedCategories && category[1][0]==1) || (this.props.showExpandedCategories)) {
                 return (
                   <>  
-                  <b>{categoryName}: </b>&ensp; <span className="text-muted justify-end"> {valueText}</span>
+                  <b>{categoryName}:</b>&ensp; <span className="text-muted justify-end"> {valueText}</span>
                   <Form.Group id={categoryName} key={categoryName} controlId="neighborhoodPreferences">
                     <Form.Control type="range" value={score} custom onChange={this.props.handleCategoryScore}/>
                   </Form.Group>

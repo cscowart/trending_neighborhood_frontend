@@ -36,9 +36,16 @@ const getCityEvents = (city) => {
     })
 }
 
+async function searchEvents(city, textToSearchFor) {
+  let response = await fetch(`${url}events/${city}?filter={"where":{"eventName":{"ilike":"${textToSearchFor}"}}}`)
+  let data = await response.json()
+  return data
+}
+
 
 export default {
   findNeighborhood,
   getDefaultNeighborhoods,
   getCityEvents,
+  searchEvents
 }

@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import Cities from '../config/Cities.json';
 import CityCoords from '../config/CityCoords.json';
 import GetDistance from '../HelperFunctions/GetDistance'
-// import backendAPI from "../api/backendAPI"
+import backendAPI from "../api/backendAPI"
 import CitySelectDropdown from '../components/CitySelectDropdown'
 import defaultIMG from '../media/default.webp'
 import NYBackgroundVideo from '../media/NYBackgroundVideo.mp4'
@@ -61,12 +61,10 @@ class HomePage extends Component {
         let distance = GetDistance(lat1, lon1, lat2, lon2)
         
         distances[cityCoords[0]]=distance
-        // console.log(distances)
         let keys = Object.keys(distances);
         let lowest = Math.min.apply(null, keys.map(function(x) { return distances[x]} ));
         let closest  = keys.filter(function(y) { return distances[y] === lowest });
         this.setState({closestCity: closest[0]})
-        // console.log("Closest City: ", this.state.closestCity)
       })}
       
        

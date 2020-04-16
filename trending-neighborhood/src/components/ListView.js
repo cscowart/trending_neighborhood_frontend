@@ -17,15 +17,12 @@ class ListView extends Component {
 
   render() {
     let rnd=Math.random()
-    console.log("props", this.props)
     return (
       <CardDeck  id="list-view" sm-style={{marginTop: '150px', width: '400px'}} md-style={{marginTop: '150px', width: '400px'}} lg-style={{marginTop: '150px', width: '400px'}} xl-style={{marginTop: '150px', width: '1100px'}} > 
       {this.props.results.map((result, index) => {
         let sortedArray=[]
         for (let i in result.breakdown){sortedArray.push([result.breakdown[i], i])}
-        sortedArray=sortedArray.sort().reverse() 
-        // console.log("Sorted Array", sortedArray)
-        
+        sortedArray=sortedArray.sort().reverse()       
         let lat1 
         let lon1 
         if (this.props.coords) {
