@@ -12,7 +12,7 @@ export class MapLegend extends Component {
             style={{backgroundColor: '#00342c'}}
           />
           <Media.Body>
-            <p>Good</p>
+            <p>Perfect Fit</p>
           </Media.Body>
         </Media>
         <Media className="map-legend-category">
@@ -21,9 +21,6 @@ export class MapLegend extends Component {
             height={15}
             style={{backgroundColor: '#006d2c'}}
           />
-          <Media.Body>
-            <p>Pretty Good</p>
-          </Media.Body>
         </Media>
         <Media className="map-legend-category">
           <img
@@ -32,7 +29,7 @@ export class MapLegend extends Component {
             style={{backgroundColor: '#238b45'}}
           />
           <Media.Body>
-            <p>Ok</p>
+            <p>Good Fit</p>
           </Media.Body>
         </Media>
         <Media className="map-legend-category">
@@ -41,9 +38,6 @@ export class MapLegend extends Component {
             height={15}
             style={{backgroundColor: '#99d8c9'}}
           />
-          <Media.Body>
-            <p>Not Bad</p>
-          </Media.Body>
         </Media>
         <Media className="map-legend-category">
           <img
@@ -52,7 +46,7 @@ export class MapLegend extends Component {
             style={{backgroundColor: '#f7fcfd'}}
           />
           <Media.Body>
-            <p>Bad</p>
+            <p>Neutral Fit</p>
           </Media.Body>
         </Media>
       </Card>
