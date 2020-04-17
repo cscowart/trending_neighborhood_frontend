@@ -27,10 +27,10 @@ class NeighborhoodPreferencesForm extends Component {
     else {
       return (
       <Form id="preferences" onSubmit={ this.props.handleCategoriesSubmit }>
-        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '560px', width: '400px', opacity: '0.9'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
+        <Card style={{position: 'absolute', top: '0%', right: '2%', zIndex: '3', height: '600px', width: '380px', opacity: '0.9'}} id="dropdown-menu-align-right" title="Customize my Neighborhood">
           <Card.Header id="preference-form-header"><b>Customize My Neighborhood</b></Card.Header>
           <Card.Body style={{overflow: 'auto'}}>
-            <h5 id="preference-form-subheader">How important is each category to you?</h5>
+            <ul id="preference-form-subheader text-muted"><i>How important is each category to you?</i></ul>
             {Object.entries(this.props.categories).map((category) => {
               let categoryName=category[0]
               let score = category[1][1]

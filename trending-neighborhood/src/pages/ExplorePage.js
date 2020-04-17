@@ -68,8 +68,6 @@ class ExplorePage extends Component {
       }
     }
 
-
-
   getDefaultResults = async (city) => {
     let objCity = city
     if (objCity === "Washington D.C.") {
@@ -178,7 +176,6 @@ class ExplorePage extends Component {
   }
 
   render() {
-
     if (this.state.isLoading === true) {
       return (
         <ReactLoading type={"bars"} color={"#ffffff"} height={'20%'} width={'20%'} />

@@ -3,22 +3,84 @@ import { PageItem, Pagination, Accordion, Button, ListGroup, ListGroupItem, Row,
 import ScoreBreakdown from './ScoreBreakdown';
 import { geolocated } from "react-geolocated";
 import CityCoords from '../config/CityCoords.json';
+import NeighborhoodCoords from '../config/CHI-neighborhood-locations.json'
 import GetDistance from '../HelperFunctions/GetDistance'
 
 
 
 class ListView extends Component {
-    getZillowHref = (neighborhood) => {
-      const formattedNeighborhood = neighborhood.replace(' ', '-')
-      const state = "IL"
-      const formattedLink = "https://www.zillow.com/" + formattedNeighborhood + "-" + this.props.city + "-" + state + "/rentals"
+  // https://www.yelp.com/search?find_desc=Restaurants&find_loc=Adams%20Morgan%2C%20Washington%2C%20DC
+  // https://www.yelp.com/search?find_desc=Restaurants&find_loc=Lake%20View%2C%20Chicago%2C%20IL
+  getYelpURL = (neighborhood) => {
+    let state = this.getState(this.props.city)
+    if (this.props.city === "Washington D.C."){
+      let formattedNeighborhood = neighborhood.replace(' ', '%20')
+      let formattedLink = "https://www.yelp.com/search?find_desc=Restaurants&find_loc=" + formattedNeighborhood + "%2C%20Washington%2C%20DC"
+      return formattedLink
+    } else {
+      let formattedNeighborhood = neighborhood.replace(' ', '%20')
+      let formattedLink = "https://www.yelp.com/search?find_desc=Restaurants&find_loc=" + formattedNeighborhood + "%2C%20" + this.props.city + "%2C%20" + state 
       return formattedLink
     }
+  }
+
+
+  // https://www.zillow.com/homes/Adams-Morgan,-Washington,-DC_rb/
+  // https://www.zillow.com/lake-view-chicago-il/rentals
+  getZillowURL = (neighborhood) => {
+    let state = this.getState(this.props.city)
+    if (this.props.city === "Washington D.C."){
+      let formattedNeighborhood = neighborhood.replace(' ', '-')
+       return "https://www.zillow.com/" + formattedNeighborhood + "-washington-dc/rentals/"
+
+    } else {
+      let formattedNeighborhood = neighborhood.replace(' ', '-')
+      return "https://www.zillow.com/" + formattedNeighborhood + "-" + this.props.city + "-" + state + "/rentals"
+    }
+  }
+
+  getState = (city) => {
+      switch(this.props.city) {
+        case "Atlanta":
+          return "GA"
+          break; 
+        case "Boston":
+          return "MA"
+          break; 
+        case "Chicago":
+          return "IL"
+          break; 
+        case "Dallas":
+          return "TX"
+          break; 
+        case "Houston":
+          return "TX"
+          break; 
+        case "Los Angeles":
+          return "CA"
+          break; 
+        case "New York City":
+          return "NY"
+          break; 
+        case "Philadelphia":
+          return "PA"
+          break; 
+        case "San Francisco":
+          return "CA"
+          break; 
+        case "Washington D.C.":
+          return "DC"
+          break;  
+        default:
+          return "IL"
+          break; 
+      }
+  }
 
   render() {
     let rnd=Math.random()
     return (
-      <CardDeck  id="list-view" sm-style={{marginTop: '150px', width: '400px'}} md-style={{marginTop: '150px', width: '400px'}} lg-style={{marginTop: '150px', width: '400px'}} xl-style={{marginTop: '150px', width: '1100px'}} > 
+      <CardDeck  id="list-view"  > 
       {this.props.results.map((result, index) => {
         let sortedArray=[]
         for (let i in result.breakdown){sortedArray.push([result.breakdown[i], i])}
@@ -40,19 +102,25 @@ class ListView extends Component {
           }
         }
             // get coordinates of nieghborhood
-            // TODO need coordinates of neighborhood
-        let lat2 = 41.8786
-        let lon2 = -87.6251
+        let lat2
+        let lon2
+        for (let i in NeighborhoodCoords) {
+          if (NeighborhoodCoords[i][1]==result["Neighborhood"]){
+            lat2 = NeighborhoodCoords[i][2]
+            lon2 = NeighborhoodCoords[i][3]
+          }
+        }
+
         let distance = (GetDistance(lat1, lon1, lat2, lon2))/1609
             // Display distance to the hundreths if < 1 mile away
         if (distance < 1) {distance=distance.toFixed(2)} else {distance=parseInt(distance.toFixed(2))}
             
             return(
         // <Card key={index} >
-        <Row className="my-4" xl={3} >
+        <Row className="my-2" xl={3} >
           <Col >
-            <Card className="mx-3" key={index} style={{height: '300px', width: '300px'}}>
-              <Card.Img variant="top" src={`https://placeimg.com/400/400/arch?${rnd}${index}`} style={{opacity: '0.5'}}/>
+            <Card className="mx-2" key={index} style={{height: '350px', width: '350px'}}>
+              <Card.Img variant="top" src={`https://placeimg.com/400/400/arch?${index}`} style={{opacity: '0.5'}}/>
               <Card.ImgOverlay>
                 <Card.Body className="bg-white" style={{opacity: '0.7'}}>
                   <Card.Title className="text-center">{result["Neighborhood"]}<br/>
@@ -63,8 +131,12 @@ class ListView extends Component {
                       <ul id="list-view-categories">{category[1]}: {parseInt(category[0])}</ul>
                     )    
                   })}
-                {/* <small centered><Button size="xs">I'm a link!</Button> <Button size="xs">I'm a link!</Button>
-                </small> */}
+                <div style={{textAlign: 'center'}}>  
+                <Button className="external-url-btn"  style={{ marginTop: '7px', marginBottom: '5px', width:"250px",height:"35px", backgroundColor: '#5477bb', borderColor: '#5477bb'}} href={this.getZillowURL(result["Neighborhood"])} >Rentals in {result["Neighborhood"]}</Button>
+                </div>
+                <div style={{textAlign: 'center'}}>
+                 <Button className="external-url-btn"  style={{width:"250px", height:"35px", backgroundColor: '#c41200', borderColor: '#c41200'}} href={this.getYelpURL(result["Neighborhood"])}>Food in {result["Neighborhood"]}</Button>
+                 </div>
                 </Card.Body>
          
               </Card.ImgOverlay>
