@@ -76,7 +76,7 @@ componentDidUpdate(prevProps, prevState){
 
 
   render() {
-    console.log("City: ",this.state.city)
+    // console.log("City: ",this.state.city)
     return (
       <>
       <Navbar id="navbar" sticky="top">
