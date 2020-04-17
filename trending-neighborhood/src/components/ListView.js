@@ -3,6 +3,7 @@ import { PageItem, Pagination, Accordion, Button, ListGroup, ListGroupItem, Row,
 import ScoreBreakdown from './ScoreBreakdown';
 import { geolocated } from "react-geolocated";
 import CityCoords from '../config/CityCoords.json';
+import NeighborhoodCoords from '../config/CHI-neighborhood-locations.json'
 import GetDistance from '../HelperFunctions/GetDistance'
 
 
@@ -101,9 +102,15 @@ class ListView extends Component {
           }
         }
             // get coordinates of nieghborhood
-            // TODO need coordinates of neighborhood
-        let lat2 = 41.8786
-        let lon2 = -87.6251
+        let lat2
+        let lon2
+        for (let i in NeighborhoodCoords) {
+          if (NeighborhoodCoords[i][1]==result["Neighborhood"]){
+            lat2 = NeighborhoodCoords[i][2]
+            lon2 = NeighborhoodCoords[i][3]
+          }
+        }
+
         let distance = (GetDistance(lat1, lon1, lat2, lon2))/1609
             // Display distance to the hundreths if < 1 mile away
         if (distance < 1) {distance=distance.toFixed(2)} else {distance=parseInt(distance.toFixed(2))}
